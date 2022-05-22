@@ -1,0 +1,13 @@
+{
+  "response": [
+    {
+      "datetime": 1653152635,
+      "filename": "lineage-19.1-20220521-UNOFFICIAL-daisy.zip",
+      "id": "73e3804aa1ec8293368b7605b33f335c",
+      "romtype": "unofficial",
+      "size": 690663388,
+      "url": "https://github.com/ItsVixano-releases/LineageOS_daisy/releases/download/20220521/lineage-19.1-20220521-UNOFFICIAL-daisy.zip",
+      "version": "19.1"
+    }
+  ]
+}
