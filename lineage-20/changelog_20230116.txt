@@ -1,0 +1,140 @@
+====================
+     2023-01-16    
+====================
+* build/soong
+daa8d2d soong: increase heap size for metalava [LeddaZ]
+
+* frameworks/base
+55a662c8 base: Disable ripple effect on unlock [Rishawn]
+2f593497 Add support for app signature spoofing [Danny Lin]
+
+* kernel/xiaomi/msm8953
+07fd3827e175 arm64: configs: xiaomi: Regenerate defconfigs [Giovanni Ricca]
+c05c04ae82d4 fs: sdfat: Pull from https://github.com/cryptomilk/kernel-sdfat [Giovanni Ricca]
+83da2df2e88f arm64: boot: xiaomi: sakura: Fixup awinic aw2013 compatible node [Giovanni Ricca]
+
+* lineage/wiki
+99e18c0 devices: promote surya to 20 [Willy Gardiol]
+
+* packages/modules/Permission
+2531fa5 Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/extra
+ffce579 extra: build: Conditionally push the build to the public [Giovanni Ricca]
+d864d83 extra: build: Automate it once and for all [Giovanni Ricca]
+
+* vendor/qcom/opensource/fm-commonsys
+f824494 jni: Skip loading FM firmware if requested [Ricardo Cerqueira]
+
+====================
+     2023-01-15    
+====================
+* system/sepolicy
+046a032 private: Exempt system_app from adbd_config_prop neverallow [Nolen Johnson]
+
+* vendor/extra/external/ih8sn
+8cc77ba ih8sn: Add a generic config [Giovanni Ricca]
+
+====================
+     2023-01-14    
+====================
+* lineage/hudson
+385be6b Regenerate device dependency mappings [Michael Bestas]
+
+====================
+     2023-01-13    
+====================
+* lineage/mirror
+a3ef51e Updated aosp-minimal to 12-Jan-2023 13:01 UTC [Tim Schumacher]
+
+* packages/apps/Aperture
+b4c9d1b Aperture: Location permissions dialog [Sebastiano Barezzi]
+
+====================
+     2023-01-12    
+====================
+* frameworks/base
+52f39a1c AlertWindowNotification: Correctly load app label [HZ]
+
+====================
+     2023-01-11    
+====================
+* android
+98698f2 lineage: Re-enable rsync [DroidFreak32]
+
+* frameworks/av
+893516d Camera: Avoid roundBufferDimensionsNearest also for HAL_PIXEL_FORMAT_BLOB [SGCMarkus]
+
+* lineage-sdk
+1c6d5b1 sdk: add HFR privapp camera related resource to config.xml [SGCMarkus]
+
+* vendor/extra
+a010765 extra: General cleanup [Giovanni Ricca]
+159b559 extra: Correct copyright headers [Giovanni Ricca]
+
+* vendor/lineage
+f83ae43 backuptool: Unmount v3 partitions during backup [TheHitMan7]
+
+====================
+     2023-01-10    
+====================
+* build/soong
+dadb5ae java_sdk_library_import: Copy all prebuilt properties to child modules [Paul Duffin]
+
+* packages/apps/AudioFX
+db29c41 Automatic translation import [Michael Bestas]
+
+* packages/apps/Contacts
+ee96f61 Automatic translation import [Michael Bestas]
+
+* packages/apps/DeskClock
+25dbc2a Automatic translation import [Michael Bestas]
+
+* packages/apps/Dialer
+ba98660 Automatic translation import [Michael Bestas]
+
+* packages/apps/DocumentsUI
+ec06fd0 Automatic translation import [Michael Bestas]
+
+* packages/apps/Eleven
+11519b4 Automatic translation import [Michael Bestas]
+
+* packages/apps/Etar
+b650bf7 Automatic translation import [Michael Bestas]
+
+* packages/apps/FlipFlap
+db18739 Automatic translation import [Michael Bestas]
+
+* packages/apps/Jelly
+6f2489a Automatic translation import [Michael Bestas]
+
+* packages/apps/LineageParts
+ea090ef Automatic translation import [Michael Bestas]
+
+* packages/apps/Recorder
+be505b3 Automatic translation import [Michael Bestas]
+
+* packages/apps/Settings
+2138cab Automatic translation import [Michael Bestas]
+
+* packages/apps/SetupWizard
+78eed39 Automatic translation import [Michael Bestas]
+
+* packages/apps/Updater
+468ff36 Automatic translation import [Michael Bestas]
+
+* packages/inputmethods/LatinIME
+eecbf81 Automatic translation import [Michael Bestas]
+
+* packages/providers/DownloadProvider
+be3cdfc Automatic translation import [Michael Bestas]
+
+* packages/resources/devicesettings
+93542da Automatic translation import [Michael Bestas]
+
+* vendor/crowdin
+db63991 Automatic translation import [Michael Bestas]
+
+* vendor/qcom/opensource/fm-commonsys
+24e05dd Automatic translation import [Michael Bestas]
+
