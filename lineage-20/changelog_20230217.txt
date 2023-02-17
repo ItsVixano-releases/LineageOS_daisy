@@ -1,0 +1,174 @@
+====================
+     2023-02-17    
+====================
+* android
+2ba66bd manifest: Track our fork of packages/modules/Virtualization [Michael Bestas]
+
+* build/soong
+2349886 Disable clang-tidy [Danny Lin]
+64ed87f cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+3bb518d ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+6229ae9 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/msm8953-common
+7112a28 msm8953-common: Disable bluetooth enhanced SCO connection [me-cafebabe]
+
+* frameworks/base
+f9a85301 base: Disable ripple effect on unlock [Rishawn]
+91d27cf2 SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+16b8884d Revert "Update Media Seekbar Thumb Shape" [00day0]
+79f6c280 core: Remove default aspect ratio limit for old apps [Danny Lin]
+aa309183 Add support for app signature spoofing [Danny Lin]
+
+* lineage/hudson
+b4afbf9 Panthers are fast but Cheetahs are faster [Nolen Johnson]
+
+* lineage/mirror
+8ae6b0b Updated aosp-minimal to 16-Feb-2023 13:01 UTC [Tim Schumacher]
+
+* lineage/wiki
+2ee76e6 devices: Import Pixel 7 family devices [Nolen Johnson]
+
+* packages/apps/Settings
+4985994 Settings: Fixup start padding for battery usage graph [Adithya R]
+
+* packages/apps/Trebuchet
+b5efb39 Revert "Launcher3: Do not attach cleanupScreenshot() to frame update event" [Edwin Moquete]
+39983a2 Launcher3: power-off -> screen-off [kubersharma001]
+5622070 Launcher3: Show clear all button in recents overview [jhonboy121]
+3ec635c Launcher3: Add toggle for DT2S [DennySPB]
+61e1359 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/modules/Permission
+6380a9d Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* packages/modules/Virtualization
+68a154b sign_virt_apex: Set hash_algorithm flag to sha256 [Shikha Panwar]
+
+* vendor/qcom/opensource/fm-commonsys
+182368d jni: Skip loading FM firmware if requested [Ricardo Cerqueira]
+
+====================
+     2023-02-16    
+====================
+* device/xiaomi/sm8350-common
+b2ec535 sm8350-common: import missing blobs [Ramii Ahmed]
+e86fc28 sm8350-common: rootdir: Apply device specific input boost values [Giovanni Ricca]
+fe3ab6a sm8350-common: sepolicy: Allow fingerprint HAL r/w for fingerprint_device/input_device [Ramii Ahmed]
+79ce0c3 sm8350-common: vibrator: Add support to awinic_haptic node [Ramii Ahmed]
+d545c3e sm8350-common: Allow extracting proprietary-files for recovery [Ramii Ahmed]
+7ea5111 sm8350-common: Add support for taoyao [Ramii Ahmed]
+
+* packages/apps/Aperture
+636f225 Aperture: Do not store photos captured via other apps [Tommy Webb]
+
+* packages/apps/LineageCustomizer
+6d78f75 Add an exported flag in manifest [Michael Bestas]
+
+* vendor/xiaomi/sm8350-common
+07c1c9f sm8350-common: import missing blobs [Ramii Ahmed]
+
+====================
+     2023-02-15    
+====================
+* kernel/xiaomi/sm8350
+d0efe8df7817 TMP goodix taoyao-s-oss [Giovanni Ricca]
+b8621bcee42c Revert "input: touchscreen: gt9916: Don't probe if gpio_96 returns 0" [Giovanni Ricca]
+4d38578f5597 input: touchscreen: gt9916: Don't probe if gpio_96 returns 0 [Giovanni Ricca]
+
+* packages/apps/DeskClock
+2d773b9 DeskClock: Fix timer notification [Michael W]
+
+====================
+     2023-02-14    
+====================
+* frameworks/base
+72ea30c5 Automatic translation import [Michael Bestas]
+
+* lineage-sdk
+3865315 Automatic translation import [Michael Bestas]
+
+* lineage/scripts
+3508ae0 device-deps-regenerator: blacklist -> ignorelist [Michael Bestas]
+
+* packages/apps/AudioFX
+bb65196 Automatic translation import [Michael Bestas]
+
+* packages/apps/Dialer
+eadac53 Automatic translation import [Michael Bestas]
+
+* packages/apps/DocumentsUI
+67a7b01 Automatic translation import [Michael Bestas]
+
+* packages/apps/Eleven
+cdab07b Automatic translation import [Michael Bestas]
+
+* packages/apps/Etar
+35931d5 Automatic translation import [Michael Bestas]
+
+* packages/apps/FlipFlap
+e09235c Automatic translation import [Michael Bestas]
+
+* packages/apps/Jelly
+7f72e28 Automatic translation import [Michael Bestas]
+
+* packages/apps/LineageParts
+f893daa Automatic translation import [Michael Bestas]
+
+* packages/apps/Recorder
+21ad3da Automatic translation import [Michael Bestas]
+
+* packages/apps/Settings
+fe00b54 Automatic translation import [Michael Bestas]
+
+* packages/apps/SetupWizard
+6a4d8ba Automatic translation import [Michael Bestas]
+
+* packages/apps/Trebuchet
+4ca5f8a Automatic translation import [Michael Bestas]
+
+* packages/apps/Updater
+304b45b Automatic translation import [Michael Bestas]
+
+* packages/inputmethods/LatinIME
+a0efe97 Automatic translation import [Michael Bestas]
+
+* packages/resources/devicesettings
+080152a Automatic translation import [Michael Bestas]
+
+* vendor/crowdin
+a699b1d Automatic translation import [Michael Bestas]
+
+* vendor/qcom/opensource/fm-commonsys
+dcca002 Automatic translation import [Michael Bestas]
+
+====================
+     2023-02-13    
+====================
+* frameworks/av
+4e4fd6d fixup! audioflinger: Fix audio for WifiDisplay [Michael Bestas]
+
+* frameworks/native
+e9c2c24 Remove BLASTBufferQueue debug log line [Tommy Webb]
+
+* kernel/xiaomi/sm8350
+170875f43e5f arm64: dts: Add PM8008I label [Giovanni Ricca]
+6a2c888510a7 asoc: Fixup taoyao guards [Giovanni Ricca]
+3e6a8dbab7ee arm64: dts: display: taoyao-s-oss [Giovanni Ricca]
+79d5fc3d3082 input: touchscreen: focaltech_3680: Update compatible node [Giovanni Ricca]
+74ea0f569ccb input: touchscreen: gt9916: Make it load on taoyao [Giovanni Ricca]
+65fe0da53a06 input: touchscreen: focaltech_3680: Omit mi_disp_set_fod_queue_work [Giovanni Ricca]
+4d727f8043d7 input: touchscreen: synaptics_s3908p: Omit mi_disp_set_fod_queue_work [Giovanni Ricca]
+87181cfc26f4 fixup! input: touchscreen: Import Synaptics S3908P driver [Giovanni Ricca]
+cc9dcdbca90a fixup! input: touchscreen: synaptics_s3908p: Load the correct fw file [Giovanni Ricca]
+5da4fe9fb151 arm64: dts: Use seperate mi2s rx and tx in taoyao overlay [Arian]
+
+* vendor/lineage
+d9d76b3 vars: Update floral to TP1A.221005.002.B2 [Michael Bestas]
+
+====================
+     2023-02-12    
+====================
+====================
+     2023-02-11    
+====================
