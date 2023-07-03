@@ -1,0 +1,212 @@
+====================
+     2023-07-03    
+====================
+* build/soong
+011424b Disable clang-tidy [Danny Lin]
+e06499d cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+0d8358f ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+46a2b13 soong: Specify heap size for metalava for S+ [Michael W]
+310080a soong: Increase Java heap size for r8 [LeddaZ]
+d5f8943 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/ysl
+4014b8a ysl: Reduce display density [Giovanni Ricca]
+
+* frameworks/av
+bf1d7a9 SessionConfigurationUtils: Allow privileged camera apps to create raw streams for raw capable cameras [Arian]
+
+* frameworks/base
+84697269 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+b124fe1f Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+705399d3 Camera: Expose aux camera if packagename is null [wbs306]
+5fb3582e SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+2d98bff8 Revert "Update Media Seekbar Thumb Shape" [00day0]
+9dac7390 core: Remove default aspect ratio limit for old apps [Danny Lin]
+fba6eba7 Add support for app signature spoofing [Danny Lin]
+46625a43 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+99f48770 base: SystemUI: Allow flags to be overrideable [Jeferson]
+cc374e06 Revert "Ignore the charging ripple flag." [Jeferson]
+
+* hardware/interfaces
+116b2c5 frameworks: Update HIDL overrideFormat from HAL [Abhijit Trivedi]
+
+* hardware/xiaomi
+57da6c8 aidl: light: Implement blink effect adjustments [Arian]
+
+* kernel/xiaomi/sm8350
+61bca7c966a4 HACK techpack: audio: My build env sucks [Giovanni Ricca]
+
+* packages/apps/Aperture
+6aa5ea8 Aperture: Make the supported quality list an unordered map [Sebastiano Barezzi]
+
+* packages/apps/FMRadio
+fd48607 FMRadio: fix record activity timer being off after a while [nift4]
+6ecc80d FMRadio: match playlist by name instead [nift4]
+c0e02db FMRadio: fix monkey using MENU key can start record [nift4]
+ed586ed FMRadio: fix listen to recordings [nift4]
+64894f2 FMRadio: Play Music is dead - fix saved recordings [nift4]
+9e30f04 FMRadio: androidx conversion, cleanup makefiles [nift4]
+18eee85 FMRadio: use notification channels [nift4]
+
+* packages/apps/Trebuchet
+40f3ef5 Increase blur radius [Alexander Winkowski]
+fc09f7a DepthController: Change blur radius to dimension resource [Danny Lin]
+d492bcb Disable blur on app launch [Alexander Winkowski]
+64c0fd7 Don't draw below Recents [Alexander Winkowski]
+b1de665 Make scrim transparent [Alexander Winkowski]
+2c8ad8f Trebuchet: Move clear all button to actions view [Vachounet]
+27b681b Launcher3: power-off -> screen-off [kubersharma001]
+b115a17 Launcher3: Add toggle for DT2S [DennySPB]
+943f1ca Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/Updater
+9aebad3 Updater: add support for local updates [Joey]
+e87db3c Revert "Updater: 20 and up are integers!" [Giovanni Ricca]
+
+* packages/modules/Permission
+de27383 Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/extra
+677fcd1 extra: build: patches: Unbreak local updater [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+8da86a2 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+ba22c10 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2023-07-02    
+====================
+* device/xiaomi/sm8350-common
+a9be97e sm8350-common: Build Lineage Health HAL [Michael Bestas]
+
+* frameworks/base
+a2909dad Automatic translation import [LineageOS Infra]
+
+* lineage-sdk
+d487fb5 Automatic translation import [LineageOS Infra]
+
+* lineage/wiki
+1c1464c wiki: devices: Add Galaxy F62/M62 [Tim Zimmermann]
+
+* packages/apps/Backgrounds
+243e072 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Contacts
+514e662 Automatic translation import [LineageOS Infra]
+
+* packages/apps/DeskClock
+8eec88b Automatic translation import [LineageOS Infra]
+
+* packages/apps/Dialer
+bcc6f18 Automatic translation import [LineageOS Infra]
+
+* packages/apps/DocumentsUI
+bc1e6b9 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Eleven
+72ca7be Automatic translation import [LineageOS Infra]
+
+* packages/apps/Etar
+4846cdb Automatic translation import [LineageOS Infra]
+
+* packages/apps/Jelly
+0e706e4 Automatic translation import [LineageOS Infra]
+
+* packages/apps/LineageParts
+92bab79 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Messaging
+832e397 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Profiles
+3f1faab Automatic translation import [LineageOS Infra]
+
+* packages/apps/Recorder
+5bd0c9e Automatic translation import [LineageOS Infra]
+
+* packages/apps/Settings
+c7f007a Automatic translation import [LineageOS Infra]
+
+* packages/apps/SetupWizard
+aff7773 Automatic translation import [LineageOS Infra]
+
+* packages/apps/ThemePicker
+16a5a3a Automatic translation import [LineageOS Infra]
+
+* packages/apps/Trebuchet
+b4a700d Automatic translation import [LineageOS Infra]
+
+* packages/apps/Updater
+ae11300 Automatic translation import [LineageOS Infra]
+
+* packages/providers/DownloadProvider
+8b91542 Automatic translation import [LineageOS Infra]
+
+* packages/resources/devicesettings
+1ae641b Automatic translation import [LineageOS Infra]
+
+* system/vold
+2711bf7 vold: fix failing to format zero-ed out SD card [nift4]
+
+* vendor/qcom/opensource/fm-commonsys
+63e405c Automatic translation import [LineageOS Infra]
+
+====================
+     2023-07-01    
+====================
+* lineage/hudson
+b4e4c3e hudson: Add Galaxy F62/M62 (f62) [Tim Zimmermann]
+
+* vendor/extra
+7bf9dfe extra: build: patches: Regen patches [Giovanni Ricca]
+efb57f6 extra: Call vendor/extra/priv [Giovanni Ricca]
+
+* vendor/extra/priv
+c4826be priv: I don't want blur [Giovanni Ricca]
+
+====================
+     2023-06-30    
+====================
+* device/xiaomi/msm8953-common
+2fef529 msm8953-common: gps: Remove all Wno-error flags [Michael Bestas]
+f188120 msm8953-common: gps: Implement list empty error code for msg_q [Albert I]
+e361658 msm8953-common: gps: Reorder initializations list to satisfy warnings [Albert I]
+a8cd1bb msm8953-common: Add dummy perf profile. [Quallenauge]
+
+* lineage/mirror
+8725ba2 Updated to 29-Jun-2023 20:27 UTC [Michael Bestas]
+
+====================
+     2023-06-29    
+====================
+* hardware/hisi
+4027a4e hisi: libinit_hisi: Read model dynamically from oeminfo [R0rt1z2]
+
+* vendor/extra/priv
+c4475f1 priv: Update patches [Giovanni Ricca]
+61fe768 priv: Alex will kill me if i leak this [Giovanni Ricca]
+
+====================
+     2023-06-28    
+====================
+* device/huawei/prague
+63d5b57 prague: Build libinit [Giovanni Ricca]
+
+* kernel/huawei/hi6250-8
+9431d448 BACKPORT: ANDROID: ftrace: fix function type mismatches [Sami Tolvanen]
+
+* vendor/extra/external/ih8sn
+d402f2d ihs8n: Add config for prague [Giovanni Ricca]
+
+====================
+     2023-06-27    
+====================
+* device/hisi/sepolicy
+583b749 [TMP] sepolicy: Permissive [Giovanni Ricca]
+
+* hardware/lineage/compat
+d67ae54 compat: Fix ABI issues [Ivan Vecera]
+
+* vendor/huawei
+0f4aebb prague: Sync with tree [Giovanni Ricca]
+
