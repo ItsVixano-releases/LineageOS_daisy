@@ -1,0 +1,146 @@
+====================
+     2023-07-11    
+====================
+* android
+20afbdd pixel: Add felix support [Michael Bestas]
+
+* build/soong
+7522746 Disable clang-tidy [Danny Lin]
+4ecc59c cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+169729a ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+295388b soong: Specify heap size for metalava for S+ [Michael W]
+7f8110f soong: Increase Java heap size for r8 [LeddaZ]
+fcca7fb soong: increase heap size for metalava [LeddaZ]
+
+* frameworks/av
+cbad1fe SessionConfigurationUtils: Allow privileged camera apps to create raw streams for raw capable cameras [Arian]
+
+* frameworks/base
+212c4082 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+4739cd3e Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+ee35c2ed Camera: Expose aux camera if packagename is null [wbs306]
+4d60fe85 SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+79c0e789 Revert "Update Media Seekbar Thumb Shape" [00day0]
+80e7a227 core: Remove default aspect ratio limit for old apps [Danny Lin]
+f3c86a7e Add support for app signature spoofing [Danny Lin]
+9b451d50 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+57b99e07 base: SystemUI: Allow flags to be overrideable [Jeferson]
+f45243a5 Revert "Ignore the charging ripple flag." [Jeferson]
+
+* hardware/interfaces
+ec5bcc6 frameworks: Update HIDL overrideFormat from HAL [Abhijit Trivedi]
+
+* hardware/lineage/interfaces
+83262c9 fixup! health: Wait for required paths indefinitely [Luofan Chen]
+
+* hardware/xiaomi
+9586dc3 aidl: light: Implement blink effect adjustments [Arian]
+
+* kernel/xiaomi/sm8350
+a6735aa4d465 HACK techpack: audio: My build env sucks [Giovanni Ricca]
+
+* lineage/wiki
+d3fc5f2 wiki: Run `sass-migrator.js division {}` on all scss files [LuK1337]
+
+* packages/apps/FMRadio
+f402c5f FMRadio: fix record activity timer being off after a while [nift4]
+b5639f8 FMRadio: match playlist by name instead [nift4]
+c08dde1 FMRadio: fix monkey using MENU key can start record [nift4]
+cb350a3 FMRadio: fix listen to recordings [nift4]
+6bbec36 FMRadio: Play Music is dead - fix saved recordings [nift4]
+af97215 FMRadio: androidx conversion, cleanup makefiles [nift4]
+1d0417a FMRadio: use notification channels [nift4]
+
+* packages/apps/Trebuchet
+dc199bf Increase blur radius [Alexander Winkowski]
+5209339 DepthController: Change blur radius to dimension resource [Danny Lin]
+7d0f05a Disable blur on app launch [Alexander Winkowski]
+60bff1d Don't draw below Recents [Alexander Winkowski]
+3f569a7 Make scrim transparent [Alexander Winkowski]
+d388426 Trebuchet: Move clear all button to actions view [Vachounet]
+13f2c9c Launcher3: power-off -> screen-off [kubersharma001]
+06604b9 Launcher3: Add toggle for DT2S [DennySPB]
+deb501f Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/Updater
+004f7f6 Updater: add support for local updates [Joey]
+
+* packages/modules/Permission
+84c4e50 Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/extra
+fe3a7bf extra: build: patches: Regen patches [Giovanni Ricca]
+
+* vendor/lineage
+4768246 config: Allow overriding ro.support_one_handed_mode [Michael Bestas]
+
+* vendor/qcom/opensource/libfmjni
+00dc3cb libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+1dd6924 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2023-07-10    
+====================
+* external/setupcompat
+9627624 Don't use card view on tablets/foldables [Michael Bestas]
+
+* lineage-sdk
+c407667 ChargingControl: Use ServiceManager.waitForDeclaredService() [LuK1337]
+
+* lineage/hudson
+6b0105f hudson: Add Nubia Z18 (nx606j) [Cyborg2017]
+
+* packages/apps/LineageParts
+5e85ebc LineageParts: Make sure wakelock is held before releasing it [LuK1337]
+
+====================
+     2023-07-09    
+====================
+* build/soong
+32f43e7 soong: Properly sort dumpvar additions [Nolen Johnson]
+
+* lineage/crowdin
+cdb398f crowdin: Update packages/apps/Updater strings.xml path [LuK1337]
+
+* packages/apps/Updater
+185b5de Updater: Don't show delete twice [Michael W]
+
+====================
+     2023-07-08    
+====================
+* build/make
+cf5e4f7 Merge tag 'android-13.0.0_r61' into staging/lineage-20.0_merge-android-13.0.0_r61 [Michael Bestas]
+
+* frameworks/av
+2a75cd6 Merge tag 'android-13.0.0_r61' into staging/lineage-20.0_merge-android-13.0.0_r61 [Michael Bestas]
+
+* frameworks/base
+ff380f86 Merge tag 'android-13.0.0_r61' into staging/lineage-20.0_merge-android-13.0.0_r61 [Michael Bestas]
+
+* lineage/mirror
+7d94ee5 Updated to 07-Jul-2023 12:56 UTC [Kevin F. Haggerty]
+
+* lineage/scripts
+3951b65 pixel: Support wifi only devices [Chirayu Desai]
+
+* packages/apps/Settings
+ed01619 Merge tag 'android-13.0.0_r61' into staging/lineage-20.0_merge-android-13.0.0_r61 [Michael Bestas]
+
+* packages/modules/Wifi
+8302866 Merge tag 'android-13.0.0_r61' into staging/lineage-20.0_merge-android-13.0.0_r61 [Michael Bestas]
+
+====================
+     2023-07-07    
+====================
+* vendor/extra
+2b4f964 extra: build: patches: Regen patches [Giovanni Ricca]
+
+====================
+     2023-07-06    
+====================
+====================
+     2023-07-05    
+====================
+* kernel/xiaomi/sm8350
+f4f0cc4eb201 Revert "power: supply: qti_battery_charger: Conditionally revert 690e81a4109b6f8702589342972bbc07ead48fd6" [Giovanni Ricca]
+
