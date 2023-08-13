@@ -1,0 +1,145 @@
+====================
+     2023-08-13    
+====================
+* build/soong
+1ad512e Disable clang-tidy [Danny Lin]
+dd54179 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+6d3c2a8 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+34d59ec soong: Specify heap size for metalava for S+ [Michael W]
+beace5f soong: Increase Java heap size for r8 [LeddaZ]
+39312f7 soong: increase heap size for metalava [LeddaZ]
+
+* frameworks/av
+72cc4d2 SessionConfigurationUtils: Allow privileged camera apps to create raw streams for raw capable cameras [Arian]
+
+* frameworks/base
+5fd8fbfb Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+4cf84344 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+53bdb701 Camera: Expose aux camera if packagename is null [wbs306]
+f1ff2cee SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+c2bee7cc Revert "Update Media Seekbar Thumb Shape" [00day0]
+87b0f757 core: Remove default aspect ratio limit for old apps [Danny Lin]
+2d10bad7 Add support for app signature spoofing [Danny Lin]
+79165966 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+68bc3ee0 base: SystemUI: Allow flags to be overrideable [Jeferson]
+ed69303d Revert "Ignore the charging ripple flag." [Jeferson]
+
+* hardware/hisi
+b4fa278 hisi: livedisplay: Store RGB values globally [R0rt1z2]
+
+* hardware/interfaces
+b4c6edc frameworks: Update HIDL overrideFormat from HAL [Abhijit Trivedi]
+
+* hardware/xiaomi
+1716daa aidl: light: Implement blink effect adjustments [Arian]
+
+* kernel/configs
+57e06b0 p/android-4.4: Relax vintf requirements [Giovanni Ricca]
+
+* kernel/xiaomi/sm8350
+f057021ea3fc HACK techpack: audio: My build env sucks [Giovanni Ricca]
+
+* lineage/hudson
+571555f Regenerate device dependency mappings [LineageOS Infra]
+
+* lineage/mirror
+ad179a2 Updated to 12-Aug-2023 15:30 UTC [Kevin F. Haggerty]
+
+* packages/apps/Trebuchet
+5ff808c Increase blur radius [Alexander Winkowski]
+3c8153d DepthController: Change blur radius to dimension resource [Danny Lin]
+06ad98c Disable blur on app launch [Alexander Winkowski]
+8f08e28 Make scrim transparent [Alexander Winkowski]
+e5ca088 Trebuchet: Move clear all button to actions view [Vachounet]
+61de527 Launcher3: power-off -> screen-off [kubersharma001]
+f8ec4c6 Launcher3: Add toggle for DT2S [DennySPB]
+f3905ec Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/Updater
+ae537f5 Updater: add support for local updates [Joey]
+
+* packages/modules/Permission
+d5dbc8c Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/extra
+2321825 extra: build: patches: Update for august patches [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+0be9533 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+9d104f4 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2023-08-12    
+====================
+* android
+e7dfeaa manifest: August 2023 Security update [Michael Bestas]
+
+* lineage/wiki
+0f600a0 wiki: adding_device: Make lowest supported version dynamic [LuK1337]
+
+====================
+     2023-08-11    
+====================
+* hardware/qcom-caf/wlan
+1dd1fe0 wcnss-service: Restore OSS building functionality [Ricky Cheung]
+
+====================
+     2023-08-10    
+====================
+====================
+     2023-08-09    
+====================
+* build/make
+42dec80 Merge tag 'android-13.0.0_r67' into staging/lineage-20.0_merge-android-13.0.0_r67 [Michael Bestas]
+
+* device/huawei/hi6250-8-common
+9f83121 hi6250-8-common: Load libsensor_vendor shim [Giovanni Ricca]
+
+* frameworks/base
+4915af0e Merge tag 'android-13.0.0_r72' of https://android.googlesource.com/platform/frameworks/base into staging/lineage-20.0_merge-android-13.0.0_r67 [Michael Bestas]
+
+* packages/apps/Trebuchet
+f71ed2a Merge tag 'android-13.0.0_r71' of https://android.googlesource.com/platform/packages/apps/Launcher3 into staging/lineage-20.0_merge-android-13.0.0_r67 [Michael Bestas]
+
+* packages/providers/TelephonyProvider
+72419e3 Merge tag 'android-13.0.0_r67' into staging/lineage-20.0_merge-android-13.0.0_r67 [Michael Bestas]
+
+* packages/services/Telecomm
+6f28986 Merge tag 'android-13.0.0_r67' into staging/lineage-20.0_merge-android-13.0.0_r67 [Michael Bestas]
+
+* vendor/lineage
+9d239d1 August 2023 Security update [Chirayu Desai]
+
+====================
+     2023-08-08    
+====================
+* device/lineage/sepolicy
+155d37a sepolicy: vendor: Allow Trust to get vendor SPL [razorloves]
+
+* vendor/extra/external/ih8sn
+e8f947f ihs8n: Add config for miatoll [Giovanni Ricca]
+
+====================
+     2023-08-07    
+====================
+* lineage-sdk
+c8b9013 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Aperture
+54fab97 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Jelly
+8f785f2 Automatic translation import [LineageOS Infra]
+
+* packages/apps/LineageParts
+4b20fe3 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Recorder
+32001be Automatic translation import [LineageOS Infra]
+
+* packages/resources/devicesettings
+eaeed69 Automatic translation import [LineageOS Infra]
+
+* vendor/extra
+9ad5335 extra: tools: Kick in miatoll [Giovanni Ricca]
+
