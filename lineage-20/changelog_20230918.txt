@@ -1,0 +1,256 @@
+====================
+     2023-09-18    
+====================
+* build/soong
+038c9a8 Disable clang-tidy [Danny Lin]
+f6c2a09 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+e646b36 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+88e3e75 soong: Specify heap size for metalava for S+ [Michael W]
+4706b7a soong: Increase Java heap size for r8 [LeddaZ]
+97f3a1a soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/msm8953-common
+73d2b22 msm8953-common: rootdir: Don't read bluetooth.hciattach [Giovanni Ricca]
+2a46ce1 msm8953-common: rootdir: Don't start gamed [Giovanni Ricca]
+ea15356 msm8953-common: rootdir: Don't set store_user nodes to 0 [Giovanni Ricca]
+a5063ea msm8953-common: sepolicy: Allow hal_gnss_qti to get xtra_control_prop [Nolen Johnson]
+41de346 msm8953-common: sepolicy: Resolve BPF denials [Nolen Johnson]
+
+* device/xiaomi/sm8350-common
+f5ab2ab sm8350-common: i Don't Want To Format Data [Giovanni Ricca]
+
+* frameworks/av
+ba70b837d6 SessionConfigurationUtils: Allow privileged camera apps to create raw streams for raw capable cameras [Arian]
+
+* frameworks/base
+a89fc25f Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+275bfeee Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+0f4da644 Camera: Expose aux camera if packagename is null [wbs306]
+c47d30f7 SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+e03976b4 Revert "Update Media Seekbar Thumb Shape" [00day0]
+932dd457 core: Remove default aspect ratio limit for old apps [Danny Lin]
+946cc1ed Add support for app signature spoofing [Danny Lin]
+1f5b77ce AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+b5efda97 base: SystemUI: Allow flags to be overrideable [Jeferson]
+56521f5f Revert "Ignore the charging ripple flag." [Jeferson]
+
+* hardware/interfaces
+a52f6ba frameworks: Update HIDL overrideFormat from HAL [Abhijit Trivedi]
+
+* hardware/xiaomi
+a41736e aidl: light: Implement blink effect adjustments [Arian]
+
+* kernel/configs
+4d2394d p/android-4.4: Relax vintf requirements [Giovanni Ricca]
+
+* kernel/xiaomi/sm8350
+ae8ed572a92e HACK techpack: audio: My build env sucks [Giovanni Ricca]
+
+* lineage/wiki
+5bd86ab wiki: Add "unknown device" [Michael W]
+
+* packages/apps/Aperture
+6de5535 Aperture: Don't pass `repository` unnecessarily [LuK1337]
+
+* packages/apps/Trebuchet
+d2db2a4 Increase blur radius [Alexander Winkowski]
+8f2b0ff DepthController: Change blur radius to dimension resource [Danny Lin]
+40592e4 Disable blur on app launch [Alexander Winkowski]
+783e54d Make scrim transparent [Alexander Winkowski]
+40cf611 Trebuchet: Move clear all button to actions view [Vachounet]
+faad382 Launcher3: power-off -> screen-off [kubersharma001]
+fe93465 Launcher3: Add toggle for DT2S [DennySPB]
+f2883a2 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/Updater
+64261f1 Updater: Use generateBp plugin [LuK1337]
+
+* packages/modules/Permission
+cf975df Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/extra
+1c444b5 extra: props: Move avoid_gfx_accel prop on system_ext [Giovanni Ricca]
+
+* vendor/lineage
+2a0d417 kernel: Allow to limit the used .dtb files for the final DTB image [SGCMarkus]
+
+* vendor/qcom/opensource/libfmjni
+a3307ae libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+32b1816 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2023-09-17    
+====================
+* build/make
+88f0375 Bump Security String to 2023-09-05 [Kevin F. Haggerty]
+
+* frameworks/base
+87052f70 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/frameworks/base into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* lineage-sdk
+9e85082 trust: Fix variable usage before null check [Tommaso Fonda]
+
+* lineage/hudson
+0753f4f Regenerate device dependency mappings [LineageOS Infra]
+
+* lineage/mirror
+4e745a1 Updated to 17-Sep-2023 12:00 UTC [Tim Schumacher]
+
+====================
+     2023-09-16    
+====================
+* android
+fed3b28 Track our own fork(s) for 2023-09 ASB patching [Kevin F. Haggerty]
+
+* device/xiaomi/msm8953-common
+6cd38df msm8953-common: rootdir: Disable qemu.hw.mainkeys setprop [Erfan Abdi]
+921e7f7 msm8953-common: sepolicy: Label discard_max_bytes [Nolen Johnson]
+d29cc1a msm8953-common: sepolicy: Label Extcon nodes [Giovanni Ricca]
+d4ee93d msm8953-common: Drop audiosphere [Dhina17]
+
+* external/chromium-webview/patches
+a4b0104 Update Chromium Webview to 117.0.5938.60 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm
+a80f484 Update Chromium Webview arm prebuilt to 117.0.5938.60 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm64
+f0bcd13 Update Chromium Webview arm64 prebuilt to 117.0.5938.60 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86
+1355d68 Update Chromium Webview x86 prebuilt to 117.0.5938.60 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86_64
+d44bdfd Update Chromium Webview x86_64 prebuilt to 117.0.5938.60 [Kevin F. Haggerty]
+
+* frameworks/av
+eedaeee7b1 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/frameworks/av into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* frameworks/native
+2d384e9 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/frameworks/native into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* kernel/xiaomi/msm8953
+1ea7e46cc1d6 Merge remote-tracking branch 'msm8953/lineage-20' into lineage-20 [Giovanni Ricca]
+
+* lineage/scripts
+23ef447 build-webview: Update default webview to 117.0.5938.60 [Kevin F. Haggerty]
+
+* packages/apps/Dialer
+0eb50202 fixup! Dialer: Introduce asking for default dialer role [LuK1337]
+
+* packages/apps/Eleven
+07207d0 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Etar
+6ec123e Automatic translation import [LineageOS Infra]
+
+* packages/apps/LineageParts
+53c4e9a Automatic translation import [LineageOS Infra]
+
+* packages/apps/Nfc
+15cd920 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/apps/Nfc into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/apps/Settings
+af9db16 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/apps/Settings into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/apps/Trebuchet
+80cbcb4 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/apps/Launcher3 into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/inputmethods/LatinIME
+a451d52 Automatic translation import [LineageOS Infra]
+
+* packages/modules/Bluetooth
+bf9abb2 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/modules/Bluetooth into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/modules/NeuralNetworks
+b839fd3 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/modules/NeuralNetworks into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/providers/MediaProvider
+4dc6b69 Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/providers/MediaProvider into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* packages/resources/devicesettings
+4b27258 Automatic translation import [LineageOS Infra]
+
+* packages/services/Telephony
+544ea2d Merge tag 'android-security-13.0.0_r9' of https://android.googlesource.com/platform/packages/services/Telephony into staging/lineage-20.0_merge_android-security-13.0.0_r9 [Kevin F. Haggerty]
+
+* vendor/crowdin
+8bce613 Automatic translation import [LineageOS Infra]
+
+* vendor/qcom/opensource/power
+f16c47b power: Remove unused variable [Chippa-a]
+
+* vendor/xiaomi/msm8953-common
+89d32d8 msm8953-common: Drop audiosphere [Dhina17]
+
+====================
+     2023-09-15    
+====================
+* device/lineage/sepolicy
+f568c2e common: Move in mediashell rules from ATV [LuK1337]
+
+====================
+     2023-09-14    
+====================
+* kernel/xiaomi/msm8953
+30c40317999d Revert "power: qpnp-smbcharger: init power supply type as USB" [Giovanni Ricca]
+
+* packages/apps/Jelly
+562bc91 Jelly: Run ./gradlew app:generateBp [Sebastiano Barezzi]
+
+====================
+     2023-09-13    
+====================
+* device/xiaomi/msm8953-common
+2d4f521 msm8953-common: rootdir: Setup all the sub-system as related. [Georg Veichtlbauer]
+5a93f5b msm8953-common: Explicitly disable AVB [Nolen Johnson]
+85b6ca4 msm8953-common: Switch to fragmented defconfigs [Giovanni Ricca]
+fc92fe6 msm8953-common: Drop TARGET_KERNEL_VERSION [Giovanni Ricca]
+d57dbd3 msm8953-common: Set ro.crypto.volume.filenames_mode to aes-256-cts [bohu]
+bf7a2fd msm8953-common: ueventd: Remove all permissions from /sys/devices/soc0/serial_number [Michael Bestas]
+bcd545d msm8953-common: Implement xtra-daemon control via property [Michael Bestas]
+b4e658c msm8953-common: gps: Remove XTRA version check. [Kevin Tang]
+93cf315 msm8953-common: gps: Remove all Wno-error flags [Michael Bestas]
+6dab3f4 msm8953-common: gps: Implement list empty error code for msg_q [Albert I]
+30c9baf msm8953-common: gps: Reorder initializations list to satisfy warnings [Albert I]
+2a8bd45 msm8953-common: sepolicy: Set vendor_fp_prop to restricted [Giovanni Ricca]
+a2da821 msm8953-common: sepolicy: Allow FMRadio app what it needs [Nolen Johnson]
+a5aee13 msm8953-common: Automatically add apk/jar/vintf fragments to PRODUCT_PACKAGES [Michael Bestas]
+5ba4943 msm8953-common: Fix PowerOffAlarm [Georg Veichtlbauer]
+737acee msm8953-common: rootdir: add power_off_alarm into init.rc [Qimeng Pan]
+2e47fe5 msm8953-common: rootdir: Add vendor prefix to power_off_alarm service [Mao Jinlong]
+3cd3f87 msm8953-common: rootdir: Add power off alarm service [Mao Jinlong]
+e5cc6fd msm8953-common: Enable Qcrild [Giovanni Ricca]
+
+* kernel/xiaomi/msm8953
+259ed806b0d3 binder: Set binder_debug_mask=0 to suppress logging [John Dias]
+8663cb00d558 android: binder: Rate-limit debug and userspace triggered err msgs [Sherry Yang]
+200243f30a19 ANDROID: binder: retry security_secid_to_secctx() [Carlos Llamas]
+c0d59f08cd86 UPSTREAM: binder: Return EFAULT if we fail BINDER_ENABLE_ONEWAY_SPAM_DETECTION [Luca Stefani]
+73acfadd3629 UPSTREAM: binder: tell userspace to dump current backtrace when detected oneway spamming [Hang Lu]
+fac46706d76d FROMGIT: binder: fix the missing BR_FROZEN_REPLY in binder_return_strings [Hang Lu]
+55f8e572dd0e BACKPORT: FROMGIT: binder: fix freeze race [Li Li]
+9f40da64bbe6 binder: don't unlock procs while scanning contexts [Marco Ballesio]
+124e9cac835f binder: don't log on EINTR [Marco Ballesio]
+5684c8de1a82 binder: freeze multiple contexts [Marco Ballesio]
+1b9994737a81 binder: use EINTR for interrupted wait for work [Marco Ballesio]
+705f4fe0fc04 binder: introduce the BINDER_GET_FROZEN_INFO ioctl [Marco Ballesio]
+c69396579bc6 binder: implement BINDER_FREEZE ioctl [Marco Ballesio]
+
+====================
+     2023-09-12    
+====================
+* hardware/qcom-caf/sm8550/audio/agm
+a72154a agm: fixup!: OSS compile for plugins [Akash Srivastava]
+
+* vendor/extra
+67a5433 extra: props: Set default ADB TCP port [Giovanni Ricca]
+a07d748 ectra: Apply Android GO Optimizations on hi6250 as well [Giovanni Ricca]
+5319b9c extra: rro_overlays: WebViewOverlay: Add support to Mulch WebView [Giovanni Ricca]
+6eec875 extra: rro_overlays: WebViewOverlay: Drop Bromite WebView support [Giovanni Ricca]
+107c9fc extra: rro_overlays: Drop Bromite* prefix [Giovanni Ricca]
+a88981c Revert "extra: Drop Bromite WebView support" [Giovanni Ricca]
+
+* vendor/firmware
+e51b310 FP4: FP4.SP2K.B.089.20230807 [Michael Bestas]
+
