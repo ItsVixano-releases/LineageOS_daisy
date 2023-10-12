@@ -1,0 +1,304 @@
+====================
+     2023-10-12    
+====================
+* art
+75c8b36 Adjust jit warmup threshold. [Nicolas Geoffray]
+f36b09f Optimize comparisons where lhs and rhs are the same [Santiago Aboy Solanes]
+a55aea1 Optimize the System.arraycopy(char) arm64 intrinsic [Richard Neill]
+35922fd arm64: Faster invoke stub routines. [Vladimir Marko]
+6433a9b OnDeviceRefresh::GetSystemServerImagePath support system_ext partition [huyuxin]
+c9d30c8 Add phis in SimplifyIfs to enable branch redirection [Santiago Aboy Solanes]
+8a5d540 Add a write barrier elimination pass [Santiago Aboy Solanes]
+84670ae Remove tries which don't contain throwing instructions [Santiago Aboy Solanes]
+dfdff31 Allow LSA to run with acquire/release operations [Santiago Aboy Solanes]
+283eb5d Swap optimizations when inlining [Santiago Aboy Solanes]
+84a53f8 constify JNINativeMethod tables [Daniel Micay]
+577218b ART: dex2oat and instruction_set_features: utilize modified runtime capabilities set [XeonDead]
+68a406e art: add check for __ARM_FEATURE_ATOMICS that indicates LSE atomics availability on target [XeonDead]
+ef356ab For cortex-a75/a55 validate features with hwcaps. [Nicolas Geoffray]
+95d25da art: Disable debug tracing on production builds [Danny Lin]
+f28dac5 Update concurrent start bytes when app switches from background to foreground. [qiubowen]
+27e7527 Don't inline methods whose basic blocks end with a throw [Santiago Aboy Solanes]
+17e3f62 ART: Add regression test for obsolete crash. [Vladimir Marko]
+bdb4b59 Make LoadMethod{Handle,Type} instruction throwing. [Nicolas Geoffray]
+c967a7e Cleanup libart-compiler version script [Dmitrii Ishcheikin]
+b9e7481 avoid "> >" in demangled names [Chih-Hung Hsieh]
+f764930 Hide internal libart-compiler symbols [Dmitrii Ishcheikin]
+fb418a4 ART: Change hash table load factors in images to 0.6. [Vladimir Marko]
+9687396 arm64: Rewrite `art_quick_aput_obj`. [Vladimir Marko]
+7f552c7 Only madvise for jank-perceptible processes [Jared Duke]
+dfc1bc5 Make linear loop optimization safe from overflow [Santiago Aboy Solanes]
+7669da8 Adjust thresholds for methods that share method hotness counter. [Nicolas Geoffray]
+97bba33 Only madvise primary oat/vdex artifacts [Jared Duke]
+0a458a6 Optimize GC judgment process from foreground to background [qiubowen]
+9294856 Explicitly madvise boot image oat files [Jared Duke]
+
+* bionic
+e0c549e Switch to jemalloc memory allocator [Danny Lin]
+e7cb8fb Revert "Add ability to build scudo-free 32-bit libc variant." [Alexander Winkowski]
+
+* build/soong
+a75db03 use speed compiler filter for dexpreopt by default [Daniel Micay]
+0ae4228 Disable clang-tidy [Danny Lin]
+8834aba cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+335fa9d ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+a8ca620 soong: Specify heap size for metalava for S+ [Michael W]
+01856e2 soong: Increase Java heap size for r8 [LeddaZ]
+6c543c3 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/sm6250-common
+cf02581 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+2602ce0 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+c0b02a2 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+ee65459 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* external/jemalloc_new
+9d89a12 Add compile option to speed up code. [Christopher Ferris]
+3210788 Use ELF TLS [Danny Lin]
+d2039de android: Disable malloc_iterate [Danny Lin]
+9995425 Enable usage of MADV_FREE [Danny Lin]
+989e2f1 Revert "jemalloc: disable JEMALLOC_STATS" [Juhyung Park]
+6b787c7 jemalloc: always assume overcommitting memory [Park Ju Hyung]
+36c8e61 jemalloc: remove THP support [Park Ju Hyung]
+14cb7ec jemalloc: disable JEMALLOC_STATS [Park Ju Hyung]
+ef9a0c4 jemalloc: disable config parsing altogether [Park Ju Hyung]
+960cc78 jemalloc: remove deprecated size_classes.h [Park Ju Hyung]
+3703603 Update Soong blueprint for jemalloc 5.2.1 [Danny Lin]
+12cba8d Update Android extension functions for jemalloc 5.2.1 [Danny Lin]
+54c695a Regenerate configs for 5.2.1 update [Danny Lin]
+b97db31 Fix typo in tcache stats check [Danny Lin]
+78c36b6 Merge tag '5.2.1' into HEAD [Danny Lin]
+
+* frameworks/av
+90bd58d353 SessionConfigurationUtils: Allow privileged camera apps to create raw streams for raw capable cameras [Arian]
+
+* frameworks/base
+99400528 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+ee6363ec screenrecord: Use HEVC [Kazuki Hashimoto]
+45eedceb Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+b8f46e06 stop auto-granting location to system browsers [Daniel Micay]
+9d409334 Use try-with-resources to avoid accidentaly leaking unclosed objects. [Mateus Azis]
+fd504aeb HWUI: reset buffer state only for ES3 context [Shih-hsin Li]
+551eea23 HWUI: reset buffer state after MakeCurrent [Shih-Hsin Li]
+e2075df4 Fix cursor not blinking when view re-added to layout [Steven Terrell]
+3ba25174 Do not crash webview if its group creation fails due to a dead process [Suren Baghdasaryan]
+98084a64 Fix AudioMix.equals() [Alex Leung]
+19c5760d Close DirectoryStream in ActivityThread after use. [Mateus Azis]
+0f613597 Improve Transition GC initiation by improving the Frameworks triggering signal [Wessam Hassanein]
+b73b6aa2 Fix some memory leakage [Houxiang Dai]
+28ff9647 base: set scrolling friction to 0.006f [Jake Weinstein]
+36a28cf5 ViewConfiguration: Set scroll friction to 0.012 [Alex Naidis]
+518da2e7 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+ec54aa49 hwui: renderthread/CanvasContext: Reduce the timeout for dequeueing buffers [electimon]
+716d2828 Opt libhwui out of -fprofile-sample-accurate [Yi Kong]
+3cffb3fe constify JNINativeMethod tables [Daniel Micay]
+c78764a0 fix NullPointException when pkg is null [Sichen Liu]
+0696f465 Switch back to the application on /system when UID and path changed [Wen Zhang]
+1ab69999 use max_adj to control process final adj [guolun Xue]
+91e76546 When the sharedUserSetting of the application on /system is different from the sharedUserSetting on /data, we should trust the sharedUserSetting on /system [gang.huang]
+e1a198b8 Treat process group creation failure due to a dead process as non-fatal [Suren Baghdasaryan]
+23cedc9b Treat failure to create a process group as fatal [Suren Baghdasaryan]
+c337c771 Cleanup and consistency around system server profiling. [Nicolas Geoffray]
+8ddc8058 check whitelisted packages exclude nonsystem app [Wen Zhang]
+5bbfae37 WindowProcessController: Fix potential memory leak [Adrian Roos]
+0ece9714 Catch exception when dump local window. [qinyige1]
+00e23f7f Fix hang when dumping local window. [qinyige1]
+d16c6ba4 Do not kill the server process itself [Bart Van Assche]
+dbf63029 Add null pointer check to avoid system crash. [Jessie Hao]
+fe1757e7 Fix erroneous self deletion on SkImage creation failure [Nolan Scobie]
+cd891320 Only create clip bound object when RenderNode is not quick rejected [Zhao Qin]
+9f1e3329 Shrink by 0.5 for YUV TextViews [John Reck]
+e685d72c Touch is not working [pioush.kumar-IN009423]
+5e2a58ae Activity not finishing even after pressing back key [pioush.kumar-IN009423]
+79a81bdb Pause is getting scheduled 2 times [pioush.kumar-IN009423]
+a9356dcb System crash during dismissing split in multi-user scenario [pioush.kumar-IN009423]
+bfbf98ed Fix NPE when pip onAnimationEnd [wangdongdong6]
+e62e9fce Fix the pip bounds error when entering pip mode. [buwenjing]
+7bef5e62 Youtube application when moving to PIP animation was very bad [pioush.kumar-IN009423]
+69bb3437 Add a new file for the boot image. [Nicolas Geoffray]
+2d195974 Do not preload java.util.ImmutableCollections. [Almaz Mingaleev]
+7187417f Do not preload ThreadLocalRandom class. [Almaz Mingaleev]
+e95b77c0 Use SecureRandom instead of java.util.Random. [Almaz Mingaleev]
+495fcca4 Remove build fingerprint from screenshot EXIF [June]
+2ca65d20 Cache pin algorithms in PinSet [Till Kottmann]
+f61bdc24 Cache KeyStoreService [Till Kottmann]
+a97f3efc (Point) Only calculate sin and cos once [Till Kottmann]
+372fdb25 Paint: Enable subpixel text positioning by default [Danny Lin]
+169fc370 SystemUI: Require unlocking to use sensitive QS tiles [Danny Lin]
+0b1430f4 display: Render screen-off fade animation in linear sRGB space [Danny Lin]
+10124d6f Editor: Disable magnifier position animation [Danny Lin]
+b0dc7881 Remove unnecessary HashMap instantiation [Josep del Rio]
+bd7d2a18 EventLog: Disable event writing in production builds [Danny Lin]
+c9c4c19a Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+dafb1f63 PackageInfo: Optimize ApplicationInfo creation [Danny Lin]
+4e3cc627 Trace: Disable debug tracing on production builds [Danny Lin]
+44513c8a ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+f49e02e1 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+6050aeab InsetsStateController: Replace ArrayMap with HashMap for performance [Danny Lin]
+89001466 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+bde9cc50 LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+9dffb0af Camera: Expose aux camera if packagename is null [wbs306]
+982ce24c SystemUI: Add delete action to screen recorder notification [Sourajit Karmakar]
+157658ff Revert "Update Media Seekbar Thumb Shape" [00day0]
+b4947173 SystemUI: Remove Android build number from QS footer [Danny Lin]
+b175895e SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+56704df3 core: Remove old app target SDK dialog [Danny Lin]
+f8d100f7 core: Remove default aspect ratio limit for old apps [Danny Lin]
+ac558f93 Add support for app signature spoofing [Danny Lin]
+c29746a5 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+3b7c204d base: SystemUI: Allow flags to be overrideable [Jeferson]
+64b83951 Revert "Ignore the charging ripple flag." [Jeferson]
+a28ea8c1 fixup! SystemUI: Add VPN tile [Dominik Baronelli]
+
+* frameworks/native
+e2752dc sf: avoiding unnecessary frame skip to reduce janks. [binzhang]
+5a7b2f4 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+1503dde Fix unintended buffer canceling [Kwangkyu Park]
+ef8f713 Skip transaction processing if the surface damage stays the same in Layer::setSurfaceDamageRegion. [Sally Qi]
+dfe454b DO NOT MERGE: SF: Fix a race between layer creation and apply transaction [Vishnu Nair]
+45a5136 Fix the shadow problem caused by layer parent switching [xinying1]
+f40fd7d libbinder: O_CLOFORK [Steven Moreland]
+2ddb403 It's no need to start the dispatch cycle going if the outbound queue was not previously empty. [hongzuo liu]
+
+* hardware/xiaomi
+2268860 aidl: light: Implement blink effect adjustments [Arian]
+
+* kernel/configs
+15e5801 p/android-4.4: Relax vintf requirements [Giovanni Ricca]
+
+* kernel/xiaomi/sm8350
+b6aac9ba06fa HACK techpack: audio: My build env sucks [Giovanni Ricca]
+
+* lineage/mirror
+c4ebb6f Updated aosp-minimal to 12-Oct-2023 12:01 UTC [Tim Schumacher]
+
+* lineage/wiki
+60a939c wiki: Prepend wiki_dir before vendor/bundle/ [LuK1337]
+
+* packages/apps/LineageParts
+6662663 LineageParts: Fix RuntimeException when running PartsUpdater [LuK1337]
+
+* packages/apps/Trebuchet
+21e37f7 Increase blur radius [Alexander Winkowski]
+db8efec DepthController: Change blur radius to dimension resource [Danny Lin]
+4838b25 Disable blur on app launch [Alexander Winkowski]
+9ec8f29 Make scrim transparent [Alexander Winkowski]
+2ac471b Trebuchet: Move clear all button to actions view [Vachounet]
+f6c377c Launcher3: power-off -> screen-off [kubersharma001]
+47a9acd Launcher3: Add toggle for DT2S [DennySPB]
+455dd62 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+a7aaab3 SettingsActivity: Hide home screen rotation pref if not supported [Bruno Martins]
+
+* packages/modules/Permission
+2d29b6e Utils: add FAKE_PACKAGE_SIGNATURE to platform permissions [Vachounet]
+
+* vendor/qcom/opensource/libfmjni
+0077d35 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+ce15b27 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2023-10-11    
+====================
+* packages/apps/Aperture
+4ad48ce Aperture: Use prebuilt SDK version [LuK1337]
+
+* packages/apps/Jelly
+f0a7c30 Jelly: Use prebuilt SDK version [LuK1337]
+
+* packages/apps/Recorder
+5e734b2 Recorder: Use prebuilt SDK version [LuK1337]
+
+* vendor/extra/priv
+d2e4877 priv: dlopener: Build both 32bit and 64bit unconditionally [Giovanni Ricca]
+d166894 priv: dlopener: Use logging macros instead [Giovanni Ricca]
+
+====================
+     2023-10-10    
+====================
+* device/google/atv
+bec7fb5 atv_base: Include default translations [Bruno Martins]
+
+* lineage/hudson
+068a525 hudson: promote tissot to 20 [abhinavgupta371]
+
+* packages/apps/SetupWizard
+0a77fdb WelcomeActivity: Only show emergency call button if supported [Bruno Martins]
+
+* vendor/extra
+e222c35 extra: Enable camera override format from reserved [Arian]
+91e14c1 extra: Drop merged patch [Giovanni Ricca]
+09ebcc5 extra: Upload vendor image as well [Giovanni Ricca]
+
+* vendor/extra/priv
+313ebae priv: dlopener: Format with clang-format [Giovanni Ricca]
+91ca242 priv: import dlopener debugging tool [A2L5E0X1]
+
+* vendor/lineage
+fea85da vendor/lineage: Hookup TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED [Rohit Sekhar]
+
+====================
+     2023-10-09    
+====================
+* hardware/hisi
+35a99e8 [WIP] hisi: audio: Add a v2.0 -> v4.0 wrapper [Sebastiano Barezzi]
+
+* vendor/extra
+4a3eefa extra: LineageOS-21.0 [Giovanni Ricca]
+
+====================
+     2023-10-08    
+====================
+* build/make
+055b769 Bump Security String to 2023-10-06 [Kevin F. Haggerty]
+
+* device/hisi/sepolicy
+2e3305b [TMP] sepolicy: Permissive [Giovanni Ricca]
+
+* device/huawei/hi6250-8-common
+7d3ce6c hi6250-8-common: Update blobs to 8.0.0.416(C185) [Giovanni Ricca]
+
+* device/huawei/prague
+1e9fec3 prague: Don't patch camera hal [Giovanni Ricca]
+
+====================
+     2023-10-07    
+====================
+* android
+b55bc9d Track our own fork(s) for 2023-10 ASB patching [Kevin F. Haggerty]
+
+* frameworks/native
+ec30387 Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/frameworks/native into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* packages/apps/Settings
+cbb7cf3 Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/packages/apps/Settings into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* packages/modules/Bluetooth
+106e1c4 Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/packages/modules/Bluetooth into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* packages/modules/Wifi
+e6037c2 Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/packages/modules/Wifi into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* packages/providers/MediaProvider
+81d8a4a Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/packages/providers/MediaProvider into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* packages/services/Telecomm
+c8b247a Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/packages/services/Telecomm into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* tools/apksig
+6447768 Merge tag 'android-security-13.0.0_r10' of https://android.googlesource.com/platform/tools/apksig into staging/lineage-20.0_merge_android-security-13.0.0_r10 [Kevin F. Haggerty]
+
+* vendor/firmware
+6427ab9 mars: Updated from miui_STARGlobal_V14.0.5.0.TKAMIXM [FlowerSea0208]
+
+* vendor/huawei
+ece7af0 hi6250-8-common & prague: Sync with tree [Giovanni Ricca]
+
+====================
+     2023-10-06    
+====================
+* vendor/extra
+5bfd5f4 extra: Update vendorsetup.sh [Giovanni Ricca]
+bf8e04e extra: props: Enable usage of dex2oat64 [David Sehr]
+

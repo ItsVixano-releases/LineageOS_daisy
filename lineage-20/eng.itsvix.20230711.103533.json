@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1695048453,
-      "filename": "lineage-20.0-20230918-UNOFFICIAL-daisy.zip",
-      "id": "4b651c196ad0c049586bef8884eadcda",
+      "datetime": 1697114978,
+      "filename": "lineage-20.0-20231012-UNOFFICIAL-daisy.zip",
+      "id": "defaff0bcfd87deac4bb083130d8b8c2",
       "romtype": "unofficial",
-      "size": 726864556,
-      "url": "https://github.com/ItsVixano-releases/LineageOS_daisy/releases/download/20230918/lineage-20.0-20230918-UNOFFICIAL-daisy.zip",
+      "size": 838632612,
+      "url": "https://github.com/ItsVixano-releases/LineageOS_daisy/releases/download/20231012/lineage-20.0-20231012-UNOFFICIAL-daisy.zip",
       "version": "20.0"
     }
   ]
