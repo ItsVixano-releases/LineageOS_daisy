@@ -1,0 +1,540 @@
+====================
+     2024-02-15    
+====================
+* art
+fbaf5b9 constify JNINativeMethod tables [Daniel Micay]
+9ee99a1 Speed up graph checker for graphs with instructions with many uses [Santiago Aboy Solanes]
+4942a81 Optimize Select instructions regarding equality [Santiago Aboy Solanes]
+9f6e389 Optimize Sub/Sub and Sub/Add operations [Santiago Aboy Solanes]
+6f90460 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/make
+64e2ecd Always use release-keys for ro.build.tags [Danny Lin]
+593cfba Revert "envsetup: Set INLINE_KERNEL_BUILDING if EMULATOR_KERNEL_FILE is set" [Michael Bestas]
+
+* build/soong
+f014f29 use speed compiler filter for dexpreopt by default [Daniel Micay]
+bec999e cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+659b1ee ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+412396e soong: Specify heap size for metalava for S+ [Michael W]
+7662790 soong: Increase Java heap size for r8 [LeddaZ]
+57ec448 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/mt6895-common
+ceb175a mt6895-common: usb: Don't error when failing to write saving state [bengris32]
+
+* device/xiaomi/sm6250-common
+b103614 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+d1a81f8 sm6250-common: Define boot image security patch [Alexander Koskovich]
+9f2a229 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+c16d885 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+8dfeadd sm8350-common: Define boot image security patch [Alexander Koskovich]
+6b7205f sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+d4f32f8 sm8350-common: Don't copy camera config [Giovanni Ricca]
+
+* external/jemalloc_new
+312cb46 Add compile option to speed up code. [Christopher Ferris]
+4e85c1d Use ELF TLS [Danny Lin]
+36f0a01 Enable usage of MADV_FREE [Danny Lin]
+755211c android: Disable malloc_iterate [Danny Lin]
+5239e98 jemalloc: always assume overcommitting memory [Park Ju Hyung]
+954bc63 JEMALLOC_THP -> JEMALLOC_HAVE_MADVISE_HUGE [Alexander Winkowski]
+
+* frameworks/av
+029a4bb02e Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+53e433307 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+23f832c18 Cache pin algorithms in PinSet [Till Kottmann]
+bb5d6b682 Cache KeyStoreService [Till Kottmann]
+d39c64a31 (Point) Only calculate sin and cos once [Till Kottmann]
+9765361ef LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+29a72be1f SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+5d1b3dd27 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+e30b42e04 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+b0376fce0 Trace: Disable debug tracing on production builds [Danny Lin]
+272ae75e1 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+623c288f0 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+efef652ff Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+17433c253 PackageInstaller: fix crash when handling STATUS_PENDING_USER_ACTION [Dmitry Muhomor]
+9e51abc73 SystemUI: Require unlocking to use sensitive QS tiles [Danny Lin]
+b93efd103 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+71f1d2c91 libhwui: compile for performance [Vaisakh Murali]
+9940d281e libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+ff605b8b0 libhwui: remove deprecated perf flags [Vaisakh Murali]
+25feedee8 SystemUI: Remove Android build number from QS footer [Danny Lin]
+1a53e3b8e SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+0d348c672 core: Remove old app target SDK dialog [Danny Lin]
+b70fabbcf core: Remove default aspect ratio limit for old apps [Danny Lin]
+360148048 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+caa8cf577 base: SystemUI: Allow flags to be overrideable [Jeferson]
+1b79a975b Revert "Ignore the charging ripple flag." [Jeferson]
+020597c9b Revert "Update Media Seekbar Thumb Shape" [00day0]
+e171e9d53 base: Add support for app signature spoofing [Danny Lin]
+fbc88d0e0 Screenrecord: Dismiss notification on stop [Lostark13]
+6f4badb1f Screenrecord: Remember last used blinking dot position [Ido Ben-Hur]
+166ec721b Screenrecord: Save preferences for permission dialog [Pranav Vashi]
+9f0e90646 Screenrecord: Add an option to use HEVC [Ido Ben-Hur]
+ac06c86ca Screenrecord: Allow to reduce 3 second screen record timer [maitreya29]
+ccbec4072 Screenrecord: Add an option to record for longer [Ido Ben-Hur]
+cb7fbac74 Screenrecord: Make low quality bitrate scalable per device [Ido Ben-Hur]
+0df35418c Screenrecord: Save and load set preferences [Ido Ben-Hur]
+bc4974943 Screenrecord: add blinking stop dot and low quality options [ezio84]
+be3ecc0a8 Screenrecord: Allow to select AVC codec profile level [iusmac]
+48330181f Screenrecord: Allow limiting the max framerate [Kuba Wojciechowski]
+b46d0a660 PhoneWindowManager: Pass correct assistInvocationType for KEYCODE_ASSIST [Dhina17]
+
+* frameworks/native
+6ed9fb773e libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+590d6049e8 Revert "REThreaded: convert gen- and delete-Textures to no-ops" [DarkJoker360]
+
+* hardware/mediatek
+cec2b04 aidl: usb: Rework enableUsbData implementation [bengris32]
+
+* hardware/xiaomi
+15ca974 interfaces: goodix: Reverse the remaining calls [Giovanni Ricca]
+
+* kernel/xiaomi/mt6895
+2d5d90b09f06 selinux sucks [bengris32]
+
+* lineage/hudson
+4af9e99 too spicy for you? [Bruno Martins]
+
+* lineage/scripts
+47cbd0e device-deps-regenerator: Add lineage-21 branches [LuK1337]
+
+* lineage/website
+7dd2d79 www: 28: Add sdm660 common kernel [Nolen Johnson]
+
+* lineage/wiki
+34037a5 devices: Fix missing devices when compared to hudson [Nolen Johnson]
+
+* packages/apps/Aperture
+d596215 Aperture: Add support for passkey QR codes [Sebastiano Barezzi]
+
+* packages/apps/Glimpse
+3df9efe Glimpse: ViewActivity: Fix bottom sheet shadow and insets configuration [Sebastiano Barezzi]
+
+* packages/apps/LineageParts
+2732e7c Regenerate contributors cloud (2024-02-11) [Kevin F. Haggerty]
+
+* packages/apps/SetupWizard
+0db1ceb SetupWizard: Add step for changing theme [Oliver Scott]
+cb8bc2d Use WizardManagerHelper NEXT intent and result codes [Oliver Scott]
+883287f Launch Settings activities for lockscreen and biometrics setup [Oliver Scott]
+
+* packages/apps/Trebuchet
+e39f491 Increase blur radius [Alexander Winkowski]
+a0c48a5 DepthController: Change blur radius to dimension resource [Danny Lin]
+0f1d743 Disable blur on app launch [Alexander Winkowski]
+f33f122 Make scrim transparent [Alexander Winkowski]
+93f1c3e Trebuchet: Move clear all button to actions view [Vachounet]
+250f7f4 Launcher3: Add toggle for DT2S [DennySPB]
+765d256 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+77f0dd2 LatinIME: fix gesture typing [johnny]
+bb10c1b Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* system/core
+8dcbd786b init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/lineage
+390df266 bootanimation: Refreshed bootanimation for new release [Asher Simonds]
+
+* vendor/qcom/opensource/libfmjni
+2dbd4fa libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+3547585 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-02-14    
+====================
+* android
+ad1d51c pixel: Remove gs201 kernel modules [Michael Bestas]
+
+* external/wpa_supplicant_8
+8dc1f8e Explicitly set a user for the wpa_supplicant service [Samuel Holland]
+
+* hardware/google/pixel
+5723b06 kernel_headers: Guard with soong namespace [Michael Bestas]
+
+* kernel/xiaomi/mt6895
+e57f880889b0 drivers: gpu: mali-valhall: Always enable `CONFIG_MALI_MTK_DEVFREQ_THERMAL` [bengris32]
+fa39f0fcf3a2 sched/rt: Don't try push tasks if there are none. [Sebastian Andrzej Siewior]
+6e9db44b71e8 schedutil: Allow CPU frequency changes to be amended before they're set [Sultan Alsawaf]
+2d6d21afb1c3 schedutil: Don't affine sugov kthreads if DVFS is allowed from any CPU [Sultan Alsawaf]
+2675f4cc48f8 arm64: cache: Set ARCH_DMA_MINALIGN to L1_CACHE_BYTES [Alexander Winkowski]
+015c41ba4c95 arm64: Align __arch_clear_user() to 16 bytes as per upstream [Sultan Alsawaf]
+0231bee225f2 sched: Reduce PELT half-life from 32 ms to 16 ms [Sultan Alsawaf]
+f7c20d310081 sched/fair: Make sure to try to detach at least one movable task [Vincent Guittot]
+b5dac247c5fe sched: Allow newidle balancing to bail out of load_balance [Josh Don]
+0438fd23c192 sched/pelt: Relax the sync of load_sum with load_avg [Vincent Guittot]
+8afb46aa7f6f sched/pelt: Relax the sync of runnable_sum with runnable_avg [Vincent Guittot]
+118ea0747cf1 sched/pelt: Continue to relax the sync of util_sum with util_avg [Vincent Guittot]
+d8d1c6b0403e sched/fair: Prevent dead task groups from regaining cfs_rq's [Mathias Krause]
+8a0b62d9c212 sched/fair: Remove sysctl_sched_migration_cost condition [Vincent Guittot]
+102a30a96a6f sched/fair: Wait before decaying max_newidle_lb_cost [Vincent Guittot]
+26706315e45a sched/fair: Skip update_blocked_averages if we are defering load balance [Vincent Guittot]
+fe59c5a5da54 sched/fair: Account update_blocked_averages in newidle_balance cost [Vincent Guittot]
+954647042445 sched/fair: Sync load_sum with load_avg after dequeue [Vincent Guittot]
+35ba325e3568 sched/fair: Ensure that the CFS parent is added after unthrottling [Rik van Riel]
+7469f7525819 sched/fair: Return early from update_tg_cfs_load() if delta == 0 [Dietmar Eggemann]
+40cf51c97050 sched/fair: Correctly insert cfs_rq's to list on unthrottle [Odin Ugedal]
+0a95b2993e06 sched/pelt: Ensure that *_sum is always synced with *_avg [Vincent Guittot]
+e896be73e30d sched/fair: Keep load_avg and load_sum synced [Vincent Guittot]
+98b8c7172d28 sched,fair: Skip newidle_balance if a wakeup is pending [Rik van Riel]
+e2d8cdabc544 sched/fair: Introduce a CPU capacity comparison helper [Valentin Schneider]
+1e70913979e3 sched/fair: Clean up active balance nr_balance_failed trickery [Valentin Schneider]
+67cf75c11bb7 sched/fair: Reduce long-tail newly idle balance cost [Aubrey Li]
+86063b28a55d sched/fair: Optimize test_idle_cores() for !SMT [Barry Song]
+ef92076896f0 sched: Optimize __calc_delta() [Clement Courbet]
+be5c37922655 sched/fair: Trigger the update of blocked load on newly idle cpu [Vincent Guittot]
+e4c48df1cf09 sched/fair: Reorder newidle_balance pulled_task tests [Vincent Guittot]
+39333e909380 sched/fair: Remove update of blocked load from newidle_balance [Vincent Guittot]
+fcdce54b3345 sched/fair: Move avg_scan_cost calculations under SIS_PROP [Mel Gorman]
+d09dc2d1a262 sched/fair: Remove SIS_AVG_CPU [Mel Gorman]
+6d35c3bac05b sched: Use task_current() instead of 'rq->curr == p' [Hui Su]
+65f383097772 sched/fair: Reduce cases for active balance [Vincent Guittot]
+aa9c189180c5 sched/fair: Don't set LBF_ALL_PINNED unnecessarily [Vincent Guittot]
+7b9d68dadeb2 sched/fair: Skip idle cfs_rq [Vincent Guittot]
+39c291de51b4 sched/fair: Always update CPU capacity when load balancing [Sultan Alsawaf]
+b616e40f7dba Android: Add empty Android.mk file [LuK1337]
+d723cb5ae452 ARM64: dts: vendor: Reduce GPU upthreshold to 50% [bengris32]
+3ca8320abd70 ARM64: dts: vendor: adjust gpu upthreshold/downdifferential [Weixin Zhou]
+a39402d328e6 ARM64: dts: vendor: Use stack opp table for mali devfreq [bengris32]
+718516102d20 ARM64: dts: vendor: Set `rcu_nocbs=all` flag in chosen [bengris32]
+edf502c05ab9 mediatek-cpufreq-hw: Disable cpufreq fast switch [bengris32]
+4f0377de9af1 mtk-dvfsrc-devfreq: Switch to `passive` governor w/ CPU based scaling [bengris32]
+ff4edfe429bf UPSTREAM: PM / devfreq: passive: revert an editing accident in SPDX-License line [Lukas Bulwahn]
+a505a330d2b6 UPSTREAM: PM / devfreq: Fix kernel warning with cpufreq passive register fail [Christian Marangi]
+c4600b5ad8bd UPSTREAM: PM / devfreq: Rework freq_table to be local to devfreq struct [Christian Marangi]
+2f49621062a0 UPSTREAM: PM / devfreq: Fix cpufreq passive unregister erroring on PROBE_DEFER [Christian 'Ansuel' Marangi]
+f2d113594361 UPSTREAM: PM / devfreq: Mute warning on governor PROBE_DEFER [Christian 'Ansuel' Marangi]
+3a1250ab7de8 UPSTREAM: PM / devfreq: Fix kernel panic with cpu based scaling to passive gov [Christian 'Ansuel' Marangi]
+04d8afbaa39c UPSTREAM: PM / devfreq: passive: Return non-error when not-supported event is required [Chanwoo Choi]
+50855d521024 UPSTREAM: PM / devfreq: passive: Keep cpufreq_policy for possible cpus [Chanwoo Choi]
+faeac9fad7c2 UPSTREAM: PM / devfreq: passive: Reduce duplicate code when passive_devfreq case [Chanwoo Choi]
+02251bde16de UPSTREAM: PM / devfreq: Add cpu based scaling support to passive governor [Saravana Kannan]
+c16b2ae44ded UPSTREAM: PM / devfreq: Export devfreq_get_freq_range symbol within devfreq [Chanwoo Choi]
+ea2ab1f1e794 UPSTREAM: PM / devfreq: passive: Fix get_target_freq when not using required-opp [Chanwoo Choi]
+6923ac3d525c UPSTREAM: PM / devfreq: Add required OPPs support to passive governor [Saravana Kannan]
+b339b6be10cf UPSTREAM: PM / devfreq: Cache OPP table reference in devfreq [Saravana Kannan]
+2cd3e02f814a BACKPORT: OPP: Add function to look up required OPP's for a given OPP [Saravana Kannan]
+9471a72f5c77 UPSTREAM: PM / devfreq: Unify frequency change to devfreq_update_target func [Chanwoo Choi]
+b4c263d7a690 UPSTREAM: sched/fair: Fixes for capacity inversion detection [Qais Yousef]
+d9da3de8ec43 BACKPORT: sched/uclamp: Fix a uninitialized variable warnings [Qais Yousef]
+cbfd62f16cbe UPSTREAM: sched/fair: Consider capacity inversion in util_fits_cpu() [Qais Yousef]
+0f1befbbb283 BACKPORT: sched/fair: Detect capacity inversion [Qais Yousef]
+62460342afff ANDROID: Enable CONFIG_LAZY_RCU in arm64 gki_defconfig [Qais Yousef]
+dfe15f3220ce FROMGIT: rcu: Provide a boot time parameter to control lazy RCU [Qais Yousef]
+35c12f48cf7e ANDROID: rcu: Add a minimum time for marking boot as completed [Joel Fernandes (Google)]
+2181ee5b47db ANDROID: rcu: Disable lazy if call_rcu() called when GPs expedited [Joel Fernandes (Google)]
+314698d6bb99 Revert "Revert "rcu/kvfree: Avoid freeing new kfree_rcu() memory after old grace period"" [Qais Yousef]
+d63e71d64efb FROMGIT: rcu: Do not disable gp stall detection in rcu_cpu_stall_reset() [Sergey Senozhatsky]
+285af967c38a UPSTREAM: rcu/kvfree: Move need_offload_krc() out of krcp->lock [Uladzislau Rezki (Sony)]
+55e7d516d1d7 BACKPORT: FROMGIT: rcu: Make call_rcu() lazy to save power [Joel Fernandes (Google)]
+1c44801faaeb FROMLIST: net: Use call_rcu_flush() for dst_destroy_rcu [Joel Fernandes (Google)]
+677f980c33ed FROMLIST: net: devinet: Reduce refcount before grace period [Eric Dumazet]
+2f34c22ebd4e FROMGIT: rxrpc: Use call_rcu_flush() instead of call_rcu() [Joel Fernandes (Google)]
+0614fec30da1 FROMGIT: scsi/scsi_error: Use call_rcu_flush() instead of call_rcu() [Uladzislau Rezki]
+48d8f7881d0e FROMGIT: rcu/sync: Use call_rcu_flush() instead of call_rcu [Joel Fernandes (Google)]
+1074c1aa59d1 FROMGIT: percpu-refcount: Use call_rcu_flush() for atomic switch [Joel Fernandes (Google)]
+11bbcbf5a4ad BACKPORT: FROMGIT: rcu: Shrinker for lazy rcu [Vineeth Pillai]
+d471931603a0 BACKPORT: FROMGIT: rcu: Refactor code a bit in rcu_nocb_do_flush_bypass() [Joel Fernandes (Google)]
+b067f475c3b7 BACKPORT: FROMGIT: rcu: Make call_rcu() lazy to save power [Joel Fernandes (Google)]
+ed3163cdb9bf BACKPORT: FROMGIT: rcu: Fix late wakeup when flush of bypass cblist happens [Joel Fernandes (Google)]
+d7556a114644 BACKPORT: FROMGIT: rcu: Fix missing nocb gp wake on rcu_barrier() [Frederic Weisbecker]
+f8cc8a05e60e UPSTREAM: rcu/kvfree: Update KFREE_DRAIN_JIFFIES interval [Uladzislau Rezki (Sony)]
+b5d62f03da3d UPSTREAM: rcu/kvfree: Remove useless monitor_todo flag [Joel Fernandes (Google)]
+fff55fd2ea9d UPSTREAM: kvfree_rcu: Refactor kfree_rcu_monitor() [Uladzislau Rezki (Sony)]
+d7178b81e28c UPSTREAM: kvfree_rcu: Fix comments according to current code [Uladzislau Rezki (Sony)]
+dcd4e3544ff5 UPSTREAM: kvfree_rcu: Use kfree_rcu_monitor() instead of open-coded variant [Uladzislau Rezki (Sony)]
+16193cbcde8d UPSTREAM: kvfree_rcu: Update "monitor_todo" once a batch is started [Uladzislau Rezki (Sony)]
+61188bd3b0e0 UPSTREAM: kvfree_rcu: Add a bulk-list check when a scheduler is run [Uladzislau Rezki (Sony)]
+71a1f2dcc0eb UPSTREAM: kvfree_rcu: Use [READ/WRITE]_ONCE() macros to access to nr_bkv_objs [Uladzislau Rezki (Sony)]
+396ac217b6d8 UPSTREAM: kvfree_rcu: Release a page cache under memory pressure [Zhang Qiang]
+c80bd499b89f BACKPORT: FROMLIST: rcu/nocb: Add an option to offload all CPUs on boot [Joel Fernandes]
+25ecdd792b85 Revert "rcu/kvfree: Avoid freeing new kfree_rcu() memory after old grace period" [Qais Yousef]
+72dd1215b7e5 ARM64: configs: Add config fragment for `aristotle` [bengris32]
+dcc0f9d0856b [TMP] arm64: dts: mediatek: xaga_global -> xaga [Giovanni Ricca]
+379071b4e7c4 arm64: configs: vendor: xaga: Enable specfic device configs [Giovanni Ricca]
+d16358c42754 arm64: configs: vendor: Create a dummy xaga fragment config [Giovanni Ricca]
+58f215a8e34a [WIP] power: supply: sc8561: Initializate xaga [Giovanni Ricca]
+676ea96926e6 [WIP] power: supply: sc8551: Initializate xaga [Giovanni Ricca]
+d72488093b74 [WIP] power: supply: pd_cp_manager: Initializate xaga [Giovanni Ricca]
+e7d08d7c3c14 [WIP] power: supply: mtk_pd_adapter: Initializate xaga [Giovanni Ricca]
+fe7dda4b828f [WIP] power: supply: mtk_charger: Initializate xaga [Giovanni Ricca]
+fda7c77019bc [WIP] power: supply: bq28z610: Initializate xaga [Giovanni Ricca]
+ee90bb2afa4c [WIP] power: supply: ln8000: Initializate xaga [Giovanni Ricca]
+2cb35fb55e3d [TMP] drm: panel: l16: Define LCM struct [Giovanni Ricca]
+4fc74d17a7f1 drm: panel: Import xaga panel drivers [Giovanni Ricca]
+b2511269785c arm64: boot: dts: Import xaga dts [Giovanni Ricca]
+68fee0b54ffd power: supply: sc8551: Guard try_to_find_i2c_regess for yuechu [Giovanni Ricca]
+3328b889b61a power: supply: step_jeita_charge: Resolve Wunused-variable errors [Giovanni Ricca]
+ec8b1c08b79a power: supply: mt6375-charger: Correct some guard [Giovanni Ricca]
+027e6495ee15 drivers: media: mtk-isp: BUILD_TARGET_PRODUCT -> CONFIG_BUILD_PRODUCT_NAME [bengris32]
+07b0af4577d8 ARM64: configs: Unset CONFIG_XMEXT_SC8551A_CHG_PUMP=m [bengris32]
+e8d518719e1b drivers: {extcon, power}: Use BUILD_PRODUCT_NAME for CHARGE_PROJECT [bengris32]
+0d6a12932174 ARM64: configs: Add plato config fragment [bengris32]
+b0a857a44913 ARM64: dts: vendor: Import `plato` dts [bengris32]
+f3f5d56a3901 drivers: input: touchscreen: Resolve fortify warnings [bengris32]
+7630781fc7e7 drivers: input: L12a_fts_spi: Remove unused `fts_lockdown_info_read` function [bengris32]
+331740ea20c5 drivers: input: L12a_fts_spi: Trigger suspend on `MI_DISP_DPMS_EVENT` [bengris32]
+ba99af6de631 drivers: touchscreen: goodix_9916: Handle `MI_DISP_DPMS_EVENT` events [bengris32]
+390edde63b7f drivers: touchscreen: goodix_9916: Fix the broken bounds check [bengris32]
+72a5cd4836bb drivers: panel-l12a-36-02-0b-dsc-cmd: Resolve Clang 14 warnings [bengris32]
+e92fcac9b3f3 drm: panel: Adapt old panel drivers to new `mi_disp` driver [bengris32]
+c0a68983c3b8 drm: panel: Import `l12a-36-02-0b-dsc` and `l12a-42-02-0a-dsc` panel drivers [bengris32]
+4f713832ecc2 drivers: drm: mediatek_v2: Import Xiaomi ESD check code from `plato-s-oss` [bengris32]
+9dae5e715aa0 drivers: input: Import touchscreen drivers from `bsp-plato-s-oss` [bengris32]
+3460fda77a8e ARM64: dts: vendor: Set-up DTB building [bengris32]
+1f2f4c69b969 ARM64: configs: Enable mali base modules [Erfan Abdi]
+ad9ef297dbb1 ARM64: configs: Create initial Xiaomi MT6895 config fragment [bengris32]
+fda6ba9014ec drivers: connectivity: gen4m: Refactor firmware flavor handling [bengris32]
+e6623b35765d drivers: connectivity: bt-mt66xx: Refactor firmware flavor handling [bengris32]
+c71c43594a54 drivers: connectivity: Build and include `gps_scp` driver [bengris32]
+e6d196d06b22 drivers: connectivity: updates to list_cmp_func_t typedef [bengris32]
+158ae9b9bebe drivers: connectivity: Fix wifi random disconnection [Erfan Abdi]
+47a9fc5a76e0 drivers: connectivity: Adapt to build for MT6895 and fix function prototypes [bengris32]
+6f0346d6c2ab drivers: connectivity: Port connectivity modules for in-kernel building [Erfan Abdi]
+de7b384d073f drivers: connectivity: Import connectivity modules [bengris32]
+05d05a8afea8 drivers: mali-valhall: Restart devfreq polling unconditionally on System resume [Akash Goel]
+5ac8d093c407 drivers: mali-valhall: Add private data for governor [Finley Xiao]
+db6472da31e4 drivers: mali-valhall: remove ged_dvfs and adjust freq by mali devfreq [xudong.chen]
+9d20039a6efb drivers: mali-valhall: Rename CONFIG_MALI_MTK_DEVFREQ option [bengris32]
+228fed55ced3 drivers: gpufreq_v2: Notify Mali IPA about frequency change every commit [bengris32]
+110f00f5ec46 drivers: gpu: mali-valhall: fix function prototype warning [CloudedQuartz]
+aa13721d724b drivers: gpu: mali-valhall: Don't append platform to mgm kmod name [bengris32]
+a60a522f6d3e drivers: gpu: mali-valhall: Don't append platform to protm kmod name [bengris32]
+4aa4b4d4970c drivers: gpu: mali-valhall: Add platform to kbase module name [Erfan Abdi]
+318db767f720 drivers: gpu_mali: Import mali_valhall driver and adapt for inline build [bengris32]
+e61c8d76e416 drivers: input: Remove duplicate BUILD_PRODUCT_NAME declaration [bengris32]
+dbd8e8f93693 {drivers, sound}: Fix psy include paths [bengris32]
+7f943a626c34 usb: typec: tcpc: fix unused variable build breaks [Miles Chen]
+c1b8d495bd9f drivers: mediatek: tcpci_typec: Remove unused `ret` variable [bengris32]
+448f41815135 drivers: misc: mediatek: updates to list_cmp_func_t typedef [bengris32]
+9d39143b394f drivers: mediatek: typec: Add `power/supply/mediatek/` to include paths [bengris32]
+4ae63cdf1850 drivers: {adsp, mtk-isp}: Allow building with AEE disabled [Woomymy]
+0256f8a5390f drivers: iommu: Stop tracking iova domain in debug info [bengris32]
+3b908baded56 drivers: mtk-isp: Update vendor hooks [bengris32]
+417374f79c34 drivers: mmc: Fix build with blocktag disabled [bengris32]
+35830d162d13 drivers: mediatek: perf_common: Explicitly include `linux/slab.h` [bengris32]
+c5447dd0404f drivers: mtk-pd-chk: Revert Xiaomi changes [bengris32]
+ec4f7e115c04 drivers: xm_charge: Pass boolean value instead of pointer to `xmc_ops_charge_done` [bengris32]
+6e7d0df4581d drivers: mtk-isp: Remove unused variables in `mtk_cam_seninf_debugTest` [bengris32]
+02523588d378 drivers: apusys_rv: Remove unused `dev` variable [bengris32]
+adbb21f81a54 drivers: mtk-uart-apdma: Resolve mismerge of upstream commit 63fa5b2 [bengris32]
+c7846c578b5c drivers: mtk-uart-apdma: Resolve mismerge of upstream commit 0f48f92 [bengris32]
+909383450b88 drivers: xhci-mtk-sch: Remove unused `get_esit_boundary` function [bengris32]
+1dae141b21bb drivers: eccci: Fix unused variable warnings when AEE is disabled [bengris32]
+f8e7fad836db drivers: thermal: Resolve fortify warnings [bengris32]
+e2d2909e5401 drivers: mediatek: pbm: Resolve fortify warnings [bengris32]
+e9d05e200d1c drivers: mediatek: power_throttling: Resolve fortify warnings [bengris32]
+46349de8a830 drivers: tee: mitee: Fix function prototype warnings [bengris32]
+986d768f5137 drivers: power: supply: Fix implicit type definition warnings [bengris32]
+c2dee4b6b067 drivers: misc: mediatek: extcon: Fix implicit type definition warnings [bengris32]
+c51ab1ac605d drivers: gpu: drm: panel: Fix function prototype warnings [bengris32]
+2eb82928b2bd drivers: misc: mediatek: slbc: Fix function prototype warnings [bengris32]
+ddb1be010059 drivers: misc: mediatek: ssc: Fix function prototype warnings [bengris32]
+884e17b3929d drivers: thermal: mediatek: Fix function prototype warnings [bengris32]
+f9f74fabe8cf drivers: misc: mediatek: sensor: Fix function prototype warnings [bengris32]
+6ea55ce49c84 drivers: misc: mediatek: iommu: Fix function prototype warnings [bengris32]
+347fe9444345 drivers: misc: mediatek: cm_mgr: Fix function prototype warnings [bengris32]
+9635b5593e39 drivers: drm: mediatek: Fix function prototype warnings [bengris32]
+9e9c465f732c drivers: mediatek: ccci: Fix build with !CONFIG_MTK_AEE_IPANIC [bengris32]
+faf5ea89a132 drivers: spmi: mtk: Allow builiding with AEE disabled [Woomymy]
+5d7dd7bd8e29 drivers: mtk-cameraisp: Allow compiling without irq debug [Woomymy]
+075d026d546d thermal: Import Xiaomi thermal control interface from `yunluo-s-oss` [bengris32]
+b3adf0e7f387 drivers: misc: mediatek: Add config to specify platform [bengris32]
+517ef153ec48 drivers: misc: mediatek: Remove MediaTek config hacks [bengris32]
+adb08b6c7a81 sound: cs35l41: Use CONFIG_TARGET_PRODUCT configs instead [bengris32]
+fecb55eb0590 drivers: Re-use BUILD_PRODUCT_NAME for BUILD_XIAOMI_CAMERA_IMAGE_NAMES [bengris32]
+3174ea62f8ce ARM64: Add `BUILD_XIAOMI_CAMERA_IMAGE_NAMES` config option [bengris32]
+37da32ea7e30 {drivers, sound}: Remove usages of the CONFIG_FACTORY_BUILD macro [bengris32]
+6b7e9ca571d7 sound: soc: Import Xiaomi/MediaTek changes [bengris32]
+bfdba8434196 include: Import Xiaomi/MediaTek changes [bengris32]
+d1638a1bb926 include: dt-bindings: Import MediaTek changes [bengris32]
+300bdc98e53f drivers: watchdog: Import MediaTek changes [bengris32]
+796dbb534728 drivers: video: Import MediaTek changes [bengris32]
+e3eaaea15864 drivers: usb: Import MediaTek changes [bengris32]
+a5913e1b66d1 drivers: tty: Import MediaTek changes [bengris32]
+069b9c0e11df FROMLIST: reset-controller: ti: introduce a new reset handler [Chang-An Chen]
+1aef7243a700 drivers: thermal: Import Xiaomi/MediaTek changes [bengris32]
+b63fd59cd48e drivers: tee: Import MediaTek/Xiaomi changes [bengris32]
+d78c482658e7 drivers: android: ion: Import MediaTek changes [bengris32]
+2d2cc5cea1db drivers: spmi: Import MediaTek changes [bengris32]
+8a5b2c5c5a94 drivers: spi: Import Xiaomi/MediaTek changes [bengris32]
+a9fa991b6a2b drivers: soc: Import MediaTek changes [bengris32]
+7be1082eb889 [ALPS06799076] ufs: mediatek: shutdown/suspend racing patch [Peter Wang]
+eb4cd0c5114a drivers: ufs-mediatek: Adapt for the new ufshcd interface [bengris32]
+1127336d1311 drivers: scsi: ufs: Import MediaTek changes [bengris32]
+43c21c85ee73 drivers: rtc: Import MediaTek changes [bengris32]
+73bebb262c4d drivers: rpmsg: Import MediaTek changes [bengris32]
+51a7b667239a drivers: remoteproc: Import MediaTek changes [bengris32]
+0f96d92729be drivers: regulator: Import Xiaomi/Mediatek changes [bengris32]
+5895df68c715 drivers: phy: Import MediaTek changes [bengris32]
+540a4ea357e0 drivers: pwm: Import MediaTek changes [bengris32]
+70e4a741ba3d drivers: power: Import plato specific charger drivers [bengris32]
+3dae7f8faaef drivers: power: Import Xiaomi/MediaTek psy driver [bengris32]
+1ac23efd3fe3 drivers: pinctrl: Import Xiaomi/MediaTek changes [bengris32]
+a0626a7fae3e drivers: pci: Import MediaTek changes [bengris32]
+cc3c970b24bf drivers: p73-spi: Import Xiaomi p73-spi driver [bengris32]
+7c4479cec6c8 drivers: nvmem: Import MediaTek changes [bengris32]
+974fd8d32677 drivers: nfc: Import MediaTek/Xiaomi changes [bengris32]
+0df41099dd14 drivers: mmc: Import MediaTek changes [bengris32]
+d6507e591116 drivers: misc: Import Xiaomi simtray status driver [bengris32]
+0981afd4f998 drivers: hwid: Import Xiaomi HWID driver [bengris32]
+ac862194cfcb drivers: misc: Import Xiaomi/MediaTek driver pack [bengris32]
+3c184c3e47f8 drivers: mfd: Import MediaTek changes [bengris32]
+2fc5a327eea6 drivers: memory: Import MediaTek changes [bengris32]
+0547c05153d1 drivers: media: platform: Import MediaTek changes [bengris32]
+6093a9edcb1f drivers: mailbox: Import MediaTek changes [bengris32]
+dabad84edc19 drivers: leds: Import Xiaomi/MediaTek changes [bengris32]
+0d055a8c6bd9 drivers: irqchip: Import MediaTek changes [bengris32]
+c1eb28b0815d drivers: iommu: Import MediaTek changes [bengris32]
+1fd1f92b8ed3 drivers: interconnect: Import MediaTek changes [bengris32]
+d60476b2b4f8 drivers: input: Import Xiaomi/MediaTek changes [bengris32]
+49e5b65ec209 drivers: iio: Import Xiaomi/MediaTek changes [bengris32]
+41fe763a5074 drivers: i2c: Import Xiaomi/MediaTek changes [bengris32]
+0ee6cc118b80 drivers: gpu: Import Xiaomi/MediaTek changes [bengris32]
+6b8a9029b276 drivers: dma: Import MediaTek changes [bengris32]
+6cd7d9202fda drivers: dma-buf: Import MediaTek changes [bengris32]
+fdb0d018d622 drivers: devfreq: Import MediaTek changes [bengris32]
+ab13d6b586c4 drivers: cpufreq: Import MediaTek changes [bengris32]
+04bbf38fe234 drivers: clk: Import Xiaomi/Mediatek changes [bengris32]
+363f04e12c98 drivers: char: Import Xiaomi/MediaTek changes [bengris32]
+2dcad0de40c0 scripts: Include devicetree symbols in built DTB images [bengris32]
+e65e38c2614c ARM64: dts: vendor: Import MediaTek/Xiaomi devicetrees [bengris32]
+8f5407505415 ARM64: Remove `MTK_TIMER` dependency from `ARCH_MEDIATEK` [bengris32]
+2cc95aea7b4e ARM64: Add Xiaomi target product configs [Ben]
+f6fc8cdbc224 arm64: Fix CONFIG_64BIT leak to userspace [Michael Bestas]
+ec120c847726 arm64: Add 32-bit sigcontext definition to uapi signcontext.h [Ameya Thakur]
+
+* packages/apps/DeskClock
+5661775 DeskClock: Schedule alarms after restore [Tommy Webb]
+
+* packages/apps/Dialer
+d0e5d21 Dialer: Update call end button colors [Georg Veichtlbauer]
+
+* packages/apps/Etar
+84940ee New version 1.0.42 [Gitsaibot]
+
+* packages/apps/Seedvault
+f3f4cf3 Merge branch 'android14' of https://github.com/seedvault-app/seedvault into HEAD [Chirayu Desai]
+
+* packages/apps/TvSettings
+b585b36 TvSettings: trust: remove outdated comments in strings.xml [Timi Rautamäki]
+
+====================
+     2024-02-13    
+====================
+* device/mediatek/sepolicy_vndr
+40ea9e1 basic: non_plat: Let GPU reload [Adam Shih]
+
+* lineage/charter
+16f35a4 device-support-requirements: Allow devices to reflect stock tuning capabilities [Nolen Johnson]
+
+====================
+     2024-02-12    
+====================
+* external/chromium-webview/patches
+70ea05a Update Chromium Webview to 121.0.6167.164 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm
+32694a0 Update Chromium Webview arm prebuilt to 121.0.6167.164 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm64
+6ce5dc3 Update Chromium Webview arm64 prebuilt to 121.0.6167.164 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86
+a95f026 Update Chromium Webview x86 prebuilt to 121.0.6167.164 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86_64
+be88275 Update Chromium Webview x86_64 prebuilt to 121.0.6167.164 [Kevin F. Haggerty]
+
+* lineage/mirror
+1bc73dc Updated to 11-Feb-2024 13:01 UTC [Tim Schumacher]
+
+====================
+     2024-02-11    
+====================
+* lineage-sdk
+6538e84 Automatic translation import [LineageOS Infra]
+
+* packages/apps/AudioFX
+bcc073d Automatic translation import [LineageOS Infra]
+
+* packages/apps/Contacts
+f62baf2 Automatic translation import [LineageOS Infra]
+
+* packages/apps/DocumentsUI
+37068d7 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Eleven
+92611f6 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Jelly
+59fbe75 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Messaging
+32fcd7a Automatic translation import [LineageOS Infra]
+
+* packages/apps/Recorder
+a48fe52 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Settings
+5f7e947 Automatic translation import [LineageOS Infra]
+
+* packages/apps/SetupWizard
+11b7f4c Automatic translation import [LineageOS Infra]
+
+* packages/apps/ThemePicker
+13f173f Automatic translation import [LineageOS Infra]
+
+* packages/apps/Trebuchet
+71ac5a8 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Updater
+76c126c Automatic translation import [LineageOS Infra]
+
+* packages/inputmethods/LatinIME
+9df0b16 Automatic translation import [LineageOS Infra]
+
+* packages/providers/DownloadProvider
+6a59a87 Automatic translation import [LineageOS Infra]
+
+* packages/resources/devicesettings
+fa9ef52 Automatic translation import [LineageOS Infra]
+
+* packages/services/Mms
+76d84de Automatic translation import [LineageOS Infra]
+
+* vendor/crowdin
+49ccc89 Automatic translation import [LineageOS Infra]
+
+* vendor/qcom/opensource/commonsys/fm
+f5fbe47 Automatic translation import [LineageOS Infra]
+
+====================
+     2024-02-10    
+====================
+====================
+     2024-02-09    
+====================
+* device/lineage/atv
+be2aa2b Support double tap to mute on Nvidia remotes [Aaron Kling]
+
+* hardware/qcom-caf/common
+d0d2fa3 Update common compatibility matrix with qccsyshal V1.2 [Phani Deepak Parasuramuni]
+
+* lineage/crowdin
+dea3ab5 config: lineage-21.0: Add Glimpse [Michael Bestas]
+
+* packages/modules/Bluetooth
+1fbadd6 Bluetooth: Add a workaround for M_RELEASE rsp len in ble_gap.cc [AShiningRay]
+
+* vendor/extra
+7873555 SimpleDeviceConfigOverlay: Convert location indicators to soft config [Danny Lin]
+
