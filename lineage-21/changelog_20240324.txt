@@ -1,0 +1,355 @@
+====================
+     2024-03-24    
+====================
+* art
+a01744e art: Disable debug tracing on production builds [Danny Lin]
+
+* bootable/recovery
+b78bf1f3 fixup! recovery_utils: add support for unmounting entire volumes [LuK1337]
+
+* build/make
+19759ea Always use release-keys for ro.build.tags [Danny Lin]
+570e5dc releasetools: Fix signing target_files [althafvly]
+6811b0c fixup! build: Add phony package to build enforce RRO packages [Yumi Yukimura]
+
+* build/soong
+b286416 use speed compiler filter for dexpreopt by default [Daniel Micay]
+e0ce65b cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+46024c5 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+6949bbf soong: Specify heap size for metalava for S+ [Michael W]
+4384fe0 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/msm8953-common
+da208fa msm8953-common: Don't explicitly include updatable_apex.mk [basamaryan]
+
+* device/xiaomi/mt6895-common
+763362b fixup!^2 mt6895-common: Introduce `ONLY_TARGET_COMMON` [bengris32]
+
+* device/xiaomi/sm6250-common
+2ea798e sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+90596e8 sm6250-common: Define boot image security patch [Alexander Koskovich]
+a01a400 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+9ab83d2 sm6250-common: Don't explicitly include updatable_apex.mk [basamaryan]
+
+* device/xiaomi/sm8350-common
+fc72329 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+c6f97a1 sm8350-common: Define boot image security patch [Alexander Koskovich]
+4f28895 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+a32e252 sm8350-common: Don't copy camera config [Giovanni Ricca]
+ccf483a sm8350-common: Don't explicitly include updatable_apex.mk [basamaryan]
+
+* device/xiaomi/xaga
+3aaf91e [DNM] xaga: Prebuilt dtbo V14.0.8.0.TLOMIXM [Giovanni Ricca]
+
+* external/jemalloc_new
+e05e51d Add compile option to speed up code. [Christopher Ferris]
+0659ab5 Use ELF TLS [Danny Lin]
+7e154fd Enable usage of MADV_FREE [Danny Lin]
+1332cb3 android: Disable malloc_iterate [Danny Lin]
+c4adf15 jemalloc: always assume overcommitting memory [Park Ju Hyung]
+536536f JEMALLOC_THP -> JEMALLOC_HAVE_MADVISE_HUGE [Alexander Winkowski]
+
+* frameworks/av
+5aa35c6bc0 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+d2ecc560c core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+f3920b746 Cache pin algorithms in PinSet [Till Kottmann]
+c67491fce Cache KeyStoreService [Till Kottmann]
+90753915e (Point) Only calculate sin and cos once [Till Kottmann]
+349a3f0b8 LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+1a953e87f SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+a67365e39 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+20cc97df5 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+408328f07 Trace: Disable debug tracing on production builds [Danny Lin]
+e4ede82f5 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+59a2e6fdd Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+a1fa60648 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+d735f92a0 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+7b6df8d2d libhwui: compile for performance [Vaisakh Murali]
+ce1621ebd libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+13aa52b45 libhwui: remove deprecated perf flags [Vaisakh Murali]
+d789b1128 SystemUI: Remove Android build number from QS footer [Danny Lin]
+97a0177f2 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+c80316c48 core: Remove old app target SDK dialog [Danny Lin]
+2046d5b0d core: Remove default aspect ratio limit for old apps [Danny Lin]
+c67af925c AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+3379a673c base: SystemUI: Allow flags to be overrideable [Jeferson]
+3195dc43c Revert "Ignore the charging ripple flag." [Jeferson]
+a4cb2b65c Revert "Update Media Seekbar Thumb Shape" [00day0]
+98d8802c5 Screenrecord: Dismiss notification on stop [Lostark13]
+d486b84e0 Screenrecord: Remember last used blinking dot position [Ido Ben-Hur]
+46ec46dfe Screenrecord: Save preferences for permission dialog [Pranav Vashi]
+818898430 Screenrecord: Add an option to use HEVC [Ido Ben-Hur]
+0813c0459 Screenrecord: Allow to reduce 3 second screen record timer [maitreya29]
+3402101f5 Screenrecord: Add an option to record for longer [Ido Ben-Hur]
+8435b4e28 Screenrecord: Make low quality bitrate scalable per device [Ido Ben-Hur]
+c2d51f5d3 Screenrecord: Save and load set preferences [Ido Ben-Hur]
+a58854b66 Screenrecord: add blinking stop dot and low quality options [ezio84]
+f6130d600 Screenrecord: Allow to select AVC codec profile level [iusmac]
+bae82a16d Screenrecord: Allow limiting the max framerate [Kuba Wojciechowski]
+5491ce086 fixup! Implement edge long swipe gesture [OnlyTomInSecond]
+97f50635a fixup! SystemUI: Add FingerprintInteractiveToAuthProvider implementation [Anay Wadhera]
+
+* frameworks/native
+5d6337394d libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/mediatek
+860cf36 libwifi-hal-wrapper: Initial wrapper for legacy vendor HALs [bengris32]
+
+* hardware/qcom-caf/sm8150/audio
+392d386 audio_amplifier: Change the enable amplifier function location [Luofan Chen]
+
+* kernel/xiaomi/mt6895
+a744784e7c36 ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* kernel/xiaomi/sm6250
+5108742190d7 BACKPORT: bpf: Use char in prog and map name [Martin KaFai Lau]
+9dbf7dfa6666 bpf: Change bpf_obj_name_cpy() to better ensure map's name is init by 0 [Martin KaFai Lau]
+32ff563652dd BACKPORT: bpf: Add map_name to bpf_map_info [Martin KaFai Lau]
+6a2220cf0b50 BACKPORT: bpf: Add name, load_time, uid and map_ids to bpf_prog_info [Martin KaFai Lau]
+
+* packages/apps/Trebuchet
+3780868 Increase blur radius [Alexander Winkowski]
+8ae62da DepthController: Change blur radius to dimension resource [Danny Lin]
+89b846b Disable blur on app launch [Alexander Winkowski]
+8780757 Make scrim transparent [Alexander Winkowski]
+ee1d6a7 Trebuchet: Move clear all button to actions view [Vachounet]
+092ae37 Launcher3: Add toggle for DT2S [DennySPB]
+43f1fc3 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/TvSettings
+37883bd fixup! Settings: Implement ADB over network [Bruno Martins]
+
+* packages/inputmethods/LatinIME
+fe207fc LatinIME: fix gesture typing [johnny]
+1ac51fb Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/Bluetooth
+e40e2bb [ALPS08619561] Add VSC Cmd for Mediatek chip [weifan.zhang]
+
+* system/core
+b03588bc3 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/extra
+b136532 vendorsetup: Setup beta build [Giovanni Ricca]
+d56864c patches: lineage-21: Update for QPR2 [Giovanni Ricca]
+65e845d vendorsetup: Fix breakfast [Michael Bestas]
+
+* vendor/firmware
+50223a2 xaga: Update firmware to V14.0.7.0.TKOMIXM [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+c6d0c31 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+0a8e2b8 libfmjni: Fix RDS info retrieving [iusmac]
+
+* vendor/xiaomi/xaga
+e787a0e xaga: Sync with tree [Giovanni Ricca]
+
+====================
+     2024-03-23    
+====================
+* build/make
+96844fe No more lies [Chirayu Desai]
+
+* device/mediatek/sepolicy_vndr
+1c8deec basic: non_plat: Allow binder services to r/w su:tcp_socket [Yifan Hong]
+
+* device/xiaomi/msm8953-common
+c217763 msm8953-common: Uprev usb hal to 1.3 [Aaron Kling]
+da8fd9e msm8953-common: Remove deprecated trust HAL [Bruno Martins]
+e9c0b20 Revert "msm8953-common: Switch to legacy WiFi HIDL HAL" [Yumi Yukimura]
+f42f488 msm8953-common: parts: Migrate to CompoundButton.OnCheckedChangeListener [Chaohui Wang]
+a22a3cb msm8953-common: parts: Enable use_resource_processor for all sysui deps [Peter Kalauskas]
+143f7d6 msm8953-common: gps: Don't include cutils/threads.h [Tomasz Wasilczyk]
+eb47db6 msm8953-common: Add BUILD_BROKEN_INCORRECT_PARTITION_IMAGES [Cole Faust]
+
+* device/xiaomi/sm6250-common
+567c7df sm6250-common: Switch to android.hardware.usb@1.3-service.dual_role_usb [Michael Bestas]
+2259f01 sm6250-common: gps: Don't include cutils/threads.h [Tomasz Wasilczyk]
+818dc97 sm6250-common: Add BUILD_BROKEN_INCORRECT_PARTITION_IMAGES [Cole Faust]
+
+* device/xiaomi/sm8350-common
+2a31773 sm8350-common: gps: Don't include cutils/threads.h [Tomasz Wasilczyk]
+9b40050 sm8350-common: Add BUILD_BROKEN_INCORRECT_PARTITION_IMAGES [Cole Faust]
+
+* frameworks/opt/telephony
+1655631 PhoneSwitcher: Fallback to HAL_COMMAND_ALLOW_DATA when DDS switch fails [LuK1337]
+
+* hardware/interfaces
+a8d6277 Revert "compatibility_matrices: Allow radio.config@1.0 till target-level 5" [Yumi Yukimura]
+
+* hardware/st/nfc
+0b01835 Add support to read different fw configs for ssss/dsds [Michael Bestas]
+
+* hardware/xiaomi
+edd818c hidl: biometrics: Add support for chipone fingerprint [Matsvei Niaverau]
+
+* lineage/wiki
+fad8dc2 xiaomi: Fix firmware URLs again [Giovanni Ricca]
+
+* packages/apps/FlipFlap
+c9c0701 FlipFlap: Migrate to CompoundButton.OnCheckedChangeListener [Chaohui Wang]
+
+* packages/apps/Settings
+3492261 fixup! DynamicDenylistManager shall not exist [Michael Bestas]
+
+* packages/apps/ThemePicker
+4a3bd3c fixup! ThemePicker: Bring back fonts, icon pack, shape customization [Michael Bestas]
+
+* vendor/extra/priv
+02734f8 patches: lineage-21: Update for QPR2 [Giovanni Ricca]
+
+* vendor/lineage
+5d26fdd7 config: Include AudioTv.mk on atv [Michael Bestas]
+
+====================
+     2024-03-22    
+====================
+* device/lineage/sepolicy
+754e48e common: Changes for android.hardware.usb@1.3-service.dual_role_usb HAL [Michael Bestas]
+
+* device/qcom/sepolicy-legacy-um
+a55fc3c legacy: Allow USB HAL get vendor_usb_prop [Michael Bestas]
+
+* device/qcom/sepolicy_vndr/legacy-um
+b718e9c sepolicy_vndr: Allow USB HAL get vendor_usb_prop [Michael Bestas]
+
+* frameworks/base
+329f745be UsbDeviceManager: Adapt for data signaling quirks [Tommy Webb]
+
+* hardware/lineage/interfaces
+9848d5d usb: 1.3-basic: Allow devices to customize usb control {path,enable,disable} [LuK1337]
+
+* hardware/qcom-caf/sm8450/audio/agm
+3a330a7 agm: plugins: Fix incompatible function pointer type error [LuK1337]
+
+* packages/apps/Aperture
+890504a Aperture: Allow background launch for QR code pending intents [Luca Stefani]
+
+====================
+     2024-03-21    
+====================
+* build/soong
+883519c soong: paths: Fix out of tree $OUT [Cosmin Tanislav]
+
+* frameworks/av
+c8123dc472 fixup! Camera: Skip stream size check for whitelisted apps [Nick Reuter]
+
+* hardware/qcom-caf/sm8550/audio/agm
+25a4dee agm: plugins: Fix incompatible function pointer type error [LuK1337]
+
+* lineage-sdk
+dcbd8de Drop support for legacy USB restrictor [Chirayu Desai]
+
+* lineage/hudson
+b69e939 Regenerate device dependency mappings [LineageOS Infra]
+
+* lineage/mirror
+e916189 Updated lineage-minimal to 21-Mar-2024 13:02 UTC [Tim Schumacher]
+
+* packages/apps/Dialer
+28f3ce5 Merge tag 'android-14.0.0_r29' into staging/lineage-21.0_merge-android-14.0.0_r29 [Michael Bestas]
+
+* packages/apps/Jelly
+564b570 Jelly: Bump compile and target SDK version to 34 [LuK1337]
+
+* packages/apps/LineageParts
+a4527b0 LineageParts: Migrate to SwitchPreferenceCompat [Michael Bestas]
+
+* packages/apps/SetupWizard
+79e9f1c Fix QPR2 build [Michael Bestas]
+
+* system/sepolicy
+1d6643355 sepolicy: allow fastbootd to operate devpts [Randall Huang]
+
+====================
+     2024-03-20    
+====================
+* hardware/lineage/compat
+1522a47 compat: Drop libprotobuf-cpp-lite-3.9.1-vendorcompat [basamaryan]
+
+* packages/modules/Connectivity
+0c2456a Remove sdk level check when calling getDataSaverEnabled [Junyu Lai]
+
+* system/bpf
+dd436e6 bpfloader: Support <4.14 kernels [Michael Bestas]
+
+* tools/extract-utils
+045c650 extract-utils: Support declaring symlinks to source files [SamarV-121]
+
+====================
+     2024-03-19    
+====================
+* device/xiaomi/daisy
+45feb5f daisy: camera: String8::string() => String8::c_str() [Yumi Yukimura]
+235842d daisy: camera: Fix duplicated symbol `mm_camera_shim_module_init` [Yumi Yukimura]
+
+* device/xiaomi/msm8953-common
+cb4b3c5 msm8953-common: rootdir: Reconfigure ZRAM [Bruno Martins]
+
+* device/xiaomi/ysl
+6621ea0 ysl: camera: String8::string() => String8::c_str() [Yumi Yukimura]
+8bc4d3e ysl: camera: Fix duplicated symbol `mm_camera_shim_module_init` [Yumi Yukimura]
+
+* kernel/xiaomi/mt6895
+8fa7aac7672e arm64: configs: vendor: xaga: Enable specfic device configs [Giovanni Ricca]
+520fef1dfb11 arm64: configs: vendor: Create a dummy xaga fragment config [Giovanni Ricca]
+6460a48e72e3 drivers: mediatek: sensor: Include limited timesync data for xaga's SCP firmware [bengris32]
+24da94f0f09b mediatek: imgsensor: Fix SINGLE_VC_INFO2 struct mismatch for xaga [bengris32]
+b96d5b690759 media: Pull in `mtk-isp-xaga` [Giovanni Ricca]
+b5ac4c8d9818 lens: dw9800v: Add missing xaga guard [Giovanni Ricca]
+699affc55c26 drivers: power: Fix MediaTek header inclusions [Abdulwahab Isam]
+6e0616378b52 [WIP] power: supply: sc8561: Initializate xaga [Giovanni Ricca]
+552c0cb9fea9 [WIP] power: supply: sc8551: Initializate xaga [Giovanni Ricca]
+a2e485b1c3ae [WIP] power: supply: pd_cp_manager: Initializate xaga [Giovanni Ricca]
+61416465b720 [WIP] power: supply: mtk_pd_adapter: Initializate xaga [Giovanni Ricca]
+e66db539e922 [WIP] power: supply: mtk_charger: Initializate xaga [Giovanni Ricca]
+35649e0d401e [WIP] power: supply: bq28z610: Initializate xaga [Giovanni Ricca]
+1ea6353f2a8c [WIP] power: supply: ln8000: Initializate xaga [Giovanni Ricca]
+7213b012c3f6 drm: panel: l16: Include `mi_dsi_panel.h` [Giovanni Ricca]
+5747299df5e3 drm: panel: Import `l16-36-02-0b-dsc` & `l16-42-02-0a-dsc` panels [Giovanni Ricca]
+98df49f0dabd arm64: boot: dts: Import xaga dts [Giovanni Ricca]
+188accc3178b power: supply: sc8551: Guard try_to_find_i2c_regess for yuechu [Giovanni Ricca]
+d2cde85bc4ed power: supply: step_jeita_charge: Resolve Wunused-variable errors [Giovanni Ricca]
+eb174d3c141a power: supply: mt6375-charger: Correct some guard [Giovanni Ricca]
+26db15f6b2ce drivers: connectivity: gen4m: Don't block suspend if WLAN is halted [bengris32]
+8da412448acf drivers: connectivity: gen4m: Use PM notifier to control WLAN suspend [bengris32]
+76721b2cdd6b drivers: connectivity: gen4m: Enable dynamic TX power control [bengris32]
+8aa9de4676cd drivers: connectivity: Drop unused WLAN driver versions [bengris32]
+1ee0f2a17823 drivers: leds: Introduce a backlight trigger using DRM notifier [bengris32]
+00c58fc03ee9 drivers: power_throttling: Avoid wakeup spam during suspend [bengris32]
+44426fe6bfa7 drivers: touchscreen: goodix_9916: Allow the driver to load on aristotle [bengris32]
+45a96e325aec ARM64: configs: Enable `CONFIG_REGULATOR_WL2868C` for aristotle [bengris32]
+58b615950584 ARM64: configs: Add config fragment for `aristotle` [bengris32]
+6329e73cc199 ARM64: configs: Unset CONFIG_XMEXT_SC8551A_CHG_PUMP=m [bengris32]
+bcbb03f20c62 ARM64: configs: Add plato config fragment [bengris32]
+7bb4e4021112 ARM64: dts: vendor: Import `plato` dts [bengris32]
+5871a557c965 drivers: input: touchscreen: Resolve fortify warnings [bengris32]
+eb260a41ee88 drivers: input: L12a_fts_spi: Remove unused `fts_lockdown_info_read` function [bengris32]
+d3021b98790a drivers: input: L12a_fts_spi: Trigger suspend on `MI_DISP_DPMS_EVENT` [bengris32]
+621226f126ca drivers: touchscreen: goodix_9916: Handle `MI_DISP_DPMS_EVENT` events [bengris32]
+0a35bfb7a9ba drivers: touchscreen: goodix_9916: Fix the broken bounds check [bengris32]
+2e98e15821bc drivers: panel-l12a-36-02-0b-dsc-cmd: Resolve Clang 14 warnings [bengris32]
+8bfbfb756cdc drm: panel: Adapt old panel drivers to new `mi_disp` driver [bengris32]
+f0086bbea5c3 drm: panel: Import `l12a-36-02-0b-dsc` and `l12a-42-02-0a-dsc` panel drivers [bengris32]
+337213c7dd90 drivers: drm: mediatek_v2: Import Xiaomi ESD check code from `plato-s-oss` [bengris32]
+f44bdb22a0fe drivers: input: Import touchscreen drivers from `bsp-plato-s-oss` [bengris32]
+c649b47db1be ARM64: dts: vendor: Set-up DTB building [bengris32]
+53ae7cebde55 ARM64: configs: Enable mali base modules [Erfan Abdi]
+5c0a2a56a152 ARM64: configs: Create initial Xiaomi MT6895 config fragment [bengris32]
+f3fe4f65330e drivers: connectivity: Fix function prototype warnings [alextrack2013]
+78fdf0295eca drivers: connectivity: gen4m: Guard more wakelock code [bengris32]
+6e2804e030b5 drivers: connectivity: gen4m: Disable WLAN wakelocks [bengris32]
+38199486408b drivers: connectivity: gen4m: Refactor firmware flavor handling [bengris32]
+b3dbf56dccc6 drivers: connectivity: bt-mt66xx: Refactor firmware flavor handling [bengris32]
+62270ec42a35 drivers: connectivity: Build and include `gps_scp` driver [bengris32]
+9b334a331eb2 drivers: connectivity: Fix wifi random disconnection [Erfan Abdi]
+4820abab5099 drivers: connectivity: Adapt to build for MT6895 and fix function prototypes [bengris32]
+54bff0c969a6 drivers: connectivity: Port connectivity modules for in-kernel building [Erfan Abdi]
+b67e54345e55 drivers: connectivity: Import connectivity modules [bengris32]
+b671688b067a drivers: gpufreq_v2: Notify Mali driver about frequency change every commit [bengris32]
+
+====================
+     2024-03-18    
+====================
