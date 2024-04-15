@@ -1,0 +1,170 @@
+====================
+     2024-04-15    
+====================
+* art
+85885d6 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/make
+28fec62 Always use release-keys for ro.build.tags [Danny Lin]
+
+* build/soong
+5833c7f use speed compiler filter for dexpreopt by default [Daniel Micay]
+40e9b6c cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+1aa6ea3 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+5a20b24 soong: Specify heap size for metalava for S+ [Michael W]
+2607709 soong: increase heap size for metalava [LeddaZ]
+
+* device/qcom/sepolicy-legacy-um
+84869e5 legacy: Add common telephony rules [Bruno Martins]
+
+* device/xiaomi/sm6250-common
+30452b8 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+bf8ebd4 sm6250-common: Define boot image security patch [Alexander Koskovich]
+9b1f1a0 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+78a057e sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+54ea34a sm8350-common: Define boot image security patch [Alexander Koskovich]
+2c22c77 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+0d1dd35 sm8350-common: Don't copy camera config [Giovanni Ricca]
+
+* frameworks/av
+4b181de331 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+ddfa4b852 core: Hide ADB and developer setting enable status [someone5678]
+46815777a gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+3af3ce842 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+cefe03245 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+de31a342c gmscompat: Dynamically spoof props for GMS [SamarV-121]
+b21390bba gmscompat: Allow setting any field in certified build props [Adithya R]
+faa946342 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+84383b2ff gmscompat: Get package name from context instead of app [jhenrique09]
+906e1a8e5 base: Add Safetynet/Play Integrity hax [Danny Lin]
+7f58087d9 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+616e8749e AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+790b077b4 SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+d95c367d9 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+619965420 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+227b67e98 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+cf5c69f08 Cache pin algorithms in PinSet [Till Kottmann]
+1df8aa4aa Cache KeyStoreService [Till Kottmann]
+6157c7779 (Point) Only calculate sin and cos once [Till Kottmann]
+b63797a78 LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+cd073e1ba SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+0d74a7d6d LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+70d378cd4 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+4b8a54aa4 Trace: Disable debug tracing on production builds [Danny Lin]
+1021f963e Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+e1ad58fcd Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+ed831daa6 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+24b64d68d hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+c423d26bd libhwui: compile for performance [Vaisakh Murali]
+4c46d12fa libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+4785e8e0d libhwui: remove deprecated perf flags [Vaisakh Murali]
+7e83b7527 SystemUI: Remove Android build number from QS footer [Danny Lin]
+cb97e3d71 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+b09b49e05 core: Remove old app target SDK dialog [Danny Lin]
+16b3623b1 core: Remove default aspect ratio limit for old apps [Danny Lin]
+f867727ab AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+1f4ebe524 base: SystemUI: Allow flags to be overrideable [Jeferson]
+2d2d0685c Revert "Ignore the charging ripple flag." [Jeferson]
+6f3ab5754 Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+4de5c467cc SF: Re-enable expensive rendering for blurs [Adithya R]
+7110b8776b SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+efc08ce0fb sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+22721a7619 SF: Add retry to EventThread postEvent [Rheygine Medel]
+5b03c2522d sf: upsert RenderEngine's caches [Ramakant Singh]
+36974960c0 Modify dimming threshold from 0.2 to 0.9. [linkai]
+958f0e8832 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/qcom-caf/sm8150/audio
+2e56c77 audio_amplifier: Change the enable amplifier function location [Luofan Chen]
+
+* kernel/xiaomi/mt6895
+c22607d019de ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* lineage/hudson
+423ec19 hudson: Resume builds for gemini and natrium [Bruno Martins]
+
+* lineage/wiki
+824d18b wiki: Sign apks that use public keys [althafvly]
+
+* packages/apps/Trebuchet
+c7dfe32 Increase blur radius [Alexander Winkowski]
+bd13d61 DepthController: Change blur radius to dimension resource [Danny Lin]
+4b40b10 Disable blur on app launch [Alexander Winkowski]
+13955a6 Make scrim transparent [Alexander Winkowski]
+beca2f3 Trebuchet: Move clear all button to actions view [Vachounet]
+2b260a5 Launcher3: Add toggle for DT2S [DennySPB]
+2dd4b7c Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+81b270d LatinIME: fix gesture typing [johnny]
+969ca8d Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/Bluetooth
+29da6c1 Revert "[Invisalign2] Separate security fields from tBTM_SEC_DEV_REC" [Dmitry Muhomor]
+3ad1ad2 Revert "[Invisalign2] move btm_ble_increment_sign_ctr to tBTM_SEC_REC" [Dmitry Muhomor]
+f5e519e Revert "[Invisalign2] make enc_handle public and remove friends" [Dmitry Muhomor]
+5d84e3e Revert "[Invisalign2] Encapsulate the following methods" [Dmitry Muhomor]
+0a65d2b Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::AddService" [Dmitry Muhomor]
+e13e2a7 Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::RemoveServiceById" [Dmitry Muhomor]
+19ca63a Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::RemoveServiceByPsm" [Dmitry Muhomor]
+a1eb553 Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::IsDeviceBonded" [Dmitry Muhomor]
+6cee747 Revert "[Invisalign2] Enacapsulate btm_pair_state_descr" [Dmitry Muhomor]
+8712ea3 Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::change_pairing_state" [Dmitry Muhomor]
+395ef88 Revert "Copy the keys when re-pairing with a new RPA/IRK" [Dmitry Muhomor]
+9b60095 fix use-after-free for sink/source metadata [Daniel Micay]
+
+* system/core
+8f474fb10 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/qcom/opensource/libfmjni
+8020634 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+5c25da3 libfmjni: Fix RDS info retrieving [iusmac]
+
+* vendor/xiaomi/xaga
+07fec42 xaga: Sync with tree [Giovanni Ricca]
+
+====================
+     2024-04-14    
+====================
+====================
+     2024-04-13    
+====================
+* frameworks/opt/telephony
+a97d6d0 Revert "Clear up the obsoleted cascading signal strength polling logic" [Han Sol Jin]
+
+* packages/modules/Wifi
+634862c Fix the issue of not sending p2p connection change broadcast to app with PERMISSION_MAINLINE_NETWORK_STACK [Shuibing Dai]
+
+====================
+     2024-04-12    
+====================
+* device/mediatek/sepolicy_vndr
+aa35679 basic: non_plat: Allow `update_engine` to override `logo` partition [Matsvei Niaverau]
+
+* vendor/lineage
+3db0f472 envsetup: cloremote: build got moved to build_repo [Alexander Martinz]
+
+====================
+     2024-04-11    
+====================
+====================
+     2024-04-10    
+====================
+* packages/apps/SetupWizard
+d9d2859 Fix system locale [Oliver Scott]
+
+====================
+     2024-04-09    
+====================
+* build/make
+14d5ab7 Remove non existent snapuserd.recovery package [Michael Bestas]
+
+* packages/apps/TvSettings
+d7eba7b Fix TvSettings UI sliding is not smooth [Banting Liu]
+
