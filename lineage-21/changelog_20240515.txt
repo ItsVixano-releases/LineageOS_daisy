@@ -1,0 +1,173 @@
+====================
+     2024-05-15    
+====================
+* art
+73bf3c2 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/make
+f3abce3 Always use release-keys for ro.build.tags [Danny Lin]
+
+* build/soong
+140a813 use speed compiler filter for dexpreopt by default [Daniel Micay]
+63273d0 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+40a585a ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+fbbd15c soong: Specify heap size for metalava for S+ [Michael W]
+0de5d6c soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/sm6250-common
+9ffabc7 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+023d270 sm6250-common: Define boot image security patch [Alexander Koskovich]
+60a414a sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+ed64727 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+945fea7 sm8350-common: Define boot image security patch [Alexander Koskovich]
+a929cf6 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+fa350de sm8350-common: Don't copy camera config [Giovanni Ricca]
+
+* frameworks/av
+bc0628ac5e Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+c068eed51 core: Hide ADB and developer setting enable status [someone5678]
+dc41fbb7f gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+311a19326 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+e8bc80822 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+de07a9eb0 gmscompat: Dynamically spoof props for GMS [SamarV-121]
+8a72b5afa gmscompat: Allow setting any field in certified build props [Adithya R]
+25165062a gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+1031d032b gmscompat: Get package name from context instead of app [jhenrique09]
+78e7c2358 base: Add Safetynet/Play Integrity hax [Danny Lin]
+650a29cb3 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+1917847d6 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+d27976b63 SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+733b58189 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+df8846112 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+8596b9de7 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+3c17079df Cache pin algorithms in PinSet [Till Kottmann]
+f82fe9aed Cache KeyStoreService [Till Kottmann]
+dacc10538 (Point) Only calculate sin and cos once [Till Kottmann]
+ea63a1f51 LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+ee79f0b96 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+84a300d97 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+2b627264e ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+f2afa584d Trace: Disable debug tracing on production builds [Danny Lin]
+f5d60cc97 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+15b55eec9 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+769c28549 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+49df9fb51 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+2e84bfefd libhwui: compile for performance [Vaisakh Murali]
+5d1351ae2 libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+2cc91fd32 libhwui: remove deprecated perf flags [Vaisakh Murali]
+5d4fbd435 SystemUI: Remove Android build number from QS footer [Danny Lin]
+e14db5e48 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+d7d473c8d core: Remove old app target SDK dialog [Danny Lin]
+ee308e03b core: Remove default aspect ratio limit for old apps [Danny Lin]
+393c5c376 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+5ede7130d base: SystemUI: Allow flags to be overrideable [Jeferson]
+64fa8cb9a Revert "Ignore the charging ripple flag." [Jeferson]
+66e7dd1af Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+683e8517cc SF: Re-enable expensive rendering for blurs [Adithya R]
+ad0ebd20a2 SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+128013d300 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+543e74cf84 SF: Add retry to EventThread postEvent [Rheygine Medel]
+75b9767a86 sf: upsert RenderEngine's caches [Ramakant Singh]
+95f44d9ac0 Modify dimming threshold from 0.2 to 0.9. [linkai]
+40418997bf libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* kernel/xiaomi/mt6895
+9bd52a1441dd ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* lineage/mirror
+ddcc316 aosp-minimal: Pixel 8a [Chirayu Desai]
+
+* packages/apps/Trebuchet
+5b5c7d8 Increase blur radius [Alexander Winkowski]
+6de7b85 DepthController: Change blur radius to dimension resource [Danny Lin]
+c04f5c8 Disable blur on app launch [Alexander Winkowski]
+7c77bd0 Make scrim transparent [Alexander Winkowski]
+160b755 Trebuchet: Move clear all button to actions view [Vachounet]
+e146174 Launcher3: Add toggle for DT2S [DennySPB]
+071d5b4 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+d2ff0ec LatinIME: fix gesture typing [johnny]
+6b06fe6 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/Bluetooth
+e46f4a1 Revert "[Invisalign2] Separate security fields from tBTM_SEC_DEV_REC" [Dmitry Muhomor]
+a943fff Revert "[Invisalign2] move btm_ble_increment_sign_ctr to tBTM_SEC_REC" [Dmitry Muhomor]
+83e7a02 Revert "[Invisalign2] make enc_handle public and remove friends" [Dmitry Muhomor]
+b79d260 Revert "[Invisalign2] Encapsulate the following methods" [Dmitry Muhomor]
+45d2bb7 Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::AddService" [Dmitry Muhomor]
+405fcca Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::RemoveServiceById" [Dmitry Muhomor]
+8c7dd0f Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::RemoveServiceByPsm" [Dmitry Muhomor]
+dae5e5e Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::IsDeviceBonded" [Dmitry Muhomor]
+68cd052 Revert "[Invisalign2] Enacapsulate btm_pair_state_descr" [Dmitry Muhomor]
+c1d1ca4 Revert "[Invisalign2] Encapsulate tBTM_SEC_CB::change_pairing_state" [Dmitry Muhomor]
+1c30855 Revert "Copy the keys when re-pairing with a new RPA/IRK" [Dmitry Muhomor]
+14a9863 Revert "btm_sec: Class of device regression fix" [Giovanni Ricca]
+20d4302 Revert "Reland "Enforce authentication if encryption is required"" [Giovanni Ricca]
+
+* system/core
+27cb51c04 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/extra
+5a7bbd0 releases.py: Ditch `PyGithub` [Giovanni Ricca]
+a767be2 vendorsetup: Use `breakfast` instead [Giovanni Ricca]
+
+* vendor/extra/priv
+a989f6b fixup! patches: lineage-21: GrapheneOS Bluetooth fix [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+ac2161f libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+028eaa2 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-05-14    
+====================
+* vendor/lineage
+49c4dd8f kernel: Error on duplicate modules [Aaron Kling]
+
+====================
+     2024-05-13    
+====================
+* lineage/hudson
+cd48c1b hudson: Promote tama to 21 [Danny Trunk]
+
+* lineage/wiki
+da33315 wiki: devices: Promote tama to 21 [Danny Trunk]
+
+====================
+     2024-05-12    
+====================
+* kernel/xiaomi/msm8953
+26535d9925c4 Merge https://github.com/ItsVixano/android_kernel_qcom_msm8953 into lineage-21 [Giovanni Ricca]
+604bb9eaaa0c Merge https://github.com/LineageOS/android_kernel_qcom_sdm845 into lineage-20 [Giovanni Ricca]
+
+* packages/apps/Aperture
+9601a86 Aperture: Include embedded native libs [Sebastiano Barezzi]
+
+* packages/apps/Glimpse
+b3f50f2 Glimpse: Don't add GIF decoder [Luca Stefani]
+
+====================
+     2024-05-11    
+====================
+* hardware/qcom-caf/common
+bb5988d common: Update matrix to LA.QSSI.14.0.r1-13300-qssi.0 [snnbyyds]
+
+* packages/modules/Bluetooth
+8de6650 Merge tag 'android-14.0.0_r35' into staging/lineage-21.0_merge-android-14.0.0_r35 [Michael Bestas]
+
+====================
+     2024-05-10    
+====================
+* device/xiaomi/msm8953-common
+f9a7b74 msm8953-common: overlay: Don't pin home app in memory [Alexander Winkowski]
+
+====================
+     2024-05-09    
+====================
