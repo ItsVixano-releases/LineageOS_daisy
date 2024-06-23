@@ -1,0 +1,293 @@
+====================
+     2024-06-23    
+====================
+* android
+33aec9e manifest: Switch to our fork of TvSystemUI [Michael Bestas]
+
+* art
+a323cf4 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/make
+7da11398cc core: Make build ID simple [neobuddy89]
+d9263ca4be core: Spoof `dev-keys` build to be `release-keys` [Giovanni Ricca]
+
+* build/soong
+1bce2f8a3 use speed compiler filter for dexpreopt by default [Daniel Micay]
+fb9396d1f cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+4870af886 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+0f365deba soong: Specify heap size for metalava for S+ [Michael W]
+21d7d8b8a soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/msm8953-common
+ec25afb msm8953-common: Set higher priority to c2 than OMX [Sujin Panicker]
+
+* device/xiaomi/sm6250-common
+26447e4 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+a8fcf50 sm6250-common: Define boot image security patch [Alexander Koskovich]
+b89b8c6 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+c47987dc sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+6384aa54 sm8350-common: Define boot image security patch [Alexander Koskovich]
+cfd62eea sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+30322263 sm8350-common: Don't copy camera config [Giovanni Ricca]
+
+* frameworks/av
+a35f622be1 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+c406ae579cc99 core: Hide ADB and developer setting enable status [someone5678]
+c247f136c91d4 gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+051a168d45cea gmscompat: Un-spoof GMS while adding google account [Adithya R]
+1c99f2599799d gmscompat: Add prop to disable gms spoofing [SamarV-121]
+eb0dee380206f gmscompat: Dynamically spoof props for GMS [SamarV-121]
+d1db2c650df35 gmscompat: Allow setting any field in certified build props [Adithya R]
+e31a8b45e7759 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+d04a30058d594 gmscompat: Get package name from context instead of app [jhenrique09]
+756d753e1adc5 base: Add Safetynet/Play Integrity hax [Danny Lin]
+71f2f21452f01 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+d674afe4d2bec AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+fbdedafe5f165 SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+ff37a8a3204d1 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+5c5effc8b1ef5 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+d87e6dfdd9b8d core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+f4bd2cf6ac569 Cache pin algorithms in PinSet [Till Kottmann]
+d0f550dc0ee37 Cache KeyStoreService [Till Kottmann]
+9395859a1a2f2 (Point) Only calculate sin and cos once [Till Kottmann]
+7dcb5edbf798b LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+d42e716b02155 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+8fc96e4238677 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+8a2b9f2818461 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+ec4e1a50c0adb Trace: Disable debug tracing on production builds [Danny Lin]
+00f74beea8af8 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+74cac7894f3d2 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+ed70961ba3488 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+bddcba180c512 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+99d15daacf08c libhwui: compile for performance [Vaisakh Murali]
+c2d39caec1d3d libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+594007c93f126 libhwui: remove deprecated perf flags [Vaisakh Murali]
+5b8ab44850d42 SystemUI: Remove Android build number from QS footer [Danny Lin]
+9def875638167 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+2cdd4494da0c7 core: Remove old app target SDK dialog [Danny Lin]
+5c5dd08167f6f core: Remove default aspect ratio limit for old apps [Danny Lin]
+10e282d5fb534 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+8de6111022c15 base: SystemUI: Allow flags to be overrideable [Jeferson]
+c594ce97b7a0f Revert "Ignore the charging ripple flag." [Jeferson]
+83ccb7b6074e7 Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+d0dc848e6f SF: Re-enable expensive rendering for blurs [Adithya R]
+482ec4e980 SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+93147d3042 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+4120f988f8 SF: Add retry to EventThread postEvent [Rheygine Medel]
+402d3d7e48 sf: upsert RenderEngine's caches [Ramakant Singh]
+520b7367e8 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* kernel/xiaomi/mt6895
+ba1b7df32aea ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* lineage/hudson
+8989140 updater: Correct POCO branding [Alexander Winkowski]
+
+* lineage/mirror
+667ec6e Updated to 23-Jun-2024 22:08 UTC [Michael Bestas]
+
+* lineage/wiki
+0bbb01a wiki: Add Kryo 660 and SM6375 to schema [Albert Tang]
+
+* packages/apps/Trebuchet
+716f211be93 Increase blur radius [Alexander Winkowski]
+3e82d08b558 DepthController: Change blur radius to dimension resource [Danny Lin]
+42ee2a874f2 Disable blur on app launch [Alexander Winkowski]
+51afdf0ccf9 Make scrim transparent [Alexander Winkowski]
+b58a9690856 Trebuchet: Move clear all button to actions view [Vachounet]
+9a8aa50cbbc Launcher3: Add toggle for DT2S [DennySPB]
+385a81c3889 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+b2afd78b0 LatinIME: fix gesture typing [johnny]
+97e2867e8 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* system/core
+d39571bfd8 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/lineage-priv/keys
+bb9ae99 [PERSONAL] keys: Generate keys [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+6929b3f libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+d902410 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-06-22    
+====================
+* bootable/recovery
+e386de488 Add e2fsck/resize2fs/tune2fs to recovery [Michael Bestas]
+
+* build/make
+2ba7f00a98 Revert "Add e2fsck/resize2fs/tune2fs to recovery/vendor_ramdisk" [Alexander Winkowski]
+
+* frameworks/base
+85853878ce275 core: Move Lineage notification LED code to NotificationAttentionHelper [LuK1337]
+
+* hardware/libhardware
+b923f817 libhardware: Fix symlinks for audio_amplifier and display_defs [Vivekachooz]
+
+* packages/apps/Car/Settings
+3b38802fa VolumeSettingsPreferenceController: Fix NPE when changing volumes [Bruno Martins]
+
+* packages/apps/Dialer
+01694c8 Dialer: Make the database compatible with AOSP dialer again. [Michael Bestas]
+
+* packages/services/Car
+420741151e car_product: Remove dead and missing packages for EPPE [Bruno Martins]
+
+* vendor/extra
+31386ba patches: Sync `build_make` patches [Giovanni Ricca]
+
+* vendor/extra/priv
+a18232b QPR3 [Giovanni Ricca]
+
+* vendor/lineage
+deaee2eb fixup! Hookup GRALLOC_HANDLE_HAS_UBWCP_FORMAT [AdarshGrewal]
+
+====================
+     2024-06-21    
+====================
+* device/mediatek/sepolicy_vndr
+6ca21fb basic: non_plat: Use `rw_dir_file` macro [bengris32]
+
+* device/xiaomi/daisy
+0237d50 daisy: QCamera2: Fix sensor to active array ROI conversion logic. [Gurram Pravalika]
+d3d18a5 daisy: QCamera2: Remove libhidltransport empty library [Vandana Jain]
+80203af daisy: QCamera2: HAL3: Fix for memleak if for snapshot stream [Abhinav Sohane]
+f3638bd daisy: QCamera2: Fix sharpness issue in snapshot. [Sai Kumar Sanagavarapu]
+
+* device/xiaomi/msm8953-common
+b70abb8 msm8953-common: Drop parts once and for all [Giovanni Ricca]
+d6e57bc msm8953-common: Long live SW OMX [Giovanni Ricca]
+2dae409 msm8953-common: Build missing libraries for 14 QPR3 [Michael Bestas]
+cdf6330 msm8953-common: Add `atcmdfwd` on framework compatibility matrix [Giovanni Ricca]
+48c92b6 msm8953-common: Inherit from legacy QTI FCM [Michael Bestas]
+51271b7 msm8953-common: Include lineage FCM [Michael Bestas]
+f6cdc75 msm8953-common: Inherit from QTI FCM [Bruno Martins]
+8ebfe97 msm8953-common: Set manifest target-level to 5 [Tim Zimmermann]
+31f72c0 msm8953-common: Move to QTI health AIDL service [Bruno Martins]
+234207a msm8953-common: Switch to QTI vibrator HAL [Michael Bestas]
+
+* device/xiaomi/mt6895-common
+006a621 mt6895-common: Link mediatek camera provider against v32 `libutils` [ChrisCatto]
+
+* device/xiaomi/sm6250-common
+929103c sm6250-common: Build missing libraries for 14 QPR3 [Michael Bestas]
+
+* device/xiaomi/sm8350-common
+fb291023 sm8350-common: Import missing IMS lib [Giovanni Ricca]
+111a9bbf sm8350-common: Build missing libraries for 14 QPR3 [Michael Bestas]
+9ee014a6 sm8350-common: Disable UFFD GC [Chirayu Desai]
+
+* device/xiaomi/ysl
+6ba8ec6 ysl: QCamera2: Fix sensor to active array ROI conversion logic. [Gurram Pravalika]
+84754e0 ysl: QCamera2: Remove libhidltransport empty library [Vandana Jain]
+64c2004 ysl: QCamera2: HAL3: Fix for memleak if for snapshot stream [Abhinav Sohane]
+dcc6ecb ysl: QCamera2: Fix sharpness issue in snapshot. [Sai Kumar Sanagavarapu]
+
+* packages/apps/Glimpse
+1d1b131 Glimpse: Remove placeholder search bar [Aayush Gupta]
+
+* packages/apps/Trebuchet
+51fc8a7aeef fixup! Trebuchet: allow disabling workspace edit [Michael Bestas]
+
+* vendor/xiaomi/sm8350-common
+fd16db3 sm8350-common: Import missing IMS lib [Giovanni Ricca]
+
+* vendor/xiaomi/xaga
+b2e8858 xaga: Sync with tree [Giovanni Ricca]
+
+====================
+     2024-06-20    
+====================
+* device/realme/ums512-common
+634e181 ums512-common: So this is what a 15€ phone does to a mf [Giovanni Ricca]
+
+* device/xiaomi/daisy
+c5358cc daisy: Build missing libraries for 14 QPR3 [Michael Bestas]
+1ebcecf daisy: camera: Fix snprintf string truncation error [Yumi Yukimura]
+0747ff5 daisy: Drop COMMON_LUNCH_CHOICES [Michael Bestas]
+
+* device/xiaomi/lisa
+9aee716 lisa: unset BOARD_USERDATAIMAGE_PARTITION_SIZE [SGCMarkus]
+87ab6ec lisa: Drop COMMON_LUNCH_CHOICES [Michael Bestas]
+
+* device/xiaomi/miatoll
+31f7c11 miatoll: Inherit non_ab_device.mk [Tim Zimmermann]
+44f0b47 miatoll: Drop COMMON_LUNCH_CHOICES [Michael Bestas]
+
+* device/xiaomi/msm8953-common
+c8da87d msm8953-common: Disable the usage of ConfigStore. [Alexander Koskovich]
+
+* device/xiaomi/sm6250-common
+e534aec sm6250-common: unset BOARD_USERDATAIMAGE_PARTITION_SIZE [SGCMarkus]
+
+* device/xiaomi/xaga
+db3cf1f [DNM] xaga: Ship eng preloader image [Giovanni Ricca]
+
+* device/xiaomi/ysl
+b907f02 ysl: unset BOARD_USERDATAIMAGE_PARTITION_SIZE [SGCMarkus]
+1eecf77 ysl: Build missing libraries for 14 QPR3 [Michael Bestas]
+7c110bc ysl: camera: Fix snprintf string truncation error [Yumi Yukimura]
+44d88a5 ysl: Drop COMMON_LUNCH_CHOICES [Michael Bestas]
+
+* hardware/sprd
+0a553e8 [FIXME] interfaces: fpsensor: Initial fpsensorhidlsvc dump [Giovanni Ricca]
+
+* packages/apps/Aperture
+a2e97e4 Aperture: Set initial package stopped state [Michael Bestas]
+
+* packages/apps/Etar
+ca3641a Etar: Set initial package stopped state [Michael Bestas]
+
+* vendor/xiaomi/msm8953-common
+2c01c51 msm8953-commom: Drop dirac [Giovanni Ricca]
+
+====================
+     2024-06-19    
+====================
+====================
+     2024-06-18    
+====================
+* external/jemalloc_new
+648e1b9 Merge commit '2b6695941402dc26f034afa73f8e177f29f10cb1' of https://android.googlesource.com/platform/external/jemalloc_new into HEAD [Alexander Winkowski]
+
+* kernel/xiaomi/msm8953
+915aa4ac9e5b qti-haptics: Prevent deadlock by waiting on a negative remaining time. [Quallenauge]
+372a33066a6b input: qti-haptics: Clear PLAY bit after all pattern is played [Fenglin Wu]
+c6013f57d796 input: misc: qti-haptics: check NULL pointer before using it [Fenglin Wu]
+
+* lineage/scripts
+1767a10 carriersettings-extractor: add wcdma_ecno_thresholds_int_array to threshold list [SGCMarkus]
+
+* vendor/extra
+ae03410 patches: lineage-21: QPR3 [Giovanni Ricca]
+
+====================
+     2024-06-17    
+====================
+* external/robolectric
+4bd8e13 Fix Trebuchet tests [Michael Bestas]
+
+* external/wpa_supplicant_8
+43981d45 fixup! wpa_supplicant: add support for bcmdhd SAE authentication offload [Michael Bestas]
+
+* hardware/lineage/compat
+c69c85f libui: Add GraphicBufferMapper::unlock shims [Giovanni Ricca]
+
+* hardware/mediatek
+72fa042 Revert "aidl: gadget: Return error status when failing to update saving state" [bengris32]
+
+* hardware/qcom-caf/common
+8fd91d7 Introduce legacy FCM [Michael Bestas]
+
+* vendor/xiaomi/mt6895-common
+a2ef110 mt6895-common: Sync with tree [Giovanni Ricca]
+
