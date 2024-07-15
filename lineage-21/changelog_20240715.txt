@@ -1,0 +1,161 @@
+====================
+     2024-07-15    
+====================
+* art
+0179eb3 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/make
+1940cd05fb core: Make build ID simple [neobuddy89]
+9812526467 core: Spoof `dev-keys` build to be `release-keys` [Giovanni Ricca]
+
+* build/soong
+81fbdfd58 use speed compiler filter for dexpreopt by default [Daniel Micay]
+1b5b9db52 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+8d36699a4 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+c1e250fce soong: Specify heap size for metalava for S+ [Michael W]
+1dfaad125 soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/sm6250-common
+03e8b02 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+ae9aa39 sm6250-common: Define boot image security patch [Alexander Koskovich]
+caea97a sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+015bb5a0 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+29a0c081 sm8350-common: Define boot image security patch [Alexander Koskovich]
+a91d5740 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+67700d05 sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+16af15a7 sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+
+* frameworks/av
+7579cc5c53 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+0e4eb95b9b0c3 core: Hide ADB and developer setting enable status [someone5678]
+f5adad5501b24 gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+fe1dffee1cb75 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+5675f028a728d gmscompat: Add prop to disable gms spoofing [SamarV-121]
+f789c57c868db gmscompat: Dynamically spoof props for GMS [SamarV-121]
+2a4a8db70fce6 gmscompat: Allow setting any field in certified build props [Adithya R]
+75e9d14c9fec5 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+a0f21b829bbde gmscompat: Get package name from context instead of app [jhenrique09]
+b28c4a713bc7e base: Add Safetynet/Play Integrity hax [Danny Lin]
+d0c222b61ea1d ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+bf3bcaa397bc1 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+48b9a55562c6b SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+bf852ad9f77a3 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+401128b1fcba7 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+4f9a3ac762fcd core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+95bd562bd12ef Cache pin algorithms in PinSet [Till Kottmann]
+9021776fb9834 Cache KeyStoreService [Till Kottmann]
+5722ed1bef98d (Point) Only calculate sin and cos once [Till Kottmann]
+efd65ad4f2dbe LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+c06a7509d1a0b SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+cac357a9f145e LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+4415458baf934 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+4398da25a3fbc Trace: Disable debug tracing on production builds [Danny Lin]
+ac4f16349d8f6 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+e611592ca19f6 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+84f5a992b6353 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+02daf64adc590 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+9a2e05a6a8322 libhwui: compile for performance [Vaisakh Murali]
+de3ef56bdcb3d libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+e0fe4d3d556fd libhwui: remove deprecated perf flags [Vaisakh Murali]
+abc71c62ed3fc SystemUI: Remove Android build number from QS footer [Danny Lin]
+c5a4d82e6a499 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+90e2b05dc1284 core: Remove old app target SDK dialog [Danny Lin]
+b37186f128be5 core: Remove default aspect ratio limit for old apps [Danny Lin]
+0f04b6a9f8f3c AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+4f4a71004d2ad base: SystemUI: Allow flags to be overrideable [Jeferson]
+5c3dd514562d3 Revert "Ignore the charging ripple flag." [Jeferson]
+09e0126c9b3c3 Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+665c731ada SF: Re-enable expensive rendering for blurs [Adithya R]
+898b855d0f SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+22dc71bb62 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+0f3ecae5ba SF: Add retry to EventThread postEvent [Rheygine Medel]
+0ba3e8a156 sf: upsert RenderEngine's caches [Ramakant Singh]
+f167155e5d libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* kernel/xiaomi/mt6895
+8971090bb30d ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* lineage/wiki
+deb34c8 Revive gta4l and gta4lwifi [Christian Hoffmann]
+
+* packages/apps/Trebuchet
+692594806f8 Increase blur radius [Alexander Winkowski]
+4d3ec9756a6 DepthController: Change blur radius to dimension resource [Danny Lin]
+e4290985bcf Disable blur on app launch [Alexander Winkowski]
+39acddb8d4d Make scrim transparent [Alexander Winkowski]
+df6c2c371b3 Trebuchet: Move clear all button to actions view [Vachounet]
+08529d6a1ad Launcher3: Add toggle for DT2S [DennySPB]
+1ff71c69440 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+257227a74 LatinIME: fix gesture typing [johnny]
+1c771d893 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* system/core
+65eeea83ae init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/qcom/opensource/libfmjni
+5ef97ba libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+7380d28 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-07-14    
+====================
+* lineage/hudson
+56794d5 Revive gta4l and gta4lwifi [Christian Hoffmann]
+
+====================
+     2024-07-13    
+====================
+* device/lineage/sepolicy
+1a7689a common: private: Label mirroring disablement property [Nolen Johnson]
+
+* device/qcom/sepolicy-legacy-um
+a0cc2d5 sepolicy: Add memtrack HAL [Naseer Ahmed]
+
+* device/xiaomi/msm8953-common
+e8845f5 [DNM] msm8953-common: Import prebuilt wpa_supplicant [iusmac]
+1ac98aa msm8953-common: Remove software omx codec references [Aaron Kling]
+c632712 msm8953-common: Use AOSP default Codec2/OMX ranks [Michael Bestas]
+8ac48d4 msm8953-common: Set higher priority to c2 than OMX [Sujin Panicker]
+
+* device/xiaomi/mt6895-common
+ca7e328 mt6895-common: overlay-lineage: Enable call recording [Danny Baumann]
+
+* device/xiaomi/sm6250-common
+aea0165 sm6250-common: Remove software omx codec references [Aaron Kling]
+8a1e976 sm6250-common: Use AOSP default Codec2/OMX ranks [Michael Bestas]
+
+* frameworks/base
+8cd8a8b06b931 SystemUI: Allow skipping mirroring confirmation dialog [Sebastiano Barezzi]
+
+* lineage/mirror
+eddbb6d Updated to 12-Jul-2024 12:01 UTC [Tim Schumacher]
+
+* vendor/xiaomi/msm8953-common
+07a8bcb [DNM] msm8953-common: Import prebuilt wpa_supplicant [iusmac]
+
+====================
+     2024-07-12    
+====================
+* build/soong
+cfde37181 Add support for keyboard prebuilt module type [yangbill]
+
+* vendor/lineage
+3fe68ad5 kernel: Better x86 support [Sebastiano Barezzi]
+
+====================
+     2024-07-11    
+====================
+====================
+     2024-07-10    
+====================
+====================
+     2024-07-09    
+====================
