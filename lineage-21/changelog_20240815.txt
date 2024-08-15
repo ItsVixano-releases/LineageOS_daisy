@@ -1,0 +1,185 @@
+====================
+     2024-08-15    
+====================
+* art
+1477db1 Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+65de326 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/soong
+8161591 use speed compiler filter for dexpreopt by default [Daniel Micay]
+181834a cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+c79b6b1 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+f0b341d soong: Specify heap size for metalava for S+ [Michael W]
+486d589 soong: increase heap size for metalava [LeddaZ]
+
+* device/qcom/sepolicy_vndr/legacy-um
+23e11de lito: Allow init write to discard_max_bytes [Michael Bestas]
+
+* device/xiaomi/sm6250-common
+1369505 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+4ec81d9 sm6250-common: Define boot image security patch [Alexander Koskovich]
+7c39f29 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+c9b0a42 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+4f99dbc sm8350-common: Define boot image security patch [Alexander Koskovich]
+98a3340 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+a4e7940 sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+f4962ff sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+
+* external/jemalloc_new
+4b777fe fix compilation [Alexander Winkowski]
+
+* frameworks/av
+773ce17 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+697c72ea core: Hide ADB and developer setting enable status [someone5678]
+85ef55ac gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+bfc68b95 gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+a1e2901e gmscompat: Un-spoof GMS while adding google account [Adithya R]
+e2b9f721 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+d715010d gmscompat: Dynamically spoof props for GMS [SamarV-121]
+d6ac9080 gmscompat: Allow setting any field in certified build props [Adithya R]
+23a2ff35 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+19f6cc92 gmscompat: Get package name from context instead of app [jhenrique09]
+8c8da70c base: Add Safetynet/Play Integrity hax [Danny Lin]
+b2980325 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+efc9eecd AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+47244ed7 SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+ec937654 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+ab7ed532 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+ce8ee36a core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+3d98d77d Cache pin algorithms in PinSet [Till Kottmann]
+dfafe70a Cache KeyStoreService [Till Kottmann]
+5a806eb2 (Point) Only calculate sin and cos once [Till Kottmann]
+eb38747f LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+c041edb9 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+aa2e2912 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+c7324d18 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+2276bde9 Trace: Disable debug tracing on production builds [Danny Lin]
+abf97ce8 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+8f956902 Revert "Revert "Update light/dark detection."" [Alexander Winkowski]
+15f7a300 Revert "Enable color threshold editing via SystemProperties" [Alexander Winkowski]
+96f754ec hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+c2694e73 libhwui: compile for performance [Vaisakh Murali]
+4a343128 libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+cf716e3f libhwui: remove deprecated perf flags [Vaisakh Murali]
+72870409 SystemUI: Remove Android build number from QS footer [Danny Lin]
+cfd92a23 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+d83da27d core: Remove old app target SDK dialog [Danny Lin]
+72694102 core: Remove default aspect ratio limit for old apps [Danny Lin]
+5989d065 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+d67847a1 base: SystemUI: Allow flags to be overrideable [Jeferson]
+30537443 Revert "Ignore the charging ripple flag." [Jeferson]
+f76c85d9 Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+b73663a SF: Re-enable expensive rendering for blurs [Adithya R]
+03bbeb9 SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+c3a3707 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+762f97c SF: Add retry to EventThread postEvent [Rheygine Medel]
+81b4fbb sf: upsert RenderEngine's caches [Ramakant Singh]
+7d7cd31 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* kernel/xiaomi/mt6895
+672caf9e21 ARM64: configs: gki_defconfig: Build with ThinLTO [Giovanni Ricca]
+
+* lineage/hudson
+4d1df3c hudson: Add Redmi K60 Pro [danielml]
+
+* lineage/wiki
+3834542 wiki: Add Redmi K60 Pro [danielml]
+
+* packages/apps/Trebuchet
+b999b60 Increase blur radius [Alexander Winkowski]
+4e7c150 DepthController: Change blur radius to dimension resource [Danny Lin]
+6fa523e Disable blur on app launch [Alexander Winkowski]
+cbd1eaa Make scrim transparent [Alexander Winkowski]
+ed76296 Trebuchet: Move clear all button to actions view [Vachounet]
+17eb255 Launcher3: Add toggle for DT2S [DennySPB]
+c083119 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+b232cf6 LatinIME: fix gesture typing [johnny]
+3d216ed Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* system/core
+a2935d2 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/qcom/opensource/libfmjni
+069cb59 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+7ee236a libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-08-14    
+====================
+====================
+     2024-08-13    
+====================
+* vendor/lineage
+05a72e9 vars: Update redbull to August 2024 [Michael Bestas]
+
+====================
+     2024-08-12    
+====================
+* lineage/mirror
+2670d40 Updated to 11-Aug-2024 12:01 UTC [Tim Schumacher]
+
+====================
+     2024-08-11    
+====================
+* system/core
+9454d90 Make snapuserd recovery_available. [David Anderson]
+
+====================
+     2024-08-10    
+====================
+* vendor/extra
+8fa21e4 vendorsetup.sh: Remove `recovery_ramdisk` [Giovanni Ricca]
+
+====================
+     2024-08-09    
+====================
+* android
+b499aae manifest: August 2024 Security Update [Michael Bestas]
+
+* build/make
+12a64c2 Revert "Remove non existent snapuserd.recovery package" [David Anderson]
+
+* external/chromium-webview/patches
+3e66b09 Update Chromium Webview to 127.0.6533.103 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm
+942a549 Update Chromium Webview arm prebuilt to 127.0.6533.103 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm64
+1be5632 Update Chromium Webview arm64 prebuilt to 127.0.6533.103 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86
+bf30b1d Update Chromium Webview x86 prebuilt to 127.0.6533.103 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86_64
+47c5a9c Update Chromium Webview x86_64 prebuilt to 127.0.6533.103 [Kevin F. Haggerty]
+
+* frameworks/av
+a2bd776 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
+* frameworks/base
+38903174 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
+* frameworks/native
+7034776 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
+* hardware/interfaces
+727cbe0 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
+* hardware/mediatek
+1ae677a aidl: vibrator: Update vibrator strength nodes [bengris32]
+
+* packages/modules/Bluetooth
+5d90884 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
+* system/security
+12112e1 Merge tag 'android-14.0.0_r55' into staging/lineage-21.0_merge-android-14.0.0_r55 [Bruno Martins]
+
