@@ -1,0 +1,181 @@
+====================
+     2024-11-15    
+====================
+* art
+b13770b Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+2e03760 art: Disable debug tracing on production builds [Danny Lin]
+
+* build/soong
+e7d3c9f use speed compiler filter for dexpreopt by default [Daniel Micay]
+6730731 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+de5f5a4 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+88a6ee5 soong: Specify heap size for metalava for S+ [Michael W]
+872e0ab soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/sm6250-common
+a442436 sm6250-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+5a1873f sm6250-common: Define boot image security patch [Alexander Koskovich]
+de6436d sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+caf85e5 sm8350-common: Set arch variant to armv8-2a-dotprod [Adithya R]
+33a52ad sm8350-common: Define boot image security patch [Alexander Koskovich]
+6ad5d06 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+5024be1 sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+e9f2c05 sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+
+* device/xiaomi/xaga
+2aac8c9 xaga: Add `hardware/mediatek/libfmjni` on soong path [Giovanni Ricca]
+
+* frameworks/av
+5f1227e Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+0087a1645 core: Hide ADB and developer setting enable status [someone5678]
+f58bae78a gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+671fc3507 gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+a825f57b9 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+6f86a306b gmscompat: Add prop to disable gms spoofing [SamarV-121]
+bcddc4e36 gmscompat: Dynamically spoof props for GMS [SamarV-121]
+54e1f362c gmscompat: Allow setting any field in certified build props [Adithya R]
+20c2b861c gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+1e4298e20 gmscompat: Get package name from context instead of app [jhenrique09]
+081c02940 base: Add Safetynet/Play Integrity hax [Danny Lin]
+5f1c3e31e ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+d0031f366 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+d594e91a9 SystemUI: respect setting for use of DeviceControlsTile from lockscreen [Dmitry Muhomor]
+9ecfd5aeb SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+27411c042 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+1184b9632 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+3c6a55faa Cache pin algorithms in PinSet [Till Kottmann]
+87e4377c1 Cache KeyStoreService [Till Kottmann]
+c22a28ab0 (Point) Only calculate sin and cos once [Till Kottmann]
+088d7848c LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+d27cf776c SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+0167c2fb4 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+6296b38ea ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+02d4b0aa1 Trace: Disable debug tracing on production builds [Danny Lin]
+38cfbc685 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+44123a64d hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+66a236a0f libhwui: compile for performance [Vaisakh Murali]
+4f9c9fbcd libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+27ea0e4e7 libhwui: remove deprecated perf flags [Vaisakh Murali]
+8980d5b2d SystemUI: Remove Android build number from QS footer [Danny Lin]
+061cff6b5 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+e60718caa core: Remove old app target SDK dialog [Danny Lin]
+2af3ad0cd core: Remove default aspect ratio limit for old apps [Danny Lin]
+f7ec6cf09 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+745e296f4 base: SystemUI: Allow flags to be overrideable [Jeferson]
+44e103fd0 Revert "Ignore the charging ripple flag." [Jeferson]
+5f798794f Revert "Update Media Seekbar Thumb Shape" [00day0]
+
+* frameworks/native
+ab6966f SF: Re-enable expensive rendering for blurs [Adithya R]
+349a6ef SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+bd22053 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+018c5f6 SF: Add retry to EventThread postEvent [Rheygine Medel]
+d616216 sf: upsert RenderEngine's caches [Ramakant Singh]
+13336f0 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/lineage/compat
+aa65e2b compat: expose android.hardware.sensors@1.0-convert as shared lib [nift4]
+663836b compat: add libaudioclient shim [nift4]
+
+* hardware/lineage/interfaces
+ef1029a sensors: Add a sensors 2.0 -> 1.0 subhal wrapper [bengris32]
+
+* hardware/mediatek
+579dc7a libfmjni: Convert to Android.bp [Michael Bestas]
+
+* packages/apps/Trebuchet
+9a8f72a Launcher3: Allow hiding top shadow on statusbar [Adithya R]
+b51f4d5 Launcher3: Set recents and app drawer opacity [Pranav Vashi]
+047398a Launcher3: Show clear all button in recents overview [jhonboy121]
+bf3766a Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+ea0e8c1 LatinIME: fix gesture typing [johnny]
+09d412c Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* system/core
+81069d2 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/extra/priv
+bdda563 lineage-22: lisa patches + finish generic todo list [Giovanni Ricca]
+
+* vendor/lineage
+109d273 kernel: Use libc sysroot from host for 6.11+ [Yumi Yukimura]
+af247cd kernel: Add support to append DTBs to kernel image [Yumi Yukimura]
+
+* vendor/qcom/opensource/libfmjni
+26c2565 libfmjni: Don't call `pthread_join` on `Pwr_down` [Giovanni Ricca]
+ad0d674 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2024-11-14    
+====================
+* lineage/mirror
+a345537 Updated aosp-minimal to 13-Nov-2024 13:02 UTC [Tim Schumacher]
+
+====================
+     2024-11-13    
+====================
+* kernel/xiaomi/sm8350
+81f65f1f117e Revert "arm64: configs: lahaina: Set Local version to "-perf"" [Giovanni Ricca]
+
+* packages/apps/Settings
+bd2f8fa Fix background data clobbering other policies [Tommy Webb]
+
+====================
+     2024-11-12    
+====================
+* device/lineage/atv
+4ddb44d atv: init: Allow opt-out of forced 1080p scaling [Thomas Makin]
+
+* frameworks/base
+4849cf767 SystemUI: Add support for udfps dim layer [pjgowtham]
+
+* frameworks/native
+4249f5a surfaceflinger: Allow ZOrder override for UDFPS dim layer [pjgowtham]
+
+* vendor/extra
+afc6809 vendorsetup: Improve `apply_patches` logging [Giovanni Ricca]
+
+* vendor/lineage
+9d4e247 vars: Update qcom tags [Michael Bestas]
+
+====================
+     2024-11-11    
+====================
+* build/release
+137f003 Bump Security String to 2024-11-01 [Michael Bestas]
+
+* device/qcom/sepolicy_vndr/legacy-um
+338029e fixup! Remove vendor_service. [Michael Bestas]
+
+====================
+     2024-11-10    
+====================
+* device/xiaomi/gemstone
+f02bf93 gemstone: Assert OTA for `moonstone` & `sunstone` [Giovanni Ricca]
+
+* vendor/extra
+af95181 build: patches: lineage-22: Revert to old `incremental` prop [Giovanni Ricca]
+
+* vendor/extra/priv
+96fea87 Finish up lineage-22 todo list [Giovanni Ricca]
+
+====================
+     2024-11-09    
+====================
+* lineage/crowdin
+bd9a458 config: Add Twelve to 22.0 extra packages [LuK1337]
+
+* lineage/website
+385b743 www: Make site title more succinct [Nicholas Lim]
+
+* vendor/extra
+233cba1 build: patches: lineage-22: Spoof `dev-keys` as `release-keys` [Giovanni Ricca]
+db39db2 build: Add `MindTheGapps` public key in recovery [Giovanni Ricca]
+8e0c1eb rro_overlays: LineageUpdater: Rename package name [Giovanni Ricca]
+
