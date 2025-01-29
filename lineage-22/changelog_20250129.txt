@@ -1,0 +1,311 @@
+====================
+     2025-01-29    
+====================
+* art
+4c6c94e Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+2cfd985 art: Disable debug tracing on production builds [Danny Lin]
+
+* bionic
+59f8baabd Revert "Add better jemalloc stat logging." [John Galt]
+
+* build/soong
+226c1119d2 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+f3f31a84ec ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+3549398536 soong: Specify heap size for metalava for S+ [Michael W]
+939d2bb6ba soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/daisy
+0eccd80 fixup! daisy: Adjust override prop key names [Giovanni Ricca]
+
+* device/xiaomi/gemstone
+33ae57b gemstone: Import device-specific touchscreen firmware [Giovanni Ricca]
+27b4981 gemstone: Configure device-specific thermal stack [Giovanni Ricca]
+8e998c6 gemstone: Configure device-specific sensors stack [Giovanni Ricca]
+17a623d gemstone: Configure device-specific NFC stack [Giovanni Ricca]
+4a8ea76 gemstone: Configure device-specific fingerprint stack [Giovanni Ricca]
+339f361 gemstone: display: Pull brightness configs from lynx [Alexander Winkowski]
+4668e78 gemstone: Import device-specific display config [Giovanni Ricca]
+a006a7c gemstone: Import device-specific QDCM Calibration data [Giovanni Ricca]
+00dc006 gemstone: Configure device-specific batterysecret stack [Giovanni Ricca]
+a64b0ba gemstone: rro_overlays: Configure aux camera for Aperture [LuK1337]
+a98ecee gemstone: Enable elfchecks for camera libs [LuK1337]
+e3c4cd6 gemstone: Suppress CamX debug [Pig]
+54e8a49 gemstone: Configure device-specific camera stack [Giovanni Ricca]
+62c6280 gemstone: audio: Import cleaned up Xiaomi changes [Giovanni Ricca]
+56f229e gemstone: audio: Run `mixer_xml_utils.py` [Giovanni Ricca]
+92552eb gemstone: Import device-specific audio configs [Giovanni Ricca]
+d6ea5cb gemstone: Configure device-specific audio stack [Giovanni Ricca]
+18fbbdc gemstone: Initial dummy proprietary files [Giovanni Ricca]
+5b4d1b2 gemstone: Use common lib_fixups [LuK1337]
+5703810 gemstone: Add vendor soong imports to extract [Aaron Kling]
+248589a gemstone: Add py extract scripts from templates [Giovanni Ricca]
+7a39b84 gemstone: Add generic libinit [Sebastiano Barezzi]
+cf6f79e gemstone: Add libinit to set Dalvik heap props [Sebastiano Barezzi]
+804d9d1 gemstone: sku: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
+e917262 gemstone: Add SKU props from stock [Alexander Winkowski]
+46e713e gemstone: rro_overlays: Add GemstoneWifiOverlay [Roshan Pius]
+5027143 gemstone: rro_overlays: Set default Settings.Global.DEVICE_NAME according to MIUI [LuK1337]
+f2c196d gemstone: rro_overlays: Import vibration patterns [Giovanni Ricca]
+153d47e gemstone: rro_overlays: Import power profile [Giovanni Ricca]
+a498c60 gemstone: Disable OMX service [Michael Bestas]
+
+* device/xiaomi/sm6250-common
+facb0e5 sm6250-common: Define boot image security patch [Alexander Koskovich]
+cfe7a9e sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+c2b152c2 sm8350-common: Define boot image security patch [Alexander Koskovich]
+42cb8d3b sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+c8f0e23f sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+
+* frameworks/av
+c0e2be28a5 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+546ce22750a6 core: Hide ADB and developer setting enable status [someone5678]
+13574e2c8a7f gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+11c64b39db8c gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+53ddd5230f05 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+878e724c0d4c gmscompat: Add prop to disable gms spoofing [SamarV-121]
+bb57f38dc5e2 gmscompat: Dynamically spoof props for GMS [SamarV-121]
+84787b15fa86 gmscompat: Allow setting any field in certified build props [Adithya R]
+42cb1a57178e gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+cd3348b83de8 gmscompat: Get package name from context instead of app [jhenrique09]
+3437d8b8d1ae base: Add Safetynet/Play Integrity hax [Danny Lin]
+8b298102a046 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+5d6d450e9dfd SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+1bde3a1640b6 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+31dc34a1eb3c AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+abee424d4439 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+90d1bfb0078e Cache pin algorithms in PinSet [Till Kottmann]
+0b54eca0c095 Cache KeyStoreService [Till Kottmann]
+f84276e2d582 (Point) Only calculate sin and cos once [Till Kottmann]
+7dc41bf7a3df LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+4e66240a5736 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+41eea4ec8e63 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+e037575f70b4 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+852ec14a2036 Trace: Disable debug tracing on production builds [Danny Lin]
+87faa207bd52 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+480af5f81a8c hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+635feb6660ca libhwui: compile for performance [Vaisakh Murali]
+5dbdbc33ac00 libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+e1f335024a6e libhwui: remove deprecated perf flags [Vaisakh Murali]
+cc1c3d215953 SystemUI: Remove Android build number from QS footer [Danny Lin]
+1bf931d5d52e SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+45b72ee79c90 core: Remove old app target SDK dialog [Danny Lin]
+21aeabbe2bcc core: Remove default aspect ratio limit for old apps [Danny Lin]
+c11931342564 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+e2cc8c61da67 Revert "Ignore the charging ripple flag." [Jeferson]
+
+* frameworks/native
+8c5a7f21fb EGL Multifile Blobcache: Make use of crc32_z algorithm instead of crc32c [Jisun Lee]
+df21d5f5ef Add default maxBufferCount in GraphicBufferProducer [sm1021.shin]
+50ef00ca19 SF: VsyncTimeline::isVSyncInPhase should use display rate [unflagged] [Ady Abraham]
+dfb0607aac fix potential leakage issues [Xiao Zhang]
+d8ab1aa45f SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+f3cff08b08 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+435c29718e SF: Add retry to EventThread postEvent [Rheygine Medel]
+b4e4399baf sf: upsert RenderEngine's caches [Ramakant Singh]
+44dc232081 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/lineage/compat
+be6c7a1 compat: libcrypto: shim sk_dup/sk_delete [Secondarian]
+d2d9f06 compat: libaudioclient: Shim MTK constructor as well [bengris32]
+c8e517a compat: add libaudioclient shim [nift4]
+
+* packages/apps/Catapult
+93037f8 Catapult: Update notification layout [Timi]
+
+* packages/apps/FMRadio
+dd75cfb jni: Move customisation to properties [bengris32]
+779f20a jni: Always build noise floor detect code and make it conditional [bengris32]
+
+* packages/apps/LineageParts
+e4e6a9d LineageParts: Support breath LED mode [LuK1337]
+
+* packages/apps/Trebuchet
+fb32c0ec30 Launcher3: SysUiScrim: Hide top shadow [Giovanni Ricca]
+0e888b2220 Launcher3: Set recents and app drawer opacity [Pranav Vashi]
+68fdd9e315 Trebuchet: Move clear all button to actions view [Vachounet]
+99c7a652bd Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+f0db4e497 LatinIME: fix gesture typing [johnny]
+401c3f118 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/StatsD
+6ced44b statsd: Disable native stats collection service [Danny Lin]
+
+* system/core
+7499984f5 init.rc: Disable native stats collection service [Danny Lin]
+1250d18fc init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/qcom/opensource/libfmjni
+ea6b957 libfmjni: Prevent invalid pthread_t from being passed to pthread_join [tavukkdoner]
+dc976be libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2025-01-28    
+====================
+* device/xiaomi/mt6895-common
+8902247 mt6895-common: init: Avoid delay for vblank disable from DRM [Prabhanjan Kandula]
+0b283ab mt6895-common: init: Configure schedutil rate limit [rio004]
+931f473 Revert "mt6895-common: Restore stock SurfaceFlinger configuration" [alextrack2013]
+
+* vendor/extra
+2254f93 Revert "config: Optimize R8 Java optimizations flags" [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_gemstone
+ed1a199 LineageOS_gemstone: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_lisa
+16287f3 LineageOS_lisa: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_miatoll
+2b29d80 LineageOS_miatoll: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_sakura
+39c06f9 LineageOS_sakura: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_xaga
+92f1927 LineageOS_xaga: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_ysl
+9f98b18 LineageOS_ysl: lineage-22: 20250127 [Giovanni Ricca]
+
+====================
+     2025-01-27    
+====================
+* device/xiaomi/mt6895-common
+a11bc1a mt6895-common: init: Remove debugfs references [alextrack2013]
+
+* hardware/qcom-caf/sm8450/data-ipa-cfg-mgr
+49d1cfc ipanat: Remove test/Android.mk [Michael Bestas]
+
+* packages/apps/Glimpse
+7a8535c Glimpse: Lowercase cursor column names [Luca Stefani]
+
+* packages/apps/Twelve
+1d86b88 Twelve: Use library icon from design specifications [Joey]
+
+* tools/extract-utils
+70997b4 extract_utils: fix rules for QDSP6 blobs [dianlujitao]
+
+* vendor/extra
+4f10a9a extra: Remove root `soong_namespace` [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_daisy
+8bd45f1 LineageOS_daisy: lineage-22: 20250127 [Giovanni Ricca]
+
+* vendor/qcom/opensource/core-utils-vendor
+115dcd7 qspaframework: Convert to blueprint [Michael Bestas]
+
+* vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+59ed5d3 ipanat: Remove test/Android.mk [Michael Bestas]
+
+* vendor/qcom/opensource/dataservices
+b141057 datatop: Fix -Wstrict-prototypes errors [Michael Bestas]
+
+====================
+     2025-01-26    
+====================
+* device/xiaomi/msm8953-common
+816150e fixup! msm8953-common: Remove vendor RenderScript implementation [Giovanni Ricca]
+9326e51 msm8953-common: Switch to common lights HAL [LuK1337]
+18e20d4 msm8953-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+bcd9eaa msm8953-common: Update display flags & packages [Michael Bestas]
+847a369 msm8953-common: Remove OMX audio codecs [Michael Bestas]
+
+* device/xiaomi/mt6895-common
+58f37aa mt6895-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+694999b mt6895-common: Drop unused muxreport script [rio004]
+4d3e7fb mt6895-common: Move mediatek ims boot jar declaration to vendor [Giovanni Ricca]
+7101a20 mt6895-common: Switch to common lights HAL [LuK1337]
+d769d54 mt6895-common: `libshim_sink.so` -> `libaudioclient_shim.so` [Giovanni Ricca]
+3724f48 mt6895-common: Remove duplicate properties [ChrisCatto]
+63c0bcc mt6895-common: overlay: Remove config_cellBroadcastAppLinks [x0x00044]
+2bc542a mt6895-common: init: Use foreground UClamp cpusets for hwcomposer [Mashopy]
+11dc810 mt6895-common: init: Remove IO read_ahead_kb tune [Randall Huang]
+8143d79 mt6895-common: Set idle uclamp min for top-app/foreground to 0 [bengris32]
+fe72d2e mt6895-common: init: Import uclamp sysctl tunings [bengris32]
+83ad808 mt6895-common: init: Remove cpuset foreground boost [Lennart Wieboldt]
+352be5a mt6895-common: Remove userdata `resize` flag from fstab [alextrack2013]
+c1a66bc mt6895-common: Don't latch unsignal buffers [Midas Chien]
+6522777 mt6895-common: init: Avoid migrating foreground tasks to prime core [alextrack2013]
+741bcad mt6895-common: manifest: Remove unneeded version declaration of mlipay service [ChrisCatto]
+1a8e0f6 mt6895-common: udfps: Compare against the aidl AcquiredInfo [Arian]
+5cbd8a4 mt6895-common: Drop `debug.sf.enable_transaction_tracing` [Giovanni Ricca]
+
+* device/xiaomi/sm6250-common
+aaee30d sm6250-common: Switch to dot product CPU variant [Adithya R]
+
+* device/xiaomi/sm6375-common
+2943444 sm6375-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+a597a0f sm6375-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+d6c2c48 Revert "veux: Disable OMX" [Giovanni Ricca]
+
+* device/xiaomi/sm8350-common
+d76726ac sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+bfc66a22 sm8350-common: Switch to dot product CPU variant [Adithya R]
+de851244 sm8350-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+69568ee5 fixup! sm8350-common: Nuke ATFWD [Giovanni Ricca]
+683ded26 sm8350-common: sepolicy: Reformat it [Giovanni Ricca]
+4e7dc222 sm8350-common: sepolicy: Drop redundant `dynamic_fps` node label [Giovanni Ricca]
+84450e12 sm8350-common: sepolicy: Drop `vendor_sysfs_double_tap` definition [Giovanni Ricca]
+a25b0ae1 sm8350-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+454199a1 sm8350-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+
+* frameworks/base
+4a4a4ebf19ab Biometrics: Allow disabling of fingerprint cleanups [Quallenauge]
+
+* hardware/qcom-caf/common
+f7e3ba2 common: Enable master side content protection with soong [Giovanni Ricca]
+
+* vendor/extra
+a1904f6 build: patches: lineage-22: Update patches [Giovanni Ricca]
+
+* vendor/xiaomi/msm8953-common
+29e3c12 fixup! msm8953-common: Remove vendor RenderScript implementation [Giovanni Ricca]
+
+* vendor/xiaomi/mt6895-common
+c6b1deb mt6895-common: Sync with tree [Giovanni Ricca]
+
+====================
+     2025-01-25    
+====================
+* external/chromium-webview/prebuilt/arm
+14c6dd7 Update Chromium Webview arm prebuilt to 132.0.6834.122 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/arm64
+4f52cbf Update Chromium Webview arm64 prebuilt to 132.0.6834.122 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86
+750817b Update Chromium Webview x86 prebuilt to 132.0.6834.122 [Kevin F. Haggerty]
+
+* external/chromium-webview/prebuilt/x86_64
+9b01a3c Update Chromium Webview x86_64 prebuilt to 132.0.6834.122 [Kevin F. Haggerty]
+
+* hardware/lineage/compat
+85d5c13 Introduce libnativehelper shim [Stricted]
+
+* packages/apps/Car/Settings
+a486d48a9 fixup! Hardcode default pattern size [Cosmin Tanislav]
+
+* packages/overlays/Lineage
+d723f75 overlays: IconPack: Set config_bottomDialogCornerRadius to 16dp [LuK1337]
+
+====================
+     2025-01-24    
+====================
+* external/chromium-webview/patches
+8854626 Update Chromium Webview to 132.0.6834.122 [Kevin F. Haggerty]
+
+* lineage/scripts
+78bbda3 build-webview: Update default webview to 132.0.6834.122 [Kevin F. Haggerty]
+
+====================
+     2025-01-23    
+====================
+* vendor/lineage
+1c00116c fixup! roomservice: Skip setting revision if it's the same as default [Patrick Gaskin]
+
