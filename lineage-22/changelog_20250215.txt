@@ -1,0 +1,521 @@
+====================
+     2025-02-15    
+====================
+* art
+fb5d0b4 Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+e391199 art: Disable debug tracing on production builds [Danny Lin]
+
+* bionic
+5b96e136d Revert "Add better jemalloc stat logging." [John Galt]
+
+* build/soong
+9f6c3c4880 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+74da33283c ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+bb2dfe5a73 soong: Specify heap size for metalava for S+ [Michael W]
+313fcd33aa soong: increase heap size for metalava [LeddaZ]
+
+* device/xiaomi/msm8953-common
+9bcb7d9 msm8953-common: Switch lmkd to use minfree levels for kill decisions [Suren Baghdasaryan]
+3b0aaa3 msm8953-common: Increase ro.lmk.medium to prevent kills at medium vmpressure [Suren Baghdasaryan]
+6a8e50b msm8953-common: Set lmkd configuration properties [Suren Baghdasaryan]
+57a64da msm8953-common: Disable SF composition prediction model. [Pullakavi Srinivas]
+9713502 msm8953-common: Disable SF client composition cache [Alex Sarraf]
+398193f msm8953-common: Enable usage of dex2oat64 [David Sehr]
+
+* device/xiaomi/mt6895-common
+ebc922d mt6895-common: Enable ELF checks for `libneuralnetworks_sl_driver_mtk_prebuilt` [Giovanni Ricca]
+dcd37f5 mt6895-common: Enable ELF checks for `libimsma` [Giovanni Ricca]
+204f545 mt6895-common: sepolicy: Sort & beauty-ify it [Giovanni Ricca]
+b9f658a mt6895-common: sepolicy: Drop `vendor.fps_hal.` property label [Giovanni Ricca]
+0cf4d39 mt6895-common: sepolicy: Allow Sensors HAL to call system_server [Giovanni Ricca]
+
+* device/xiaomi/sm6250-common
+db4e0b9 sm6250-common: Define boot image security patch [Alexander Koskovich]
+06c7f61 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+7b0829c2 sm8350-common: Define boot image security patch [Alexander Koskovich]
+6920c09d sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+506a4b0d sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+2b87d120 sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+7e155cc1 sm8350-common: Switch to dot product CPU variant [Adithya R]
+2ad4a67a sm8350-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+4a381c5e sm8350-common: Enable usage of dex2oat64 [David Sehr]
+
+* device/xiaomi/xaga
+fad2710 xaga: Unship preloader [Giovanni Ricca]
+d787486 xaga: Enable ELF checks for `libalhLDC` [Giovanni Ricca]
+
+* frameworks/av
+550eec64b2 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+78f3d8b4ef57 core: Hide ADB and developer setting enable status [someone5678]
+1e2c6971261b gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+dfc12669dcef gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+3852badb3399 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+964654c5ee39 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+03f481f2d954 gmscompat: Dynamically spoof props for GMS [SamarV-121]
+73b89c5bbcd0 gmscompat: Allow setting any field in certified build props [Adithya R]
+52552adf44e1 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+6f07e3cf9dff gmscompat: Get package name from context instead of app [jhenrique09]
+52f48a93d203 base: Add Safetynet/Play Integrity hax [Danny Lin]
+74cb2c5842ff SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+c3316e112f98 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+a92c4475ba87 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+7c349efcbe7f AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+d9fa00668d4e core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+9887bb859425 Cache pin algorithms in PinSet [Till Kottmann]
+b2573abb3289 Cache KeyStoreService [Till Kottmann]
+8668f7c1eb44 (Point) Only calculate sin and cos once [Till Kottmann]
+c56f3eab9f4c LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+0499d35d6cf6 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+142126a12b3b LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+f28665b04736 ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+2aca98aa04e2 Trace: Disable debug tracing on production builds [Danny Lin]
+76cb99900dc5 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+b128553f85b8 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+e7d7503c38ea libhwui: compile for performance [Vaisakh Murali]
+cd928e0ef0a2 libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+25651826d09a libhwui: remove deprecated perf flags [Vaisakh Murali]
+cda8db91db36 SystemUI: Remove Android build number from QS footer [Danny Lin]
+5b050a0a7323 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+23fef01f228c core: Remove old app target SDK dialog [Danny Lin]
+0d1221d48a06 core: Remove default aspect ratio limit for old apps [Danny Lin]
+e3dcff838ce8 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+bbd5856be202 Revert "Ignore the charging ripple flag." [Jeferson]
+0451f4440170 Handle all exceptions when loading artwork bitmap [Luca Stefani]
+
+* frameworks/native
+f87f1ad00b EGL Multifile Blobcache: Make use of crc32_z algorithm instead of crc32c [Jisun Lee]
+df4a53a3c4 Add default maxBufferCount in GraphicBufferProducer [sm1021.shin]
+fcf0c3559a SF: VsyncTimeline::isVSyncInPhase should use display rate [unflagged] [Ady Abraham]
+86d43ecfc6 fix potential leakage issues [Xiao Zhang]
+2953a2386c SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+039dc65869 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+2663265106 SF: Add retry to EventThread postEvent [Rheygine Medel]
+3c4a3ca60c sf: upsert RenderEngine's caches [Ramakant Singh]
+058b236ec9 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/interfaces
+6d4d419194 cec: Don't spam "Machine is not on the network" [Nolen Johnson]
+
+* hardware/lineage/interfaces
+ed17ff3 libperfmgr: Only throw DisplayIdle errors if we support it [Nolen Johnson]
+
+* lineage-sdk
+ce38f73 lineage-sdk: Add setting for atv two button mute [Aaron Kling]
+
+* lineage/scripts
+38d1654 reuse_helper: Handle kotlin files [Michael Bestas]
+
+* packages/apps/FMRadio
+ff0e0a4 jni: Move customisation to properties [bengris32]
+1eda301 jni: Always build noise floor detect code and make it conditional [bengris32]
+
+* packages/apps/Jelly
+68e9e9f Jelly: Handle MediaSession For BackgroundShortcut [SaeedDev94]
+
+* packages/apps/Trebuchet
+06b65e12e7 Launcher3: SysUiScrim: Hide top shadow [Giovanni Ricca]
+ea3a103550 Launcher3: Set recents and app drawer opacity [Pranav Vashi]
+fd0b61e0df Trebuchet: Move clear all button to actions view [Vachounet]
+fe4beda418 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/apps/Twelve
+4edf7e3 Twelve: LocalDataSource: Stop pretending we can have artist thumbnails [Sebastiano Barezzi]
+
+* packages/inputmethods/LatinIME
+815282c4d LatinIME: fix gesture typing [johnny]
+f3c74cb55 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/StatsD
+f8727c3 statsd: Disable native stats collection service [Danny Lin]
+
+* system/core
+555897096 init.rc: Disable native stats collection service [Danny Lin]
+7d5884064 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/extra
+c8c84a0 config: Drop Android-GO lmkd props [Giovanni Ricca]
+71fe572 Revert "extra: props: Enable usage of dex2oat64" [Giovanni Ricca]
+2225baf Revert "FrameworksResCustomOverlay: Make the UI smoother" [Giovanni Ricca]
+917ea52 Revert "FrameworkOverlayEXTRA: Configure SQLite to operate in MEMORY mode" [Giovanni Ricca]
+
+* vendor/pixel_clocks
+c3a40f3 pixel_clocks: Delete `Android.mk` [Giovanni Ricca]
+
+* vendor/qcom/opensource/libfmjni
+555ed66 libfmjni: Prevent invalid pthread_t from being passed to pthread_join [tavukkdoner]
+3146c82 libfmjni: Fix RDS info retrieving [iusmac]
+
+* vendor/xiaomi/miuicamera-lisa
+2546361 Delete `Android.mk` [Giovanni Ricca]
+
+* vendor/xiaomi/miuicamera-xaga
+8e06888 Delete `Android.mk` [Giovanni Ricca]
+
+* vendor/xiaomi/mt6895-common
+131a52f mt6895-common: Kang `libladder` from `duchamp` [ChrisCatto]
+
+* vendor/xiaomi/xaga
+f861628 xaga: Kang `libmialgoengine` libs from gale `OS2.0.2.0.VGPMIXM` [ChrisCatto]
+
+====================
+     2025-02-14    
+====================
+* device/qcom/sepolicy_vndr/legacy-um
+87be962 sepolicy: NFC: Add support for snxxx AIDL service [Khageswararao Rao B]
+
+* device/qcom/sepolicy_vndr/sm8450
+54ee7c8 sepolicy: NFC: Add support for snxxx AIDL service [Khageswararao Rao B]
+
+* device/xiaomi/mt6895-common
+1ec8ae6 mt6895-common: init: set vm page-cluster to 0 [linckandrea]
+c3fb045 mt6895-common: Remove DEXPREOPT_GENERATE_APEX_IMAGE [Tim Zimmermann]
+35aee04 mt6895-common: Drop PRODUCT_PACKAGES_DEBUG entry [Nolen Johnson]
+531ed60 mt6895-common: Unset BOARD_VNDK_VERSION [Bharath]
+a1cbd8b mt6895-common: init: Set vendor.usb.product_string as USB Product string [alextrack2013]
+8d3e5e1 mt6895-common: Use LOCAL_PATH in the common product makefile [Bruno Martins]
+df9aa07 mt6895-common: fstab: data=journal,commit=1 for /metadata [Randall Huang]
+2f8b1ee mt6895-common: init: Stop reserving space twice [alextrack2013]
+ff06384 mt6895-common: fstab: Drop AVB keys [TheMalachite]
+f965f3b mt6895-common: Don't declare BOARD_VENDOR [Nolen Johnson]
+bcc84a2 mt6895-common: init: Avoid delay for vblank disable from DRM [Prabhanjan Kandula]
+24027a7 mt6895-common: init: Configure schedutil rate limit [rio004]
+591791d mt6895-common: init: Remove debugfs references [alextrack2013]
+8f49926 mt6895-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+cb5b5c6 mt6895-common: Drop unused muxreport script [rio004]
+f59d6b6 mt6895-common: Move mediatek ims boot jar declaration to vendor [Giovanni Ricca]
+45a9549 mt6895-common: Switch to common lights HAL [LuK1337]
+6a5aefa mt6895-common: `libshim_sink.so` -> `libaudioclient_shim.so` [Giovanni Ricca]
+271ad26 mt6895-common: Remove duplicate properties [ChrisCatto]
+4ac675f mt6895-common: overlay: Remove config_cellBroadcastAppLinks [x0x00044]
+c082425 mt6895-common: init: Use foreground UClamp cpusets for hwcomposer [Mashopy]
+5ada305 mt6895-common: init: Remove IO read_ahead_kb tune [Randall Huang]
+f19e882 mt6895-common: Set idle uclamp min for top-app/foreground to 0 [bengris32]
+ab46707 mt6895-common: init: Import uclamp sysctl tunings [bengris32]
+171a8f7 mt6895-common: init: Remove cpuset foreground boost [Lennart Wieboldt]
+15c677d mt6895-common: Remove userdata `resize` flag from fstab [alextrack2013]
+8e9a615 mt6895-common: init: Avoid migrating foreground tasks to prime core [alextrack2013]
+424a5cf mt6895-common: manifest: Remove unneeded version declaration of mlipay service [ChrisCatto]
+90ba69d mt6895-common: udfps: Compare against the aidl AcquiredInfo [Arian]
+f7af244 mt6895-common: powerhint: Drop camera-daemon [Mashopy]
+3b2eabb mt6895-common: Disable game default frame rate feature [ChrisCatto]
+9f86bc4 mt6895-common: Enable ro.audio.monitorRotation [LuK1337]
+7efc736 mt6895-common: Remove some useless doze overlays [Tim Zimmermann]
+d14d426 mt6895-common: init: Removing 'verity_update_state' [Bowgo Tsai]
+7c263cc mt6895-common: init: remove sdcard legacy support [Adam Shih]
+e56c8cf mt6895-common: init: Drop M4U RLIMIT operation [Mashopy]
+5901e7c mt6895-common: init: Remove duplicated `swapon_all` command [ChrisCatto]
+5788e56 mt6895-common: overlay: Remove implied SDK version [Sourajit Karmakar]
+d2bc86a mt6895-common: Enable hostapd 11AX compilation flag [Mashopy]
+05902d4 mt6895-common: Set all of the supported wifi HAL combinations [Mashopy]
+6e8e14b mt6895-common: power: Bump power NDK version [Giovanni Ricca]
+3e77879 mt6895-common: Update blobs to plato V816.0.14.0.ULQMIXM [Giovanni Ricca]
+5d38bcc mt6895-common: Remove unused Android.mk [Michael Bestas]
+1f144ec mt6895-common: sepolicy: Commonize NFC label [Giovanni Ricca]
+8f2c1fc mt6895-common: Move to Xiaomi fingerprint AIDL [basamaryan]
+50f592b mt6895-common: Remove quotes from TARGET_RECOVERY_PIXEL_FORMAT [Tim Zimmermann]
+8fa8e51 mt6895-common: Remove elf files in copy files check [Aaron Kling]
+9e5d846 mt6895-common: Do not manually build dependencies [Cosmin Tanislav]
+1fadf2c mt6895-common: Set correct SONAME for offending libraries [nift4]
+50b6f37 mt6895-common: Disable ELF checks for certain libraries [Michael Bestas]
+d5ed8f2 mt6895-common: Fix vendor.mediatek.hardware.videotelephony@1.0 ELF checks [Giovanni Ricca]
+31d1f8d mt6895-common: Add missing dependencies to offending libraries [nift4]
+23499c6 mt6895-common: Patchelf C2 service to link against libavservices_minijail [bengris32]
+00cef0c mt6895-common: Remove ndk_platform backend. Use the ndk backend. [Jiyong Park]
+c8079ee mt6895-common: Add vendor soong imports to extract [Aaron Kling]
+5d715ea mt6895-common: Enable elf checks [Aaron Kling]
+39df4be mt6895-common: Update blobs from plato V816.0.12.0.ULQMIXM [Giovanni Ricca]
+43027bd mt6895-common: Migrate to py extract utils [Giovanni Ricca]
+71328ca mt6895-common: sepolicy: Label `vendor.debug.appcontrol.name` property [bengris32]
+e500980 mt6895-common: sepolicy: Label some more Camera blobs [ChrisCatto]
+29727d7 mt6895-common: sepolicy: Address `mtk_hal_camera` denials [ChrisCatto]
+51d705d mt6895-common: sepolicy: Address mlipay denials [ChrisCatto]
+89b2997 mt6895-common: sepolicy: Drop redundant `vendor_sysfs_gpu` label and rules [ChrisCatto]
+f6c677f mt6895-common: configs: Add `libmpbase.so` on public libraries list [Giovanni Ricca]
+d1ec79c mt6895-common: Add missing front camera permission [hiroshi]
+6f7efc0 mt6895-common: Set aaudio mmap properties to 0 [ChrisCatto]
+f94ceb3 mt6895-common: Pull missing blobs needed for HDR video [bengris32]
+8b27468 mt6895-common: `sort-blobs-list --dir-first` [Giovanni Ricca]
+a47c8a8 mt6895-common: Kang `libladder` from `duchamp` [ChrisCatto]
+b089aef mt6895-common: Remove duplicate proprietary files entries [Giovanni Ricca]
+9305e40 mt6895-common: Enable UDFPS sensor [bengris32]
+b487f4d mt6895-common: Commonize `libJpgEncPipe` and deps [bengris32]
+553d534 mt6895-common: Pull missing libs [Giovanni Ricca]
+35fdaa0 mt6895-common: Commonize `libmiresample` [Giovanni Ricca]
+32c72ae mt6895-common: Commonize `libwvhidl` [Giovanni Ricca]
+3e63361 mt6895-common: Decommonize `libapudcutils` [Giovanni Ricca]
+8f125fe mt6895-common: Move to AOSP Bluetooth Audio impl [Giovanni Ricca]
+074b1be mt6895-common: Update blobs from plato V816.0.11.0.ULQMIXM [Giovanni Ricca]
+8145fb1 mt6895-common: Patch ImsService.apk extract time [bengris32]
+270d60a mt6895-common: Drop in-tree libsink shim [bengris32]
+e6a2de6 mt6895-common: Move sensors shim to hardware/lineage/compat [bengris32]
+4af2fa5 mt6895-common: Drop prebuilt vndk library definitions [bengris32]
+43f7a47 mt6895-common: Sync extract scripts with templates [Michael Bestas]
+abbe8f1 mt6895-common: sepolicy: mtk_hal_sensors -> hal_sensors_default [bengris32]
+febf663 mt6895-common: Move to OSS sensors subhal wrapper [bengris32]
+c36db3b mt6895-common: Move to `sensors.xiaomi.v2` [Giovanni Ricca]
+2bf55d8 mt6895-common: Migrate sensor HAL to AIDL interface [Manish Kushwaha]
+0b7a70a mt6895-common: Automatically add apk/jar/vintf fragments to PRODUCT_PACKAGES [Michael Bestas]
+da9fc8b mt6895-common: Copy dynamic head tracker permission [bengris32]
+6b3fb1a mt6895-common: sepolicy: Add missing labels for some camera libs [bengris32]
+ee3b55e mt6895-common: sepolicy: Label camera data directory [bengris32]
+bed25b8 mt6895-common: overlay: Enable battery cycle count [Michael Bestas]
+ee88818 mt6895-common: Skip TEE blob extraction when using --only-firmware [bengris32]
+5ac534b mt6895-common: Decommonize `libaudio_param_parser-vnd` [Giovanni Ricca]
+631db46 mt6895-common: Allow targets to disable VRR [bengris32]
+
+* device/xiaomi/xaga
+5d66c31 xaga: Define boot image security patch [Alexander Koskovich]
+24d4f76 xaga: Set USB product string to 'POCO X4 GT' [Alexander Koskovich]
+f531978 xaga: Move to `FMRadio` `libfmjni` [Giovanni Ricca]
+7a19590 xaga: Update blobs to V816.0.8.0.ULOCNXM [Giovanni Ricca]
+c154896 xaga: Move sensor hals config on vendor [Giovanni Ricca]
+37ab898 xaga: Remove unused Android.mk [Michael Bestas]
+af5ee59 xaga: overlay: Enable secure NFC support [Kyle Hsiao]
+633a0e9 xaga: Kang `libmialgoengine` libs from gale `OS2.0.2.0.VGPMIXM` [ChrisCatto]
+d9bca6f xaga: Import SoterService for WeChat fingerprint payment [ChrisCatto]
+97d59d2 xaga: Pass display ID to sensor location [LuK1337]
+b4aed57 xaga: Move to Xiaomi fingerprint AIDL [basamaryan]
+f143f72 xaga: Adjust override prop key names [LuK1337]
+d692ced Revert "xaga: Set stock TARGET_DEVICE and TARGET_PRODUCT" [Giovanni Ricca]
+66adeeb xaga: Set correct SONAME for offending libraries [nift4]
+764d7cf xaga: Disable ELF checks for certain libraries [Michael Bestas]
+1acd3d0 xaga: Fix crossbuild database ELF checks [Giovanni Ricca]
+6d9fddf xaga: Add missing dependencies to offending libraries [nift4]
+962bb4f xaga: Bump the ndk version of keymint and rkp [ChrisCatto]
+464b92f xaga: Remove ndk_platform backend. Use the ndk backend. [Jiyong Park]
+eb6f544 xaga: Call `lib_fixups` [Giovanni Ricca]
+0fced79 xaga: Add vendor soong imports to extract [Aaron Kling]
+a420fcb xaga: Enable elf checks [Aaron Kling]
+82d7f74 xaga: Update blobs to V816.0.5.0.ULOCNXM [Giovanni Ricca]
+6a26f4e xaga: Migrate to py extract utils [Giovanni Ricca]
+02901f9 xaga: Add `hardware/mediatek/libfmjni` on soong path [Giovanni Ricca]
+5aecff7 xaga: Drop duplicate `libmtkcam_thirdparty.customzone` entry [Giovanni Ricca]
+a7dc89c xaga: Add some missing Camera blobs [ChrisCatto]
+26878d7 xaga: `sort-blobs-list --dir-first` [Giovanni Ricca]
+7a65c4d xaga: Pull missing libs [Giovanni Ricca]
+ee95c63 xaga: Commonize `libJpgEncPipe` and deps [bengris32]
+72a9b3b xaga: Commonize `libmiresample` [Giovanni Ricca]
+684dcd2 xaga: Commonize `libgz_uree` [Giovanni Ricca]
+049b103 xaga: Decommonize `libapudcutils` [Giovanni Ricca]
+81e82a2 xaga: Update blobs from V816.0.4.0.ULOCNXM [Giovanni Ricca]
+f7a3b7c xaga: Sync extract scripts with templates [Michael Bestas]
+3605001 xaga: Move to OSS `libfmjni` [bengris32]
+94e2d88 xaga: Move to OSS sensors subhal wrapper [bengris32]
+b4ea345 xaga: Update blobs from V816.0.3.0.ULOCNXM [Giovanni Ricca]
+c515aad xaga: configs: Call `sensors.dynamic_sensor_hal` [Giovanni Ricca]
+95781bd xaga: Move modules list to sub-dir [Giovanni Ricca]
+785b641 xaga: Copy init files with soong [Giovanni Ricca]
+e350a02 xaga: Reorder Makefiles [Giovanni Ricca]
+de31eb7 xaga: Pull missing camera plugin library [bengris32]
+1d87200 xaga: Fingerprint tee -> Trustlets [Giovanni Ricca]
+614687d xaga: Remove duplicate blobs [Giovanni Ricca]
+a7368a0 xaga: Use symlinks for platform specific libraries [bengris32]
+54a5c08 xaga: Drop COMMON_LUNCH_CHOICES [Michael Bestas]
+20ae81f xaga: Update blobs from V816.0.2.0.ULOCNXM [Giovanni Ricca]
+eecc44e xaga: Setup FM Radio Stack [Giovanni Ricca]
+71a6514 xaga: init: Allow NFC HAL to open TEE device [Todd Frederick]
+b102d09 xaga: Import missing TEE config [Giovanni Ricca]
+3496b53 xaga: Update blobs to V816.0.1.0.ULOCNXM [Giovanni Ricca]
+f86d19a xaga: overlay: Enable SecureNfc [Giovanni Ricca]
+f579b08 xaga: init: Set `ro.boot.hardware.sku` property [Giovanni Ricca]
+32241f1 xaga: Don't ship `logo.img` [Giovanni Ricca]
+ec795a7 xaga: Kang Audio Hardware from rubens [Giovanni Ricca]
+466528a xaga: Import missing TFA Codec configs [Giovanni Ricca]
+12cd918 xaga: Decommonize selected audio configs [Giovanni Ricca]
+91efa9d xaga: Commonize NFC Firmware [Giovanni Ricca]
+6f63945 xaga: Move dtbo image to firmware [bengris32]
+f4c5454 xaga: overlay: Fix status bar clock end padding [alextrack2013]
+c4f96eb xaga: overlay: Rework status bar padding [Giovanni Ricca]
+5e96e35 xaga: overlay: Import status bar configuration [Giovanni Ricca]
+a4f6b97 xaga: sku: Set bluetooth device name with SKU props [Giovanni Ricca]
+5e1abb8 xaga: Add SKU props from stock [Alexander Winkowski]
+a901b1a xaga: Remove `secure_element` manifest entry [Giovanni Ricca]
+c9dadfc xaga: Setup firmware extraction [LuK1337]
+98e648e xaga: Update blobs to V14.0.8.0.TLOMIXM [Giovanni Ricca]
+c32db06 xaga: Import missing `misound` configs [Giovanni Ricca]
+daa0c95 xaga: Decommonize `aurisys` configs [Giovanni Ricca]
+907eb58 xaga: Sort blobs list /w sort-blobs-list.py [LuK1337]
+a0a3066 xaga: Reduce display density [Giovanni Ricca]
+6389eb0 xaga: Export TEE variant for extract-files [bengris32]
+5281ca8 xaga: modules: Add backlight-drm LED trigger module [bengris32]
+aa2bcfb xaga: modules: Update list after kernel rebase [bengris32]
+2ebddbf xaga: Commonize GMS Client ID Base [alextrack2013]
+2617bcc xaga: Setup Camera stack [Giovanni Ricca]
+2acaaee xaga: Setup Sensors stack [Giovanni Ricca]
+
+* packages/apps/TvSettings
+d6b23f1f2 TvSettings: Support two button mute [Aaron Kling]
+
+====================
+     2025-02-13    
+====================
+* build/blueprint
+e29c960 Use pool for mutatorContext and transition contexts [Colin Cross]
+
+* build/soong
+219a62d1fd Use blueprint/pool [Colin Cross]
+
+* device/google/atv
+66aed86 Revert "atv: sepolicy: public: Pull in hal_client_domain rule" [Nolen Johnson]
+
+* device/lineage/sepolicy
+6585eff common: private: Don't audit mediahshell_app get wifi_config_prop [Nolen Johnson]
+
+====================
+     2025-02-12    
+====================
+* vendor/lineage
+4ae5dc80 overlay: Set PermissionController help URLs [LuK1337]
+
+====================
+     2025-02-11    
+====================
+* device/xiaomi/msm8953-common
+b3a7948 msm8953-common: move to new fm vendor jni variable [Jan Altensen]
+
+* device/xiaomi/sm6250-common
+d0e25f3 sm6250-common: sepolicy: Remove duplicate snxxx AIDL rules [Bruno Martins]
+4c1bfbd sm6250-common: Drop BOARD_HAVE_QCOM_FM flag [Arne Coucheron]
+
+* hardware/samsung/nfc
+61bc89f nfc: Rename debug level property [Michael Bestas]
+
+* packages/apps/Settings
+0eb034cc82f Settings: Make SIM toggle unchangable when not supported [LuK1337]
+
+====================
+     2025-02-10    
+====================
+* device/xiaomi/miatoll
+b790a67 miatoll: Use SPDX copyright headers [Alexander Winkowski]
+
+* device/xiaomi/sm6250-common
+7d53ee0 sm6250-common: Switch to dot product CPU variant [Adithya R]
+48e01ea sm6250-common: Use SPDX copyright headers [Alexander Winkowski]
+bd8d1eb sm6250-common: Use the common Xiaomi FCM [basamaryan]
+47fec2d sm6250-common: Use the common device compatibility matrix from QCOM [Bruno Martins]
+921ec96 sm6250-common: overlay: Remove config_cellBroadcastAppLinks [x0x00044]
+feb28c4 sm6250-common: Don't declare BOARD_VENDOR [Nolen Johnson]
+2674d16 Revert "sm6250-common: Add device input configs and keylayouts" [Giovanni Ricca]
+eeeaaa6 sm6250-common: Simplify FM2 section [Giovanni Ricca]
+6b61d2b sm6250-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+bbb345e sm6250-common: Switch to common lights HAL [LuK1337]
+0d94408 sm6250-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+092fd20 sm6250-common: Build gralloc.qcom [LuK1337]
+52c8d1a sm6250-common: Update display flags & packages [Michael Bestas]
+145ce30 sm6250-common: media: Reapply media codecs settings [Giovanni Ricca]
+35f8094 sm6250-common: remove OMX [dianlujitao]
+55f078a sm6250-common: media_profiles: Edit profiles xml in accordance with schema [Malathi Gottam]
+26d2a53 sm6250-common: media: Update `c2.qti.avc.decoder` specification for atoll [Giovanni Ricca]
+ce818b4 sm6250-common: add "can-swap-width-height" for video codecs [wenchangliu]
+cbe6dac sm6250-common: media: Import Codec2 configs [basamaryan]
+84a87d4 sm6250-common: Update Media C2 stack from V14.0.9.0.SKGMIXM [Giovanni Ricca]
+91bf3f5 Reapply "sm6250-common: Import QTI Codec2 HAL and switch to Codec2 by default" [Giovanni Ricca]
+4cd4348 sm6250-common: Enable elfchecks for camera libs [LuK1337]
+69ba692 sm6250-common: Enable elfchecks for libgrallocutils [LuK1337]
+58904dc sm6250-common: Unset BUILD_BROKEN_DUP_RULES [Bruno Martins]
+473aa6d sm6250-common: Provide camera IDs remapping property and drop camera provider blobs [Ivan Vecera]
+d1c2fed sm6250-common: Enable camera override format from reserved [Arian]
+563f78f sm6250-common: Mark CNE symlink target as required package [Bruno Martins]
+8debe98 sm6250-common: releasetools: be more clear about firmware image patching [Akhil Narang]
+ce70b8d sm6250-common: gps: Convert remaining Android.mk to bp [Michael Bestas]
+0efe92a sm6250-common: Address missing libbinder symbols in libwfdnative [Nick Reuter]
+cef84f8 sm6250-common: Bump libwfdservice to android.media.audio.common.types-V4 [Nick Reuter]
+815eddc sm6250-common: Update WiFi Display system stack from sunstone [Giovanni Ricca]
+518b797 sm6250-common: Update DPM system stack from sunstone [Giovanni Ricca]
+cfed1ab sm6250-common: Pass display ID to sensor location [LuK1337]
+8a3ed49 sm6250-common: Move to Xiaomi fingerprint AIDL [basamaryan]
+2f583d0 sm6250-common: avoid setting permission for /dev/hw_random [PRANAY BHARGAV BHAVARAJU]
+579d85c sm6250-common: Nuke ATFWD [dianlujitao]
+ced37ee sm6250-common: Shim WFD with libgui_shim/libinput_shim [LuK1337]
+59da5c2 sm6250-common: Shim widevine with libcrypto_shim [Michael Bestas]
+4c85d33 sm6250-common: Remove quotes from TARGET_RECOVERY_PIXEL_FORMAT [Tim Zimmermann]
+bc50fa8 sm6250-common: Explicitly set as an non-AB target [Kelvin Zhang]
+e123213 sm6250-common: Allow to access bootable/deprecated-ota targets [Kelvin Zhang]
+439802b sm6250-common: Drop device_id_attestation feature [Tim Zimmermann]
+83cc5e6 sm6250-common: Remove wait_for_keymaster and all references [Paul Crowley]
+d81b0d7 sm6250-common: Delete dhcpcd init entries, since dhcpcd is no more. [Lorenzo Colitti]
+9119347 sm6250-common: do not manually build dependencies [Cosmin Tanislav]
+8fddd2c sm6250-common: Remove elf files in copy files check [Aaron Kling]
+0548baf sm6250-common: Disable ELF checks for certain libraries [Michael Bestas]
+1984efb sm6250-common: Patch libwfdservice to resolve duplicate dependencies [Michael Bestas]
+8249241 sm6250-common: Remove unused vendor.qti.hardware.vpp@1.3 [Alexander Winkowski]
+de03eb0 Revert "sm6250-common: Import 32 bit CamX libraries" [Alexander Winkowski]
+
+* device/xiaomi/sm6375-common
+3a2932c sm6375-common: sepolicy: Remove duplicate snxxx AIDL rules [Bruno Martins]
+
+* device/xiaomi/sm8350-common
+631f7102 sm8350-common: overlay: Remove config_cellBroadcastAppLinks [x0x00044]
+3319d7ad sm8350-common: rootdir: Add "system" group to Audio HAL [feiyuchen]
+ebd4b065 sm8350-common: rootdir: Optimize for Spatial Audio [Andy Hung]
+8b3f4670 sm8350-common: rootdir: Enable RT priority inheritance [Andy Hung]
+2b093d95 sm8350-common: rootdir: add context_hub into audio hal group [emilchung]
+5593e9d1 fixup! sm8350-common: Nuke ATFWD [Giovanni Ricca]
+e78a8da3 sm8350-common: sepolicy: Reformat it [Giovanni Ricca]
+40df75a2 sm8350-common: sepolicy: Drop redundant `dynamic_fps` node label [Giovanni Ricca]
+71d62d1a sm8350-common: sepolicy: Drop `vendor_sysfs_double_tap` definition [Giovanni Ricca]
+e458117d sm8350-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+5ed80b7b sm8350-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+
+* hardware/qcom-caf/sm8250/media
+3bfc8dd mm-core: Remove no longer used codecs [Michael Bestas]
+
+* hardware/xiaomi
+bcb6cf4 vintf: Add dtool interface [bengris32]
+00e884f vintf: Add alternative citsensorservice interface [bengris32]
+7b7a41f hidl: biometrics: Add support for chipone fingerprint [Matsvei Niaverau]
+
+* vendor/extra
+9305b31 vendorsetup.sh: use non-GrapheneOS-branded build user/host [Daniel Micay]
+
+* vendor/xiaomi/sm6250-common
+7157811 sm6250-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+
+====================
+     2025-02-09    
+====================
+* android
+538c253 manifest: February 2025 Security Update [Michael Bestas]
+
+* build/make
+36c1905749 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+
+* device/qcom/sepolicy_vndr/sm8550
+bbbbed9 sepolicy: NFC: Add support for snxxx AIDL service [Khageswararao Rao B]
+
+* device/xiaomi/sm8350-common
+b287ccac sm8350-common: sepolicy: Remove duplicate snxxx AIDL rules [Bruno Martins]
+
+* hardware/qcom-caf/msm8953/audio
+1b5ce68 visualizer: do not use GNU old-style field designators [synergy dev]
+
+* hardware/qcom-caf/msm8953/display
+47e27c74 Revert "gpu_tonemapper: Fix compilation issue." [Michael Bestas]
+
+* hardware/qcom-caf/msm8998/audio
+970b452 hal: update audio effects config names [Akhil Karuturi]
+
+* hardware/qcom-caf/sdm845/audio
+d6b236a visualizer: do not use GNU old-style field designators [synergy dev]
+
+* hardware/qcom-caf/sm8150/audio
+15dc2b0 visualizer: do not use GNU old-style field designators [synergy dev]
+
+* hardware/qcom-caf/sm8250/audio
+0547a74 visualizer: do not use GNU old-style field designators [synergy dev]
+
+* hardware/qcom-caf/sm8350/audio
+452725a audio: Drop STT meta test app [Michael Bestas]
+
+* hardware/xiaomi
+dc3069c Remove aidl/light [basamaryan]
+c8cd550 aidl: fingerprint: Improve documentation on sensor_location [Luofan Chen]
+
+* vendor/extra
+4fd0f4c patches: sm6250: Add positron patch [Giovanni Ricca]
+
