@@ -1,0 +1,200 @@
+====================
+     2025-04-15    
+====================
+* art
+158a3ff Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+df3228e art: Disable debug tracing on production builds [Danny Lin]
+
+* bionic
+a9a48f55b Revert "Add better jemalloc stat logging." [John Galt]
+
+* build/soong
+8e7be2dccd soong: Do not use compression upon creating zip (jar) files [Park Ju Hyung]
+c1aba29359 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+4adae9853a use SCHED_BATCH for the build [Daniel Micay]
+8b62957ae5 soong: Add out/soong/*.glob* to installclean [Ido Ben-Hur]
+4e820b8cb9 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+b001ed384e soong: increase heap size for metalava [LeddaZ]
+8063013412 Unique lists in ListSetDifference [Cole Faust]
+79ed499f44 Optimize HasIntersection [Cole Faust]
+02436bfbbe Fix nondeterminism in ListSetDifference [Cole Faust]
+
+* device/xiaomi/sm6250-common
+cd4b243 sm6250-common: Define boot image security patch [Alexander Koskovich]
+50d8c05 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+80c07687 sm8350-common: Define boot image security patch [Alexander Koskovich]
+6dab8cb7 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+a2349d99 sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+7551c18d sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+5acba204 sm8350-common: Switch to dot product CPU variant [Adithya R]
+f4ab1535 sm8350-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+08650c9f sm8350-common: Enable usage of dex2oat64 [David Sehr]
+
+* frameworks/av
+b881458c4a Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+8e931c401197 camera2: StreamConfigurationMap: add another constructor for MIUI camera on A15 QPR2 [Pranav Vashi]
+4650c99de0b3 core: camera2: StreamConfigurationMap: add constructor for MIUI camera [Pulkit077]
+c6bf1ba8d56d camera: Add backwards-compatible CaptureResultExtras constructor [Adithya R]
+034329631ec1 core: Hide ADB and developer setting enable status [someone5678]
+099682e223ff gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+e660c534394d gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+c42cc01de3b6 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+f617085eee38 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+1ec46b3cb9ee gmscompat: Dynamically spoof props for GMS [SamarV-121]
+92eae0af1821 gmscompat: Allow setting any field in certified build props [Adithya R]
+618ac0bd4323 gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+4296e43f132b gmscompat: Get package name from context instead of app [jhenrique09]
+9813e3f0780a base: Add Safetynet/Play Integrity hax [Danny Lin]
+fd12ab2dc182 SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+deb8b7170f85 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+d0ffdaadf03a Remove debuggable requirement for signature spoofing [Andy CrossGate Yan]
+4a0426c81c6e ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+76e55ca29c73 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+2f5c4ab6cdd5 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+8f6abdc3c6da Cache pin algorithms in PinSet [Till Kottmann]
+3eebfa537d25 Cache KeyStoreService [Till Kottmann]
+a38b499ee4a5 (Point) Only calculate sin and cos once [Till Kottmann]
+7a8ef3e9cbad LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+dd6b87429787 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+366d9bda2e95 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+a7af27185f1b ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+8b0fd67c404c Trace: Disable debug tracing on production builds [Danny Lin]
+9b99b01e8e6a Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+deef464a3c71 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+cb525e2949f4 libhwui: compile for performance [Vaisakh Murali]
+4525756e20ee libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+f074aec97183 libhwui: remove deprecated perf flags [Vaisakh Murali]
+4988842508c9 SystemUI: Remove Android build number from QS footer [Danny Lin]
+a6cfff8b8e53 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+aeb84993545f core: Remove old app target SDK dialog [Danny Lin]
+853cec0513f5 core: Remove default aspect ratio limit for old apps [Danny Lin]
+59b60b0cc494 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+a35b0cc21b70 Revert "Ignore the charging ripple flag." [Jeferson]
+
+* frameworks/native
+7cb191f387 SF: VsyncTimeline::isVSyncInPhase should use display rate [unflagged] [Ady Abraham]
+75b4063327 fix potential leakage issues [Xiao Zhang]
+0f64c90269 SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+78d7150db6 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+7dd0399ded SF: Add retry to EventThread postEvent [Rheygine Medel]
+e782e26ca9 sf: upsert RenderEngine's caches [Ramakant Singh]
+8e3c0ce309 libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/qcom-caf/common
+0355392 common: Export kernel version with soong [Giovanni Ricca]
+
+* lineage/scripts
+f55b048 set-default-branch: Initial commit [LuK1337]
+
+* packages/apps/DeskClock
+b0e8c13 DeskClock: Fix select all text in label dialog [Trogel]
+
+* packages/apps/LineageParts
+92b85fb LineageParts: Show option to turn off colored LEDs when fully charged [Trogel]
+
+* packages/apps/Trebuchet
+d822bbb3ec Launcher3: SysUiScrim: Hide top shadow [Giovanni Ricca]
+64522be89b Trebuchet: Move clear all button to actions view [Vachounet]
+23afd76aa8 Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+2e63608a8 LatinIME: fix gesture typing [johnny]
+bfba6cb87 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/StatsD
+b8a622b statsd: Disable native stats collection service [Danny Lin]
+
+* system/core
+e32eb46b0 init.rc: Disable native stats collection service [Danny Lin]
+fa0549bca init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/lineage
+1b1687b4 kernel: Add support for external kernel configs [Yumi Yukimura]
+
+* vendor/qcom/opensource/libfmjni
+f05e611 libfmjni: Prevent invalid pthread_t from being passed to pthread_join [tavukkdoner]
+940ac48 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2025-04-14    
+====================
+* frameworks/base
+ed3e555d9e2c Revert "fw/b: Add NotificationGroup class for use by lineage sdk system profiles" [Luca Stefani]
+
+* hardware/mediatek
+6e579f6 interfaces: Add prebuilt interfaces definitions for keymaster_attestation [Giovanni Ricca]
+ccb78be interfaces: Add prebuilt interfaces definitions for Mms and MMAgent [Woomymy]
+
+* lineage-sdk
+a9f9b20 Move NotificationGroup to lineage-sdk [Luca Stefani]
+
+====================
+     2025-04-13    
+====================
+====================
+     2025-04-12    
+====================
+* packages/inputmethods/LatinIME
+05f7fefac fixup! LatinIME: support for incognito mode [Oliver Scott]
+
+====================
+     2025-04-11    
+====================
+* android
+3e32007 manifest: April 2025 Security Update [Michael Bestas]
+
+* build/make
+a9f9659db8 Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* device/xiaomi/mt6895-common
+f02ecbc mt6895-common: Disable display AAL and DRE 3.0 support [alextrack2013]
+
+* frameworks/native
+e6c237786b Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* hardware/google/graphics/common
+ae5904b Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* hardware/qcom-caf/common
+06ab24e qcom: Declare hidl_vendor_qti_hardware_sigma_miracast_interface [Bharath]
+
+* kernel/xiaomi/mt6895
+25eb55244 ARM64: dts: mt6895: Disable display AAL support [alextrack2013]
+
+* packages/apps/Camelot
+aa5e487 Use string "Share" for sharing, instead of "Send" [Chirayu Desai]
+
+* packages/apps/DocumentsUI
+96f7c36cd Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* packages/apps/Settings
+4c979a6c9dd Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* packages/services/Telecomm
+7465b153c Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* packages/services/Telephony
+8ce662782 Merge tag 'android-15.0.0_r26' into staging/lineage-22.2_merge-android-15.0.0_r26 [Michael Bestas]
+
+* vendor/extra
+3ac91fd vendorsetup.sh: -j 15 on cringemachine [Giovanni Ricca]
+
+====================
+     2025-04-10    
+====================
+* hardware/qcom-caf/sm8650/display
+781c9338 display: Remove smmu-proxy and ubwcp headers defaults [chandu078]
+
+====================
+     2025-04-09    
+====================
+* hardware/lineage/interfaces
+a7d52a8 aidl: light: Add support for upstream LED timed mode [Michael Bestas]
+
+* vendor/extra
+2e6a9cd tools: releases: Rework pbar implementation [Giovanni Ricca]
+
