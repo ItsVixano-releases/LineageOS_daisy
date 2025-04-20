@@ -1,0 +1,256 @@
+====================
+     2025-04-20    
+====================
+* art
+1ef0cf7 Revert "Remove strip.keep_symbols from libart defaults" [Dmitry Muhomor]
+bc16365 art: Disable debug tracing on production builds [Danny Lin]
+
+* bionic
+1ea901ad8 Revert "Add better jemalloc stat logging." [John Galt]
+
+* build/soong
+37b44dd4a2 soong: Do not use compression upon creating zip (jar) files [Park Ju Hyung]
+bb340094f8 ui: Pass the exact CPU thread count to -j [Park Ju Hyung]
+1e5b2eea66 use SCHED_BATCH for the build [Daniel Micay]
+f6856851e3 soong: Add out/soong/*.glob* to installclean [Ido Ben-Hur]
+7ca621f308 cleanbuild: Remove obj/{DTB,DTBO,KERNEL}_OBJ on installclean [Jason Edson]
+9642f81cfa soong: increase heap size for metalava [LeddaZ]
+4720bd48e1 Unique lists in ListSetDifference [Cole Faust]
+a180b5c254 Optimize HasIntersection [Cole Faust]
+250a98275d Fix nondeterminism in ListSetDifference [Cole Faust]
+
+* device/xiaomi/msm8953-common
+e0f2c22 msm8953-common: Temporarily downgrade kernel clang version [Giovanni Ricca]
+3e87f86 msm8953-common: Build device-specific light HAL [Giovanni Ricca]
+e50ed06 Revert "aidl: light: Add support for upstream LED timed mode" [Giovanni Ricca]
+9363f3e msm8953-common: light: Rename HAL [Giovanni Ricca]
+1f1379e msm8953-common: Fork light HAL from hardware/lineage/interfaces [Giovanni Ricca]
+
+* device/xiaomi/sm6250-common
+ee4aec8 sm6250-common: Define boot image security patch [Alexander Koskovich]
+8896f78 sm6250-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+
+* device/xiaomi/sm8350-common
+1aa150df sm8350-common: Define boot image security patch [Alexander Koskovich]
+a6c01565 sm8350-common: Set VENDOR_SECURITY_PATCH to platform [Chris Fries]
+6bc92d28 sm8350-common: Don't copy dummy camera config [Giovanni Ricca]
+3dce17b4 sm8350-common: Move citsensorservice to background cpuset [Adithya R]
+4e415752 sm8350-common: Switch to dot product CPU variant [Adithya R]
+b706cc78 sm8350-common: Optimize native executables for Cortex-A76 CPU [Danny Lin]
+fe049b9e sm8350-common: Enable usage of dex2oat64 [David Sehr]
+
+* frameworks/av
+1e58139a86 Codec2: Extend the queue empty work hack to MTK decoders too [bengris32]
+
+* frameworks/base
+cabcda1f33e6 camera2: StreamConfigurationMap: add another constructor for MIUI camera on A15 QPR2 [Pranav Vashi]
+b414b8d96784 core: camera2: StreamConfigurationMap: add constructor for MIUI camera [Pulkit077]
+ebaaeee1cc63 camera: Add backwards-compatible CaptureResultExtras constructor [Adithya R]
+6d89f87f0608 core: Hide ADB and developer setting enable status [someone5678]
+71b24fd3e2d5 gmscompat: Don't log stacktrace if GMS isn't installed [Tim Zimmermann]
+27746e2e04eb gmscompat: AttestationService: Schedule only when GMS is installed [SamarV-121]
+dd0d0b0e3058 gmscompat: Un-spoof GMS while adding google account [Adithya R]
+8a548c068fe1 gmscompat: Add prop to disable gms spoofing [SamarV-121]
+86c2017b89eb gmscompat: Dynamically spoof props for GMS [SamarV-121]
+29bc3289d993 gmscompat: Allow setting any field in certified build props [Adithya R]
+20037726720a gmscompat: Remove unwanted spoofing of DEVICE_INITIAL_SDK_INT [SamarV-121]
+091eb39e13f7 gmscompat: Get package name from context instead of app [jhenrique09]
+86d9b8707382 base: Add Safetynet/Play Integrity hax [Danny Lin]
+e29085ce9fee SystemUI: allow to use some QS tiles while device is locked [Dmitry Muhomor]
+52b783030ab0 SystemUI: require unlocking to use QS tiles by default [Dmitry Muhomor]
+e110a661b839 Remove debuggable requirement for signature spoofing [Andy CrossGate Yan]
+86fcd0255f78 ViewConfiguration: Set scroll friction to 0.009 [Alex Naidis]
+51bff058e061 AbsListView: Improve scrolling cache [Pawit Pornkitprasan]
+f745655a4ac0 core: PinSet: Fixup and improve algorithms caching [jhonboy121]
+8e5595411827 Cache pin algorithms in PinSet [Till Kottmann]
+0f4e66a2bb03 Cache KeyStoreService [Till Kottmann]
+92dfc6d24fa5 (Point) Only calculate sin and cos once [Till Kottmann]
+29024a10b340 LayoutInflater: Opportunistically create views directly for performance [Danny Lin]
+494fe5ce7853 SystemServiceRegistry: Replace ArrayMap with HashMap for performance [Danny Lin]
+0e3977ff3110 LocalServices: Replace ArrayMap with HashMap for performance [Danny Lin]
+c7e868bc8c2d ThemedResourceCache: Replace ArrayMap with HashMap for performance [Danny Lin]
+1eb3ca4f12c4 Trace: Disable debug tracing on production builds [Danny Lin]
+48979b59dcf1 Revert "Pre-emptively take a snapshot when finishing an activity before changing visibility" [Danny Lin]
+77a1da35a985 hwui: Compile without no-omit-frame-pointer [Sourajit Karmakar]
+67eaa4acecbf libhwui: compile for performance [Vaisakh Murali]
+797107bc5aee libhwui: enable O3 when compiling for perf [Vaisakh Murali]
+5ea9aad52b8c libhwui: remove deprecated perf flags [Vaisakh Murali]
+8422299f11eb SystemUI: Remove Android build number from QS footer [Danny Lin]
+807e6d171df9 SystemUI: Reduce screenshot dismiss delay to 3 seconds [Danny Lin]
+442f55048878 core: Remove old app target SDK dialog [Danny Lin]
+2067bcc7d4fb core: Remove default aspect ratio limit for old apps [Danny Lin]
+4ad4c3b666c0 AuthRippleView: Allow disabling ripple unlock animation using overlay [jhenrique09]
+fc8948163ebd Revert "Ignore the charging ripple flag." [Jeferson]
+
+* frameworks/native
+f0b3bf8ade SF: VsyncTimeline::isVSyncInPhase should use display rate [unflagged] [Ady Abraham]
+f46acf09e7 fix potential leakage issues [Xiao Zhang]
+949e32cb65 SF: Don't enable expensive rendering for unknown dataspace [Adithya R]
+080ded13e4 sf: Add check for unknown dataspace [BOREDDY MAHIDHAR]
+ff2c43d90c SF: Add retry to EventThread postEvent [Rheygine Medel]
+56e696dd81 sf: upsert RenderEngine's caches [Ramakant Singh]
+e560e92fcd libbinder: Suppress log spam when unlinking death recipients [Danny Lin]
+
+* hardware/qcom-caf/common
+b771b57 common: Export kernel version with soong [Giovanni Ricca]
+744b9d8 qcom: declare hidl_vendor_qti_hardware_iop_interface [Simon1511]
+
+* packages/apps/Trebuchet
+ba3914ffcc Launcher3: SysUiScrim: Hide top shadow [Giovanni Ricca]
+e92d0a1ede Trebuchet: Move clear all button to actions view [Vachounet]
+6bc1cee55f Launcher3: Double tap on home screen to turn off screen [Thecrazyskull]
+
+* packages/inputmethods/LatinIME
+ac208f6cc LatinIME: fix gesture typing [johnny]
+bcb13d2d0 Revert "LatinIME: Add fallback loader for JNI lib" [nift4]
+
+* packages/modules/StatsD
+b3a5f52 statsd: Disable native stats collection service [Danny Lin]
+
+* system/core
+e120e6133 init.rc: Disable native stats collection service [Danny Lin]
+09298c168 init: Report valid verified boot for SafetyNet checks [Danny Lin]
+
+* vendor/qcom/opensource/libfmjni
+e1dc990 libfmjni: Prevent invalid pthread_t from being passed to pthread_join [tavukkdoner]
+5780711 libfmjni: Fix RDS info retrieving [iusmac]
+
+====================
+     2025-04-19    
+====================
+* frameworks/base
+b898dd080d8d Fix ever-growing AppOpItem string representation [Tommy Webb]
+
+====================
+     2025-04-18    
+====================
+* packages/apps/Twelve
+21c51c4 Twelve: No empty strings please. [Luca Stefani]
+
+====================
+     2025-04-17    
+====================
+* packages/apps/Bellis
+53bf521 Add Android Auto to default system package list [Oliver Scott]
+
+* vendor/extra
+3e33868 tools: releases: Hack for daisy [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_daisy
+8a7923f fixup! LineageOS_daisy: lineage-22: 20250415 [Giovanni Ricca]
+
+====================
+     2025-04-16    
+====================
+* lineage-sdk
+1847da1 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Aperture
+8d0a313 Automatic translation import [LineageOS Infra]
+
+* packages/apps/AudioFX
+9eb8650 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Camelot
+153ddf1 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Catapult
+744ef9a Automatic translation import [LineageOS Infra]
+
+* packages/apps/Contacts
+7ff70b44c Automatic translation import [LineageOS Infra]
+
+* packages/apps/DeskClock
+03def55 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Dialer
+420a923b7 Automatic translation import [LineageOS Infra]
+
+* packages/apps/DocumentsUI
+a982322d5 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Etar
+3af4f61 Automatic translation import [LineageOS Infra]
+
+* packages/apps/FMRadio
+e1affed Automatic translation import [LineageOS Infra]
+
+* packages/apps/Glimpse
+ce77e3d Automatic translation import [LineageOS Infra]
+
+* packages/apps/Jelly
+9b9605d Automatic translation import [LineageOS Infra]
+
+* packages/apps/LineageParts
+c20b80a Automatic translation import [LineageOS Infra]
+
+* packages/apps/Messaging
+b3f84ba Automatic translation import [LineageOS Infra]
+
+* packages/apps/Recorder
+a6b4a84 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Settings
+e773ebb4e58 Automatic translation import [LineageOS Infra]
+
+* packages/apps/SetupWizard
+d278186 Automatic translation import [LineageOS Infra]
+
+* packages/apps/ThemePicker
+b8ac0e05 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Trebuchet
+3f17c3bf39 Automatic translation import [LineageOS Infra]
+
+* packages/apps/Updater
+061bee8 Automatic translation import [LineageOS Infra]
+
+* packages/inputmethods/LatinIME
+8e89262ad Automatic translation import [LineageOS Infra]
+
+* packages/providers/DownloadProvider
+10e50a1e Automatic translation import [LineageOS Infra]
+
+* packages/resources/devicesettings
+676986c Automatic translation import [LineageOS Infra]
+
+* vendor/crowdin
+5ec80da Automatic translation import [LineageOS Infra]
+
+* vendor/extra/tools/releases/LineageOS_gemstone
+a5771fb LineageOS_gemstone: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_lisa
+fee9979 LineageOS_lisa: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_miatoll
+08a5aa1 LineageOS_miatoll: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_sakura
+6aae7bb LineageOS_sakura: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_xaga
+49c9baf LineageOS_xaga: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/extra/tools/releases/LineageOS_ysl
+d73a89a LineageOS_ysl: lineage-22: 20250415 [Giovanni Ricca]
+
+* vendor/qcom/opensource/commonsys/fm
+0d16da0 Automatic translation import [LineageOS Infra]
+
+====================
+     2025-04-15    
+====================
+* lineage/scripts
+f55b048 set-default-branch: Initial commit [LuK1337]
+
+* vendor/lineage
+1b1687b4 kernel: Add support for external kernel configs [Yumi Yukimura]
+
+====================
+     2025-04-14    
+====================
+* hardware/mediatek
+6e579f6 interfaces: Add prebuilt interfaces definitions for keymaster_attestation [Giovanni Ricca]
+ccb78be interfaces: Add prebuilt interfaces definitions for Mms and MMAgent [Woomymy]
+
